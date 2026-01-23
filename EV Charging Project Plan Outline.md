@@ -496,10 +496,10 @@ The goal of Phase 3 is to confirm that the proposed EV charging system is electr
 
 | Item ID | Work product | Provenance (who / how / when) | Evidence reference ID(s) | Inputs + downstream use |
 |:---- |:---- |:---- |:---- |:---- |
-| 3-W01 | Load calculation workbook + summary | Priya Shah, PE <br>Spreadsheet + PDF export<br>Date: 2026-01-22 (v1.0) | phases/P2/Outputs/P2.1_LoadCalc_Workbook_2026-01-22.xlsx<br>phases/P2/Outputs/P2.1_LoadCalc_Summary_2026-01-22.pdf | Inputs: Phase 2 panel schedules + EVSE cut sheet + AHJ/code basis<br>Used in: Phase 3, Phase 4, Phase 5, Phase 7 |
-| 3-W02 | Independent load calc check memo | Alex Kim, EE <br>Redline review + sign-off<br>Date: 2026-01-22 (v1.0) | phases/P2/Outputs/P2.1_LoadCalc_CheckMemo_2026-01-22.pdf | Inputs: 3-W01<br>Used in: Phase 3 |
-| 3-W03 | Architecture decision record | Priya Shah, PE <br>Engineering memo + diagram<br>Date: 2026-01-22 (v1.0) | phases/P2/Outputs/P2.2_Architecture_Decision_Record_2026-01-22.pdf | Inputs: 3-W01 + Phase 2 evidence<br>Used in: Phase 3, Phase 4, Phase 4, Phase 4 |
-| 3-W04 | EMS technical brief | Mia Chen (Installer PM)<br>Vendor PDF<br>Date: 2026-01-21 (revB) | phases/P2/Inputs/P2-W04_EMS_TechnicalBrief_revB_2026-01-21.pdf | Inputs: N/A<br>Used in: Phase 3, Phase 4, Phase 4 |
+| 3-W01 | Load calculation workbook + summary | Priya Shah, PE <br>Spreadsheet + PDF export<br>Date: 2026-01-22 (v1.0) | [`phases/P2/Outputs/P2.1_LoadCalc_Workbook_2026-01-22.xlsx`](https://rc979.github.io/EEIntake/phases/P2/Outputs/P2.1_LoadCalc_Workbook_2026-01-22.xlsx)<br>[`phases/P2/Outputs/P2.1_LoadCalc_Summary_2026-01-22.pdf`](https://rc979.github.io/EEIntake/phases/P2/Outputs/P2.1_LoadCalc_Summary_2026-01-22.pdf) | Inputs: Phase 2 panel schedules + EVSE cut sheet + AHJ/code basis<br>Used in: Phase 3, Phase 4, Phase 5, Phase 7 |
+| 3-W02 | Independent load calc check memo | Alex Kim, EE <br>Redline review + sign-off<br>Date: 2026-01-22 (v1.0) | [`phases/P2/Outputs/P2.1_LoadCalc_CheckMemo_2026-01-22.pdf`](https://rc979.github.io/EEIntake/phases/P2/Outputs/P2.1_LoadCalc_CheckMemo_2026-01-22.pdf) | Inputs: 3-W01<br>Used in: Phase 3 |
+| 3-W03 | Architecture decision record | Priya Shah, PE <br>Engineering memo + diagram<br>Date: 2026-01-22 (v1.0) | [`phases/P2/Outputs/P2.2_Architecture_Decision_Record_2026-01-22.pdf`](https://rc979.github.io/EEIntake/phases/P2/Outputs/P2.2_Architecture_Decision_Record_2026-01-22.pdf) | Inputs: 3-W01 + Phase 2 evidence<br>Used in: Phase 3, Phase 4, Phase 4, Phase 4 |
+| 3-W04 | EMS technical brief | Mia Chen (Installer PM)<br>Vendor PDF<br>Date: 2026-01-21 (revB) | [`phases/P2/Inputs/P2-W04_EMS_TechnicalBrief_revB_2026-01-21.pdf`](https://rc979.github.io/EEIntake/phases/P2/Inputs/P2-W04_EMS_TechnicalBrief_revB_2026-01-21.pdf) | Inputs: N/A<br>Used in: Phase 3, Phase 4, Phase 4 |
 
 ### 3.4 Key Excerpts (Electrical-Only)
 
@@ -624,12 +624,12 @@ The goal of Phase 4 is to produce the **unstamped electrical permit drawing set*
 
 | Item ID | Work product | Provenance (who / how / when) | Evidence reference ID(s) | Inputs + downstream use |
 |:---- |:---- |:---- |:---- |:---- |
-| 4-W01 | Preliminary one-line diagram (sheet) | Sam Ortega (CAD Tech, ) + Priya Shah, PE <br>CAD + PDF export<br>Date: 2026-01-26 (v1.0) | phases/P3/Outputs/P3.1_OneLine_Prelim_Unstamped_2026-01-26.pdf | Inputs: Phase 3 decision; Phase 2 schedules; Phase 2 EVSE; Phase 2 code basis<br>Used in: Phase 4, Phase 4 |
-| 4-W02 | Site plan w/ EVSE locations (electrical-impacting) | Sam Ortega (CAD Tech, )<br>CAD + PDF export<br>Date: 2026-01-26 (v1.0) | phases/P3/Outputs/P3.2_SitePlan_EVSE_Locations_Prelim_2026-01-26.pdf | Inputs: base site plan (owner/architect) + parking layout (owner) + Phase 2 context<br>Used in: Phase 4, Phase 4 |
-| 4-W03 | Conduit & trenching details (electrical-impacting) | Priya Shah, PE  + Sam Ortega (CAD Tech, )<br>CAD notes + PDF export<br>Date: 2026-01-26 (v1.0) | phases/P3/Outputs/P3.3_Conduit_Trenching_Details_ElectricalImpacting_2026-01-26.pdf | Inputs: routing assumptions (installer) + Phase 2 photos + code basis<br>Used in: Phase 4, Phase 4 |
-| 4-W04 | Updated panel schedules (MDP + EVSP-1) | Priya Shah, PE <br>Spreadsheet + PDF export<br>Date: 2026-01-26 (v1.0) | phases/P3/Outputs/P3.4_PanelSchedules_Updated_MDP_and_EVSP_2026-01-26.pdf | Inputs: Phase 2 schedules + Phase 3 + Phase 3<br>Used in: Phase 4, Phase 4 |
-| 4-W05 | Electrical notes & code sheets | Priya Shah, PE <br>Template + PDF export<br>Date: 2026-01-26 (v1.0) | phases/P3/Outputs/P3.5_ElectricalNotes_CodeSheets_2026-01-26.pdf | Inputs: Phase 2 code basis + P2 decision + EMS brief<br>Used in: Phase 4, Phase 4 |
-| 4-W06 | Permit drawing set (unstamped, compiled) | Ethan Brooks (Document Control)<br>PDF compilation<br>Date: 2026-01-26 (v1.0) | phases/P3/Outputs/P3.6_PermitSet_Unstamped_2026-01-26.pdf | Inputs: 4-W01..4-W05<br>Used in: Phase 4, Phase 5 |
+| 4-W01 | Preliminary one-line diagram (sheet) | Sam Ortega (CAD Tech, ) + Priya Shah, PE <br>CAD + PDF export<br>Date: 2026-01-26 (v1.0) | [`phases/P3/Outputs/P3.1_OneLine_Prelim_Unstamped_2026-01-26.pdf`](https://rc979.github.io/EEIntake/phases/P3/Outputs/P3.1_OneLine_Prelim_Unstamped_2026-01-26.pdf) | Inputs: Phase 3 decision; Phase 2 schedules; Phase 2 EVSE; Phase 2 code basis<br>Used in: Phase 4, Phase 4 |
+| 4-W02 | Site plan w/ EVSE locations (electrical-impacting) | Sam Ortega (CAD Tech, )<br>CAD + PDF export<br>Date: 2026-01-26 (v1.0) | [`phases/P3/Outputs/P3.2_SitePlan_EVSE_Locations_Prelim_2026-01-26.pdf`](https://rc979.github.io/EEIntake/phases/P3/Outputs/P3.2_SitePlan_EVSE_Locations_Prelim_2026-01-26.pdf) | Inputs: base site plan (owner/architect) + parking layout (owner) + Phase 2 context<br>Used in: Phase 4, Phase 4 |
+| 4-W03 | Conduit & trenching details (electrical-impacting) | Priya Shah, PE  + Sam Ortega (CAD Tech, )<br>CAD notes + PDF export<br>Date: 2026-01-26 (v1.0) | [`phases/P3/Outputs/P3.3_Conduit_Trenching_Details_ElectricalImpacting_2026-01-26.pdf`](https://rc979.github.io/EEIntake/phases/P3/Outputs/P3.3_Conduit_Trenching_Details_ElectricalImpacting_2026-01-26.pdf) | Inputs: routing assumptions (installer) + Phase 2 photos + code basis<br>Used in: Phase 4, Phase 4 |
+| 4-W04 | Updated panel schedules (MDP + EVSP-1) | Priya Shah, PE <br>Spreadsheet + PDF export<br>Date: 2026-01-26 (v1.0) | [`phases/P3/Outputs/P3.4_PanelSchedules_Updated_MDP_and_EVSP_2026-01-26.pdf`](https://rc979.github.io/EEIntake/phases/P3/Outputs/P3.4_PanelSchedules_Updated_MDP_and_EVSP_2026-01-26.pdf) | Inputs: Phase 2 schedules + Phase 3 + Phase 3<br>Used in: Phase 4, Phase 4 |
+| 4-W05 | Electrical notes & code sheets | Priya Shah, PE <br>Template + PDF export<br>Date: 2026-01-26 (v1.0) | [`phases/P3/Outputs/P3.5_ElectricalNotes_CodeSheets_2026-01-26.pdf`](https://rc979.github.io/EEIntake/phases/P3/Outputs/P3.5_ElectricalNotes_CodeSheets_2026-01-26.pdf) | Inputs: Phase 2 code basis + P2 decision + EMS brief<br>Used in: Phase 4, Phase 4 |
+| 4-W06 | Permit drawing set (unstamped, compiled) | Ethan Brooks (Document Control)<br>PDF compilation<br>Date: 2026-01-26 (v1.0) | [`phases/P3/Outputs/P3.6_PermitSet_Unstamped_2026-01-26.pdf`](https://rc979.github.io/EEIntake/phases/P3/Outputs/P3.6_PermitSet_Unstamped_2026-01-26.pdf) | Inputs: 4-W01..4-W05<br>Used in: Phase 4, Phase 5 |
 
 ### 4.4 Key Excerpts (Electrical-Only)
 
@@ -865,12 +865,12 @@ Phase 5 captures the electrical permitting submission artifacts. It intentionall
 
 | Item ID | Work product | Provenance (who / how / when) | Evidence reference ID(s) | Inputs + downstream use |
 |:---- |:---- |:---- |:---- |:---- |
-| 5-W01 | Stamped permit drawings (electrical set) | Priya Shah, PE (EOR)<br>Stamp + PDF<br>Date: 2026-01-29 (v1.0) | phases/P4/Outputs/P4.1_PermitSet_Stamped_2026-01-29.pdf | Inputs: Phase 4 unstamped set<br>Used in: Phase 5, Phase 5 |
-| 5-W02 | AHJ permit application form(s) | Jordan Lee (PM)<br>AHJ portal form + PDF export<br>Date: 2026-01-29 (v1.0) | phases/P4/Outputs/P4.2_AHJ_ApplicationForms_2026-01-29.pdf | Inputs: AHJ requirements + project metadata<br>Used in: Phase 5 |
-| 5-W03 | Permit application package (compiled) | Ethan Brooks (Document Control)<br>PDF compilation<br>Date: 2026-01-29 (v1.0) | phases/P4/Outputs/P4.2_PermitApplication_Package_Compiled_2026-01-29.pdf | Inputs: Phase 5 + 5-W02 + supporting attachments<br>Used in: Phase 5, Phase 6 |
-| 5-W04 | Supporting attachments bundle (electrical) | Ethan Brooks (Document Control)<br>PDF compilation<br>Date: 2026-01-29 (v1.0) | phases/P4/Outputs/P4.SupportingAttachments_Electrical_2026-01-29.pdf | Inputs: Phase 3 + Phase 3 + EVSE/EMS + code basis<br>Used in: Phase 5 |
-| 5-W05 | AHJ submission receipt / confirmation | Jordan Lee (PM)<br>Portal download + screenshot PDF<br>Date: 2026-01-29 (v1.0) | phases/P4/Outputs/P4.SubmissionReceipt_AHJ_Confirmation_2026-01-29.pdf | Inputs: portal submission<br>Used in: Phase 5, Phase 6 |
-| 5-W06 | Permit tracking log (submission metadata) | Jordan Lee (PM)<br>Spreadsheet<br>Date: 2026-01-29 (v1.0) | phases/P4/Outputs/P4.PermitTrackingLog_2026-01-29.xlsx | Inputs: portal submission data<br>Used in: Phase 6 |
+| 5-W01 | Stamped permit drawings (electrical set) | Priya Shah, PE (EOR)<br>Stamp + PDF<br>Date: 2026-01-29 (v1.0) | [`phases/P4/Outputs/P4.1_PermitSet_Stamped_2026-01-29.pdf`](https://rc979.github.io/EEIntake/phases/P4/Outputs/P4.1_PermitSet_Stamped_2026-01-29.pdf) | Inputs: Phase 4 unstamped set<br>Used in: Phase 5, Phase 5 |
+| 5-W02 | AHJ permit application form(s) | Jordan Lee (PM)<br>AHJ portal form + PDF export<br>Date: 2026-01-29 (v1.0) | [`phases/P4/Outputs/P4.2_AHJ_ApplicationForms_2026-01-29.pdf`](https://rc979.github.io/EEIntake/phases/P4/Outputs/P4.2_AHJ_ApplicationForms_2026-01-29.pdf) | Inputs: AHJ requirements + project metadata<br>Used in: Phase 5 |
+| 5-W03 | Permit application package (compiled) | Ethan Brooks (Document Control)<br>PDF compilation<br>Date: 2026-01-29 (v1.0) | [`phases/P4/Outputs/P4.2_PermitApplication_Package_Compiled_2026-01-29.pdf`](https://rc979.github.io/EEIntake/phases/P4/Outputs/P4.2_PermitApplication_Package_Compiled_2026-01-29.pdf) | Inputs: Phase 5 + 5-W02 + supporting attachments<br>Used in: Phase 5, Phase 6 |
+| 5-W04 | Supporting attachments bundle (electrical) | Ethan Brooks (Document Control)<br>PDF compilation<br>Date: 2026-01-29 (v1.0) | [`phases/P4/Outputs/P4.SupportingAttachments_Electrical_2026-01-29.pdf`](https://rc979.github.io/EEIntake/phases/P4/Outputs/P4.SupportingAttachments_Electrical_2026-01-29.pdf) | Inputs: Phase 3 + Phase 3 + EVSE/EMS + code basis<br>Used in: Phase 5 |
+| 5-W05 | AHJ submission receipt / confirmation | Jordan Lee (PM)<br>Portal download + screenshot PDF<br>Date: 2026-01-29 (v1.0) | [`phases/P4/Outputs/P4.SubmissionReceipt_AHJ_Confirmation_2026-01-29.pdf`](https://rc979.github.io/EEIntake/phases/P4/Outputs/P4.SubmissionReceipt_AHJ_Confirmation_2026-01-29.pdf) | Inputs: portal submission<br>Used in: Phase 5, Phase 6 |
+| 5-W06 | Permit tracking log (submission metadata) | Jordan Lee (PM)<br>Spreadsheet<br>Date: 2026-01-29 (v1.0) | [`phases/P4/Outputs/P4.PermitTrackingLog_2026-01-29.xlsx`](https://rc979.github.io/EEIntake/phases/P4/Outputs/P4.PermitTrackingLog_2026-01-29.xlsx) | Inputs: portal submission data<br>Used in: Phase 6 |
 
 ### 5.4 Key Excerpts (Electrical-Only)
 
@@ -940,12 +940,12 @@ This deliverable is the complete electrical permit submission package as provide
 
 Phase 5 is considered **complete** and closed out because all submission artifacts are archived under stable filenames:
 
-- **Stamped drawing set issued**: `phases/P4/Outputs/P4.1_PermitSet_Stamped_2026-01-29.pdf`
-- **Permit forms archived**: `phases/P4/Outputs/P4.2_AHJ_ApplicationForms_2026-01-29.pdf`
-- **Supporting attachments bundle archived**: `phases/P4/Outputs/P4.SupportingAttachments_Electrical_2026-01-29.pdf`
-- **Compiled submission package archived (as-submitted)**: `phases/P4/Outputs/P4.2_PermitApplication_Package_Compiled_2026-01-29.pdf`
-- **Submission receipt archived**: `phases/P4/Outputs/P4.SubmissionReceipt_AHJ_Confirmation_2026-01-29.pdf`
-- **Permit tracking log started**: `phases/P4/Outputs/P4.PermitTrackingLog_2026-01-29.xlsx`
+- **Stamped drawing set issued**: [`phases/P4/Outputs/P4.1_PermitSet_Stamped_2026-01-29.pdf`](https://rc979.github.io/EEIntake/phases/P4/Outputs/P4.1_PermitSet_Stamped_2026-01-29.pdf)
+- **Permit forms archived**: [`phases/P4/Outputs/P4.2_AHJ_ApplicationForms_2026-01-29.pdf`](https://rc979.github.io/EEIntake/phases/P4/Outputs/P4.2_AHJ_ApplicationForms_2026-01-29.pdf)
+- **Supporting attachments bundle archived**: [`phases/P4/Outputs/P4.SupportingAttachments_Electrical_2026-01-29.pdf`](https://rc979.github.io/EEIntake/phases/P4/Outputs/P4.SupportingAttachments_Electrical_2026-01-29.pdf)
+- **Compiled submission package archived (as-submitted)**: [`phases/P4/Outputs/P4.2_PermitApplication_Package_Compiled_2026-01-29.pdf`](https://rc979.github.io/EEIntake/phases/P4/Outputs/P4.2_PermitApplication_Package_Compiled_2026-01-29.pdf)
+- **Submission receipt archived**: [`phases/P4/Outputs/P4.SubmissionReceipt_AHJ_Confirmation_2026-01-29.pdf`](https://rc979.github.io/EEIntake/phases/P4/Outputs/P4.SubmissionReceipt_AHJ_Confirmation_2026-01-29.pdf)
+- **Permit tracking log started**: [`phases/P4/Outputs/P4.PermitTrackingLog_2026-01-29.xlsx`](https://rc979.github.io/EEIntake/phases/P4/Outputs/P4.PermitTrackingLog_2026-01-29.xlsx)
 
 
 <a id="phase-6"></a>
@@ -967,13 +967,13 @@ Phase 6 captures electrical plan-check comments and electrical drawing revisions
 
 | Item ID | Work product | Provenance (who / how / when) | Evidence reference ID(s) | Inputs + downstream use |
 |:---- |:---- |:---- |:---- |:---- |
-| 6-W01 | AHJ plan check comments (raw) | AHJ<br>Portal download<br>Date: 2026-02-06 (v1.0) | phases/P5/Inputs/P5-AHJ_PlanCheckComments_Raw_2026-02-06.pdf | Inputs: AHJ portal<br>Used in: Phase 6 |
-| 6-W02 | AHJ comment log (parsed + tracked) | Jordan Lee (PM)<br>Spreadsheet<br>Date: 2026-02-06 (v1.0) | phases/P5/Outputs/P5.1_AHJ_CommentLog_Parsed_2026-02-06.xlsx | Inputs: 6-W01<br>Used in: Phase 6, Phase 6, Phase 6 |
-| 6-W03 | Revised drawings (post-comments, stamped) | Priya Shah, PE (EOR)<br>CAD update + stamp + PDF<br>Date: 2026-02-12 (Rev 1) | phases/P5/Outputs/P5.2_PermitSet_Revised_Stamped_Rev1_2026-02-12.pdf | Inputs: Phase 5 stamped set + 6-W02<br>Used in: Phase 6, Phase 6 |
-| 6-W04 | Redline set (internal review) | Priya Shah, PE (EOR)<br>PDF markups<br>Date: 2026-02-10 (v1.0) | phases/P5/Outputs/P5.Redlines_InternalReview_2026-02-10.pdf | Inputs: Phase 5 stamped set + 6-W02<br>Used in: Phase 6 |
-| 6-W05 | Comment response letter | Priya Shah, PE (EOR)<br>Letter PDF<br>Date: 2026-02-12 (Rev 1) | phases/P5/Outputs/P5.3_CommentResponseLetter_Rev1_2026-02-12.pdf | Inputs: 6-W02 + 6-W03<br>Used in: Phase 6 |
-| 6-W06 | Resubmission receipt / confirmation | Jordan Lee (PM)<br>Portal download + screenshot PDF<br>Date: 2026-02-12 (v1.0) | phases/P5/Outputs/P5.ResubmissionReceipt_AHJ_2026-02-12.pdf | Inputs: AHJ portal<br>Used in: Phase 6 closeout |
-| 6-W07 | AHJ approval / permit issuance confirmation | AHJ<br>Portal download<br>Date: 2026-02-19 (v1.0) | phases/P5/Outputs/P5.4_AHJ_Approval_Notice_2026-02-19.pdf | Inputs: AHJ portal<br>Used in: Phase 6, Phase 6 closeout |
+| 6-W01 | AHJ plan check comments (raw) | AHJ<br>Portal download<br>Date: 2026-02-06 (v1.0) | [`phases/P5/Inputs/P5-AHJ_PlanCheckComments_Raw_2026-02-06.pdf`](https://rc979.github.io/EEIntake/phases/P5/Inputs/P5-AHJ_PlanCheckComments_Raw_2026-02-06.pdf) | Inputs: AHJ portal<br>Used in: Phase 6 |
+| 6-W02 | AHJ comment log (parsed + tracked) | Jordan Lee (PM)<br>Spreadsheet<br>Date: 2026-02-06 (v1.0) | [`phases/P5/Outputs/P5.1_AHJ_CommentLog_Parsed_2026-02-06.xlsx`](https://rc979.github.io/EEIntake/phases/P5/Outputs/P5.1_AHJ_CommentLog_Parsed_2026-02-06.xlsx) | Inputs: 6-W01<br>Used in: Phase 6, Phase 6, Phase 6 |
+| 6-W03 | Revised drawings (post-comments, stamped) | Priya Shah, PE (EOR)<br>CAD update + stamp + PDF<br>Date: 2026-02-12 (Rev 1) | [`phases/P5/Outputs/P5.2_PermitSet_Revised_Stamped_Rev1_2026-02-12.pdf`](https://rc979.github.io/EEIntake/phases/P5/Outputs/P5.2_PermitSet_Revised_Stamped_Rev1_2026-02-12.pdf) | Inputs: Phase 5 stamped set + 6-W02<br>Used in: Phase 6, Phase 6 |
+| 6-W04 | Redline set (internal review) | Priya Shah, PE (EOR)<br>PDF markups<br>Date: 2026-02-10 (v1.0) | [`phases/P5/Outputs/P5.Redlines_InternalReview_2026-02-10.pdf`](https://rc979.github.io/EEIntake/phases/P5/Outputs/P5.Redlines_InternalReview_2026-02-10.pdf) | Inputs: Phase 5 stamped set + 6-W02<br>Used in: Phase 6 |
+| 6-W05 | Comment response letter | Priya Shah, PE (EOR)<br>Letter PDF<br>Date: 2026-02-12 (Rev 1) | [`phases/P5/Outputs/P5.3_CommentResponseLetter_Rev1_2026-02-12.pdf`](https://rc979.github.io/EEIntake/phases/P5/Outputs/P5.3_CommentResponseLetter_Rev1_2026-02-12.pdf) | Inputs: 6-W02 + 6-W03<br>Used in: Phase 6 |
+| 6-W06 | Resubmission receipt / confirmation | Jordan Lee (PM)<br>Portal download + screenshot PDF<br>Date: 2026-02-12 (v1.0) | [`phases/P5/Outputs/P5.ResubmissionReceipt_AHJ_2026-02-12.pdf`](https://rc979.github.io/EEIntake/phases/P5/Outputs/P5.ResubmissionReceipt_AHJ_2026-02-12.pdf) | Inputs: AHJ portal<br>Used in: Phase 6 closeout |
+| 6-W07 | AHJ approval / permit issuance confirmation | AHJ<br>Portal download<br>Date: 2026-02-19 (v1.0) | [`phases/P5/Outputs/P5.4_AHJ_Approval_Notice_2026-02-19.pdf`](https://rc979.github.io/EEIntake/phases/P5/Outputs/P5.4_AHJ_Approval_Notice_2026-02-19.pdf) | Inputs: AHJ portal<br>Used in: Phase 6, Phase 6 closeout |
 
 ### 6.4 Key Excerpts (Electrical-Only)
 
@@ -1104,13 +1104,13 @@ This deliverable records that the AHJ has accepted all comments and has approved
 
 Phase 6 is considered **complete** and closed out because AHJ comments are resolved and approval evidence is archived:
 
-- **Raw plan check comments archived**: `phases/P5/Inputs/P5-AHJ_PlanCheckComments_Raw_2026-02-06.pdf`
-- **Parsed comment log archived**: `phases/P5/Outputs/P5.1_AHJ_CommentLog_Parsed_2026-02-06.xlsx` (all items dispositioned **Accepted/Resolved**)
-- **Internal redlines archived**: `phases/P5/Outputs/P5.Redlines_InternalReview_2026-02-10.pdf`
-- **Revised stamped set issued (Rev 1)**: `phases/P5/Outputs/P5.2_PermitSet_Revised_Stamped_Rev1_2026-02-12.pdf`
-- **Point-by-point response letter issued**: `phases/P5/Outputs/P5.3_CommentResponseLetter_Rev1_2026-02-12.pdf`
-- **Resubmission receipt archived**: `phases/P5/Outputs/P5.ResubmissionReceipt_AHJ_2026-02-12.pdf`
-- **AHJ approval/permit issuance archived**: `phases/P5/Outputs/P5.4_AHJ_Approval_Notice_2026-02-19.pdf`
+- **Raw plan check comments archived**: [`phases/P5/Inputs/P5-AHJ_PlanCheckComments_Raw_2026-02-06.pdf`](https://rc979.github.io/EEIntake/phases/P5/Inputs/P5-AHJ_PlanCheckComments_Raw_2026-02-06.pdf)
+- **Parsed comment log archived**: [`phases/P5/Outputs/P5.1_AHJ_CommentLog_Parsed_2026-02-06.xlsx`](https://rc979.github.io/EEIntake/phases/P5/Outputs/P5.1_AHJ_CommentLog_Parsed_2026-02-06.xlsx) (all items dispositioned **Accepted/Resolved**)
+- **Internal redlines archived**: [`phases/P5/Outputs/P5.Redlines_InternalReview_2026-02-10.pdf`](https://rc979.github.io/EEIntake/phases/P5/Outputs/P5.Redlines_InternalReview_2026-02-10.pdf)
+- **Revised stamped set issued (Rev 1)**: [`phases/P5/Outputs/P5.2_PermitSet_Revised_Stamped_Rev1_2026-02-12.pdf`](https://rc979.github.io/EEIntake/phases/P5/Outputs/P5.2_PermitSet_Revised_Stamped_Rev1_2026-02-12.pdf)
+- **Point-by-point response letter issued**: [`phases/P5/Outputs/P5.3_CommentResponseLetter_Rev1_2026-02-12.pdf`](https://rc979.github.io/EEIntake/phases/P5/Outputs/P5.3_CommentResponseLetter_Rev1_2026-02-12.pdf)
+- **Resubmission receipt archived**: [`phases/P5/Outputs/P5.ResubmissionReceipt_AHJ_2026-02-12.pdf`](https://rc979.github.io/EEIntake/phases/P5/Outputs/P5.ResubmissionReceipt_AHJ_2026-02-12.pdf)
+- **AHJ approval/permit issuance archived**: [`phases/P5/Outputs/P5.4_AHJ_Approval_Notice_2026-02-19.pdf`](https://rc979.github.io/EEIntake/phases/P5/Outputs/P5.4_AHJ_Approval_Notice_2026-02-19.pdf)
 
 
 <a id="phase-7"></a>
@@ -1132,15 +1132,15 @@ Phase 7 captures technical utility coordination artifacts (load letters, single-
 
 | Item ID | Work product | Provenance (who / how / when) | Evidence reference ID(s) | Inputs + downstream use |
 |:---- |:---- |:---- |:---- |:---- |
-| 7-W01 | Utility requirements capture | Jordan Lee (PM)<br>Utility portal capture + PDF<br>Date: 2026-02-20 (v1.0) | phases/P6/Inputs/P6.UtilityRequirements_Capture_2026-02-20.pdf | Inputs: utility portal<br>Used in: Phase 7 |
-| 7-W02 | Utility load letter + single-line | Priya Shah, PE (EOR)<br>Letter + PDF<br>Date: 2026-02-21 (v1.0) | phases/P6/Outputs/P6.1_UtilityLoadLetter_SingleLine_2026-02-21.pdf | Inputs: Phase 3 + Phase 3 + service info (+ stamped set if required)<br>Used in: Phase 7, Phase 7 |
-| 7-W03 | Utility application forms (completed) | Jordan Lee (PM)<br>Portal form + PDF export<br>Date: 2026-02-21 (v1.0) | phases/P6/Outputs/P6.2_UtilityApplicationForms_Completed_2026-02-21.pdf | Inputs: 7-W01 + project technical metadata<br>Used in: Phase 7 |
-| 7-W04 | Utility submission receipt | Jordan Lee (PM)<br>Portal download + screenshot PDF<br>Date: 2026-02-21 (v1.0) | phases/P6/Outputs/P6.SubmissionReceipt_Utility_2026-02-21.pdf | Inputs: portal submission<br>Used in: Phase 7 closeout |
-| 7-W05 | Utility correspondence log | Jordan Lee (PM)<br>Spreadsheet<br>Date: 2026-02-24 (v1.0) | phases/P6/Outputs/P6.CorrespondenceLog_2026-02-24.xlsx | Inputs: utility comms<br>Used in: Phase 7 closeout |
-| 7-W06 | Utility deficiency / additional info required | Utility<br>Portal message + PDF<br>Date: 2026-02-25 (v1.0) | phases/P6/Inputs/P6.Utility_DeficiencyNotice_2026-02-25.pdf | Inputs: utility review of initial submission<br>Used in: Phase 7 |
-| 7-W07 | Utility rework package | Priya Shah, PE  + Jordan Lee (PM)<br>PDF compilation<br>Date: 2026-02-27 (v1.0) | phases/P6/Outputs/P6.3_Utility_ReworkPackage_2026-02-27.pdf | Inputs: 7-W06 + evidence from Phases 2, 3, and 4 + EMS brief<br>Used in: Phase 7 |
-| 7-W08 | Utility resubmission receipt | Jordan Lee (PM)<br>Portal download + screenshot PDF<br>Date: 2026-02-27 (v1.0) | phases/P6/Outputs/P6.ResubmissionReceipt_Utility_2026-02-27.pdf | Inputs: portal resubmission<br>Used in: Phase 7 closeout |
-| 7-W09 | Utility approval / acknowledgment (final) | Utility<br>Email/portal letter<br>Date: 2026-03-03 (v1.0) | phases/P6/Outputs/P6.Utility_Approval_Acknowledgment_2026-03-03.pdf | Inputs: utility review<br>Used in: Phase 7 closeout |
+| 7-W01 | Utility requirements capture | Jordan Lee (PM)<br>Utility portal capture + PDF<br>Date: 2026-02-20 (v1.0) | [`phases/P6/Inputs/P6.UtilityRequirements_Capture_2026-02-20.pdf`](https://rc979.github.io/EEIntake/phases/P6/Inputs/P6.UtilityRequirements_Capture_2026-02-20.pdf) | Inputs: utility portal<br>Used in: Phase 7 |
+| 7-W02 | Utility load letter + single-line | Priya Shah, PE (EOR)<br>Letter + PDF<br>Date: 2026-02-21 (v1.0) | [`phases/P6/Outputs/P6.1_UtilityLoadLetter_SingleLine_2026-02-21.pdf`](https://rc979.github.io/EEIntake/phases/P6/Outputs/P6.1_UtilityLoadLetter_SingleLine_2026-02-21.pdf) | Inputs: Phase 3 + Phase 3 + service info (+ stamped set if required)<br>Used in: Phase 7, Phase 7 |
+| 7-W03 | Utility application forms (completed) | Jordan Lee (PM)<br>Portal form + PDF export<br>Date: 2026-02-21 (v1.0) | [`phases/P6/Outputs/P6.2_UtilityApplicationForms_Completed_2026-02-21.pdf`](https://rc979.github.io/EEIntake/phases/P6/Outputs/P6.2_UtilityApplicationForms_Completed_2026-02-21.pdf) | Inputs: 7-W01 + project technical metadata<br>Used in: Phase 7 |
+| 7-W04 | Utility submission receipt | Jordan Lee (PM)<br>Portal download + screenshot PDF<br>Date: 2026-02-21 (v1.0) | [`phases/P6/Outputs/P6.SubmissionReceipt_Utility_2026-02-21.pdf`](https://rc979.github.io/EEIntake/phases/P6/Outputs/P6.SubmissionReceipt_Utility_2026-02-21.pdf) | Inputs: portal submission<br>Used in: Phase 7 closeout |
+| 7-W05 | Utility correspondence log | Jordan Lee (PM)<br>Spreadsheet<br>Date: 2026-02-24 (v1.0) | [`phases/P6/Outputs/P6.CorrespondenceLog_2026-02-24.xlsx`](https://rc979.github.io/EEIntake/phases/P6/Outputs/P6.CorrespondenceLog_2026-02-24.xlsx) | Inputs: utility comms<br>Used in: Phase 7 closeout |
+| 7-W06 | Utility deficiency / additional info required | Utility<br>Portal message + PDF<br>Date: 2026-02-25 (v1.0) | [`phases/P6/Inputs/P6.Utility_DeficiencyNotice_2026-02-25.pdf`](https://rc979.github.io/EEIntake/phases/P6/Inputs/P6.Utility_DeficiencyNotice_2026-02-25.pdf) | Inputs: utility review of initial submission<br>Used in: Phase 7 |
+| 7-W07 | Utility rework package | Priya Shah, PE  + Jordan Lee (PM)<br>PDF compilation<br>Date: 2026-02-27 (v1.0) | [`phases/P6/Outputs/P6.3_Utility_ReworkPackage_2026-02-27.pdf`](https://rc979.github.io/EEIntake/phases/P6/Outputs/P6.3_Utility_ReworkPackage_2026-02-27.pdf) | Inputs: 7-W06 + evidence from Phases 2, 3, and 4 + EMS brief<br>Used in: Phase 7 |
+| 7-W08 | Utility resubmission receipt | Jordan Lee (PM)<br>Portal download + screenshot PDF<br>Date: 2026-02-27 (v1.0) | [`phases/P6/Outputs/P6.ResubmissionReceipt_Utility_2026-02-27.pdf`](https://rc979.github.io/EEIntake/phases/P6/Outputs/P6.ResubmissionReceipt_Utility_2026-02-27.pdf) | Inputs: portal resubmission<br>Used in: Phase 7 closeout |
+| 7-W09 | Utility approval / acknowledgment (final) | Utility<br>Email/portal letter<br>Date: 2026-03-03 (v1.0) | [`phases/P6/Outputs/P6.Utility_Approval_Acknowledgment_2026-03-03.pdf`](https://rc979.github.io/EEIntake/phases/P6/Outputs/P6.Utility_Approval_Acknowledgment_2026-03-03.pdf) | Inputs: utility review<br>Used in: Phase 7 closeout |
 
 ### 7.4 Key Excerpts (Electrical-Only)
 
@@ -1260,15 +1260,15 @@ Phase 7 is considered complete when:
 
 Phase 7 is considered **complete** and closed out because the utility coordination cycle is fully evidenced end-to-end:
 
-- **Utility requirements captured**: `phases/P6/Inputs/P6.UtilityRequirements_Capture_2026-02-20.pdf`
-- **Load letter + one-line issued**: `phases/P6/Outputs/P6.1_UtilityLoadLetter_SingleLine_2026-02-21.pdf`
-- **Utility application forms archived**: `phases/P6/Outputs/P6.2_UtilityApplicationForms_Completed_2026-02-21.pdf`
-- **Submission receipt archived**: `phases/P6/Outputs/P6.SubmissionReceipt_Utility_2026-02-21.pdf`
-- **Correspondence log archived**: `phases/P6/Outputs/P6.CorrespondenceLog_2026-02-24.xlsx`
-- **Deficiency notice archived**: `phases/P6/Inputs/P6.Utility_DeficiencyNotice_2026-02-25.pdf`
-- **Rework package archived**: `phases/P6/Outputs/P6.3_Utility_ReworkPackage_2026-02-27.pdf`
-- **Resubmission receipt archived**: `phases/P6/Outputs/P6.ResubmissionReceipt_Utility_2026-02-27.pdf`
-- **Final utility acknowledgment archived**: `phases/P6/Outputs/P6.Utility_Approval_Acknowledgment_2026-03-03.pdf`
+- **Utility requirements captured**: [`phases/P6/Inputs/P6.UtilityRequirements_Capture_2026-02-20.pdf`](https://rc979.github.io/EEIntake/phases/P6/Inputs/P6.UtilityRequirements_Capture_2026-02-20.pdf)
+- **Load letter + one-line issued**: [`phases/P6/Outputs/P6.1_UtilityLoadLetter_SingleLine_2026-02-21.pdf`](https://rc979.github.io/EEIntake/phases/P6/Outputs/P6.1_UtilityLoadLetter_SingleLine_2026-02-21.pdf)
+- **Utility application forms archived**: [`phases/P6/Outputs/P6.2_UtilityApplicationForms_Completed_2026-02-21.pdf`](https://rc979.github.io/EEIntake/phases/P6/Outputs/P6.2_UtilityApplicationForms_Completed_2026-02-21.pdf)
+- **Submission receipt archived**: [`phases/P6/Outputs/P6.SubmissionReceipt_Utility_2026-02-21.pdf`](https://rc979.github.io/EEIntake/phases/P6/Outputs/P6.SubmissionReceipt_Utility_2026-02-21.pdf)
+- **Correspondence log archived**: [`phases/P6/Outputs/P6.CorrespondenceLog_2026-02-24.xlsx`](https://rc979.github.io/EEIntake/phases/P6/Outputs/P6.CorrespondenceLog_2026-02-24.xlsx)
+- **Deficiency notice archived**: [`phases/P6/Inputs/P6.Utility_DeficiencyNotice_2026-02-25.pdf`](https://rc979.github.io/EEIntake/phases/P6/Inputs/P6.Utility_DeficiencyNotice_2026-02-25.pdf)
+- **Rework package archived**: [`phases/P6/Outputs/P6.3_Utility_ReworkPackage_2026-02-27.pdf`](https://rc979.github.io/EEIntake/phases/P6/Outputs/P6.3_Utility_ReworkPackage_2026-02-27.pdf)
+- **Resubmission receipt archived**: [`phases/P6/Outputs/P6.ResubmissionReceipt_Utility_2026-02-27.pdf`](https://rc979.github.io/EEIntake/phases/P6/Outputs/P6.ResubmissionReceipt_Utility_2026-02-27.pdf)
+- **Final utility acknowledgment archived**: [`phases/P6/Outputs/P6.Utility_Approval_Acknowledgment_2026-03-03.pdf`](https://rc979.github.io/EEIntake/phases/P6/Outputs/P6.Utility_Approval_Acknowledgment_2026-03-03.pdf)
 
 
 <a id="phase-8"></a>
@@ -1290,12 +1290,12 @@ Phase 8 captures electrical closeout documentation. It intentionally excludes:
 
 | Item ID | Work product | Provenance (who / how / when) | Evidence reference ID(s) | Inputs + downstream use |
 |:---- |:---- |:---- |:---- |:---- |
-| 8-W01 | Field redlines (electrical) | Luis Romero (Electrician) + Mia Chen (Installer PM)<br>Markups + photo references<br>Date: 2026-03-18 (v1.0) | phases/P7/Inputs/P7.FieldRedlines_Electrical_2026-03-18.pdf | Inputs: field observations + installed labels<br>Used in: Phase 8 |
-| 8-W02 | As-built electrical drawing set | Sam Ortega (CAD Tech, ) + Priya Shah, PE <br>CAD update + PDF export<br>Date: 2026-03-22 (As-Built v1) | phases/P7/Outputs/P7.1_AsBuilt_ElectricalPermitSet_2026-03-22.pdf | Inputs: Phase 6 revised stamped set + 8-W01 + inspection notes<br>Used in: Phase 8 |
-| 8-W03 | AHJ final inspection / permit finaled confirmation | AHJ<br>Portal download<br>Date: 2026-03-26 (v1.0) | phases/P7/Outputs/P7.AHJ_FinalInspection_PermitFinaled_2026-03-26.pdf | Inputs: AHJ portal<br>Used in: Phase 8 |
-| 8-W04 | Inspector notes / correction notice (if any) | AHJ<br>Field note + portal upload<br>Date: 2026-03-24 (v1.0) | phases/P7/Inputs/P7.AHJ_InspectorNotes_2026-03-24.pdf | Inputs: field inspection<br>Used in: Phase 8, Phase 8 |
-| 8-W05 | Inspection support Q&A log | Priya Shah, PE  + Jordan Lee (PM)<br>Spreadsheet<br>Date: 2026-03-26 (v1.0) | phases/P7/Outputs/P7.2_InspectionSupport_Log_2026-03-26.xlsx | Inputs: AHJ questions + responses<br>Used in: Phase 8 |
-| 8-W06 | EMS configuration summary (as-installed) | Mia Chen (Installer PM)<br>Vendor export + PDF<br>Date: 2026-03-21 (v1.0) | phases/P7/Outputs/P7.EMS_ConfigSummary_AsInstalled_2026-03-21.pdf | Inputs: EMS system<br>Used in: Phase 8, Phase 8 |
+| 8-W01 | Field redlines (electrical) | Luis Romero (Electrician) + Mia Chen (Installer PM)<br>Markups + photo references<br>Date: 2026-03-18 (v1.0) | [`phases/P7/Inputs/P7.FieldRedlines_Electrical_2026-03-18.pdf`](https://rc979.github.io/EEIntake/phases/P7/Inputs/P7.FieldRedlines_Electrical_2026-03-18.pdf) | Inputs: field observations + installed labels<br>Used in: Phase 8 |
+| 8-W02 | As-built electrical drawing set | Sam Ortega (CAD Tech, ) + Priya Shah, PE <br>CAD update + PDF export<br>Date: 2026-03-22 (As-Built v1) | [`phases/P7/Outputs/P7.1_AsBuilt_ElectricalPermitSet_2026-03-22.pdf`](https://rc979.github.io/EEIntake/phases/P7/Outputs/P7.1_AsBuilt_ElectricalPermitSet_2026-03-22.pdf) | Inputs: Phase 6 revised stamped set + 8-W01 + inspection notes<br>Used in: Phase 8 |
+| 8-W03 | AHJ final inspection / permit finaled confirmation | AHJ<br>Portal download<br>Date: 2026-03-26 (v1.0) | [`phases/P7/Outputs/P7.AHJ_FinalInspection_PermitFinaled_2026-03-26.pdf`](https://rc979.github.io/EEIntake/phases/P7/Outputs/P7.AHJ_FinalInspection_PermitFinaled_2026-03-26.pdf) | Inputs: AHJ portal<br>Used in: Phase 8 |
+| 8-W04 | Inspector notes / correction notice (if any) | AHJ<br>Field note + portal upload<br>Date: 2026-03-24 (v1.0) | [`phases/P7/Inputs/P7.AHJ_InspectorNotes_2026-03-24.pdf`](https://rc979.github.io/EEIntake/phases/P7/Inputs/P7.AHJ_InspectorNotes_2026-03-24.pdf) | Inputs: field inspection<br>Used in: Phase 8, Phase 8 |
+| 8-W05 | Inspection support Q&A log | Priya Shah, PE  + Jordan Lee (PM)<br>Spreadsheet<br>Date: 2026-03-26 (v1.0) | [`phases/P7/Outputs/P7.2_InspectionSupport_Log_2026-03-26.xlsx`](https://rc979.github.io/EEIntake/phases/P7/Outputs/P7.2_InspectionSupport_Log_2026-03-26.xlsx) | Inputs: AHJ questions + responses<br>Used in: Phase 8 |
+| 8-W06 | EMS configuration summary (as-installed) | Mia Chen (Installer PM)<br>Vendor export + PDF<br>Date: 2026-03-21 (v1.0) | [`phases/P7/Outputs/P7.EMS_ConfigSummary_AsInstalled_2026-03-21.pdf`](https://rc979.github.io/EEIntake/phases/P7/Outputs/P7.EMS_ConfigSummary_AsInstalled_2026-03-21.pdf) | Inputs: EMS system<br>Used in: Phase 8, Phase 8 |
 
 ### 8.4 Key Excerpts (Electrical-Only)
 
@@ -1384,12 +1384,12 @@ Phase 8 is considered complete when:
 
 Phase 8 is considered **complete** and the overall electrical project is **closed out** because final inspection/permit close evidence and as-built records are archived:
 
-- **Field redlines archived**: `phases/P7/Inputs/P7.FieldRedlines_Electrical_2026-03-18.pdf`
-- **EMS as-installed configuration summary archived**: `phases/P7/Outputs/P7.EMS_ConfigSummary_AsInstalled_2026-03-21.pdf`
-- **As-built electrical record set issued**: `phases/P7/Outputs/P7.1_AsBuilt_ElectricalPermitSet_2026-03-22.pdf`
-- **Inspector notes archived (if any)**: `phases/P7/Inputs/P7.AHJ_InspectorNotes_2026-03-24.pdf`
-- **Inspection support log archived**: `phases/P7/Outputs/P7.2_InspectionSupport_Log_2026-03-26.xlsx`
-- **AHJ final/permit finaled confirmation archived**: `phases/P7/Outputs/P7.AHJ_FinalInspection_PermitFinaled_2026-03-26.pdf`
+- **Field redlines archived**: [`phases/P7/Inputs/P7.FieldRedlines_Electrical_2026-03-18.pdf`](https://rc979.github.io/EEIntake/phases/P7/Inputs/P7.FieldRedlines_Electrical_2026-03-18.pdf)
+- **EMS as-installed configuration summary archived**: [`phases/P7/Outputs/P7.EMS_ConfigSummary_AsInstalled_2026-03-21.pdf`](https://rc979.github.io/EEIntake/phases/P7/Outputs/P7.EMS_ConfigSummary_AsInstalled_2026-03-21.pdf)
+- **As-built electrical record set issued**: [`phases/P7/Outputs/P7.1_AsBuilt_ElectricalPermitSet_2026-03-22.pdf`](https://rc979.github.io/EEIntake/phases/P7/Outputs/P7.1_AsBuilt_ElectricalPermitSet_2026-03-22.pdf)
+- **Inspector notes archived (if any)**: [`phases/P7/Inputs/P7.AHJ_InspectorNotes_2026-03-24.pdf`](https://rc979.github.io/EEIntake/phases/P7/Inputs/P7.AHJ_InspectorNotes_2026-03-24.pdf)
+- **Inspection support log archived**: [`phases/P7/Outputs/P7.2_InspectionSupport_Log_2026-03-26.xlsx`](https://rc979.github.io/EEIntake/phases/P7/Outputs/P7.2_InspectionSupport_Log_2026-03-26.xlsx)
+- **AHJ final/permit finaled confirmation archived**: [`phases/P7/Outputs/P7.AHJ_FinalInspection_PermitFinaled_2026-03-26.pdf`](https://rc979.github.io/EEIntake/phases/P7/Outputs/P7.AHJ_FinalInspection_PermitFinaled_2026-03-26.pdf)
 
 
 <a id="addendum-a"></a>
@@ -1401,106 +1401,106 @@ This addendum is a consolidated index of all **stable evidence pointers** refere
 ### 12.1 Phase 1 — Project Initiation and Feasibility
 
 - **P0 inputs**
-  - phases/P0/Inputs/P0-I01_Utility_Bills_2025-01_to_2025-12.pdf
-  - phases/P0/Inputs/P0-I01_GreenButton_IntervalData_2025.csv
-  - phases/P0/Inputs/P0-I02_MDP_Nameplate_Photos.zip
-  - phases/P0/Inputs/P0-I02_Utility_Service_Info_Letter.pdf
-  - phases/P0/Inputs/P0-I03_ElectriCharge_L2-7.6-G_CutSheet_revA.pdf
-  - phases/P0/Inputs/P0-I04_PhotoSet_ExistingGear_and_GarageArea.zip
-  - phases/P0/Inputs/P0-I04_PhotoIndex_Annotated.pdf
+  - [`phases/P0/Inputs/P0-I01_Utility_Bills_2025-01_to_2025-12.pdf`](https://rc979.github.io/EEIntake/phases/P0/Inputs/P0-I01_Utility_Bills_2025-01_to_2025-12.pdf)
+  - [`phases/P0/Inputs/P0-I01_GreenButton_IntervalData_2025.csv`](https://rc979.github.io/EEIntake/phases/P0/Inputs/P0-I01_GreenButton_IntervalData_2025.csv)
+  - [`phases/P0/Inputs/P0-I02_MDP_Nameplate_Photos.zip`](https://rc979.github.io/EEIntake/galleries/p0-i02_mdp_nameplate_photos/index.html)
+  - [`phases/P0/Inputs/P0-I02_Utility_Service_Info_Letter.pdf`](https://rc979.github.io/EEIntake/phases/P0/Inputs/P0-I02_Utility_Service_Info_Letter.pdf)
+  - [`phases/P0/Inputs/P0-I03_ElectriCharge_L2-7.6-G_CutSheet_revA.pdf`](https://rc979.github.io/EEIntake/phases/P0/Inputs/P0-I03_ElectriCharge_L2-7.6-G_CutSheet_revA.pdf)
+  - [`phases/P0/Inputs/P0-I04_PhotoSet_ExistingGear_and_GarageArea.zip`](https://rc979.github.io/EEIntake/galleries/p0-i04_photoset_existinggear_and_garagearea/index.html)
+  - [`phases/P0/Inputs/P0-I04_PhotoIndex_Annotated.pdf`](https://rc979.github.io/EEIntake/phases/P0/Inputs/P0-I04_PhotoIndex_Annotated.pdf)
 
 ### 12.2 Phase 2 — Data Collection and Site Analysis
 
 - **P1 inputs**
-  - phases/P1/Inputs/P1-I01_SitePlans_Arch_Set_rev2_2026-01-15.pdf
-  - phases/P1/Inputs/P1-I02_PanelSchedules_MDP_and_Subpanels_2026-01-16.pdf
-  - phases/P1/Inputs/P1-I03_PhotoSet_ServiceGear_Nameplates_2026-01-16.zip
-  - phases/P1/Inputs/P1-I03_PhotoIndex_Annotated_2026-01-16.pdf
-  - phases/P1/Inputs/P1-I04_EVSE_CutSheet_ElectriCharge_L2-7.6-G_revA.pdf
-  - phases/P1/Inputs/P1-I05_AHJ_Electrical_Permitting_CodeBasis_2026-01-17.pdf
+  - [`phases/P1/Inputs/P1-I01_SitePlans_Arch_Set_rev2_2026-01-15.pdf`](https://rc979.github.io/EEIntake/phases/P1/Inputs/P1-I01_SitePlans_Arch_Set_rev2_2026-01-15.pdf)
+  - [`phases/P1/Inputs/P1-I02_PanelSchedules_MDP_and_Subpanels_2026-01-16.pdf`](https://rc979.github.io/EEIntake/phases/P1/Inputs/P1-I02_PanelSchedules_MDP_and_Subpanels_2026-01-16.pdf)
+  - [`phases/P1/Inputs/P1-I03_PhotoSet_ServiceGear_Nameplates_2026-01-16.zip`](https://rc979.github.io/EEIntake/galleries/p1-i03_photoset_servicegear_nameplates_2026-01-16/index.html)
+  - [`phases/P1/Inputs/P1-I03_PhotoIndex_Annotated_2026-01-16.pdf`](https://rc979.github.io/EEIntake/phases/P1/Inputs/P1-I03_PhotoIndex_Annotated_2026-01-16.pdf)
+  - [`phases/P1/Inputs/P1-I04_EVSE_CutSheet_ElectriCharge_L2-7.6-G_revA.pdf`](https://rc979.github.io/EEIntake/phases/P1/Inputs/P1-I04_EVSE_CutSheet_ElectriCharge_L2-7.6-G_revA.pdf)
+  - [`phases/P1/Inputs/P1-I05_AHJ_Electrical_Permitting_CodeBasis_2026-01-17.pdf`](https://rc979.github.io/EEIntake/phases/P1/Inputs/P1-I05_AHJ_Electrical_Permitting_CodeBasis_2026-01-17.pdf)
 
 - **P1 normalized outputs (Phase 2)**
-  - phases/P1/Outputs/P1.2_SitePlans_ElectricalContext_Excerpts_2026-01-18.pdf
-  - phases/P1/Outputs/P1.2_PanelSchedules_Normalized_MDP_Subpanels_2026-01-18.pdf
-  - phases/P1/Outputs/P1.2_Photos_Annotated_Index_2026-01-18.pdf
-  - phases/P1/Outputs/P1.2_EVSE_CutSheet_FrozenForDesign_revA_2026-01-18.pdf
-  - phases/P1/Outputs/P1.2_AHJ_CodeBasis_Normalized_2026-01-18.pdf
+  - [`phases/P1/Outputs/P1.2_SitePlans_ElectricalContext_Excerpts_2026-01-18.pdf`](https://rc979.github.io/EEIntake/phases/P1/Outputs/P1.2_SitePlans_ElectricalContext_Excerpts_2026-01-18.pdf)
+  - [`phases/P1/Outputs/P1.2_PanelSchedules_Normalized_MDP_Subpanels_2026-01-18.pdf`](https://rc979.github.io/EEIntake/phases/P1/Outputs/P1.2_PanelSchedules_Normalized_MDP_Subpanels_2026-01-18.pdf)
+  - [`phases/P1/Outputs/P1.2_Photos_Annotated_Index_2026-01-18.pdf`](https://rc979.github.io/EEIntake/phases/P1/Outputs/P1.2_Photos_Annotated_Index_2026-01-18.pdf)
+  - [`phases/P1/Outputs/P1.2_EVSE_CutSheet_FrozenForDesign_revA_2026-01-18.pdf`](https://rc979.github.io/EEIntake/phases/P1/Outputs/P1.2_EVSE_CutSheet_FrozenForDesign_revA_2026-01-18.pdf)
+  - [`phases/P1/Outputs/P1.2_AHJ_CodeBasis_Normalized_2026-01-18.pdf`](https://rc979.github.io/EEIntake/phases/P1/Outputs/P1.2_AHJ_CodeBasis_Normalized_2026-01-18.pdf)
 
 ### 12.3 Phase 3 — System Design and Load Calculation
 
 - **P2 engineering work products**
-  - phases/P2/Outputs/P2.1_LoadCalc_Workbook_2026-01-22.xlsx
-  - phases/P2/Outputs/P2.1_LoadCalc_Summary_2026-01-22.pdf
-  - phases/P2/Outputs/P2.1_LoadCalc_CheckMemo_2026-01-22.pdf
-  - phases/P2/Outputs/P2.2_Architecture_Decision_Record_2026-01-22.pdf
-  - phases/P2/Inputs/P2-W04_EMS_TechnicalBrief_revB_2026-01-21.pdf
+  - [`phases/P2/Outputs/P2.1_LoadCalc_Workbook_2026-01-22.xlsx`](https://rc979.github.io/EEIntake/phases/P2/Outputs/P2.1_LoadCalc_Workbook_2026-01-22.xlsx)
+  - [`phases/P2/Outputs/P2.1_LoadCalc_Summary_2026-01-22.pdf`](https://rc979.github.io/EEIntake/phases/P2/Outputs/P2.1_LoadCalc_Summary_2026-01-22.pdf)
+  - [`phases/P2/Outputs/P2.1_LoadCalc_CheckMemo_2026-01-22.pdf`](https://rc979.github.io/EEIntake/phases/P2/Outputs/P2.1_LoadCalc_CheckMemo_2026-01-22.pdf)
+  - [`phases/P2/Outputs/P2.2_Architecture_Decision_Record_2026-01-22.pdf`](https://rc979.github.io/EEIntake/phases/P2/Outputs/P2.2_Architecture_Decision_Record_2026-01-22.pdf)
+  - [`phases/P2/Inputs/P2-W04_EMS_TechnicalBrief_revB_2026-01-21.pdf`](https://rc979.github.io/EEIntake/phases/P2/Inputs/P2-W04_EMS_TechnicalBrief_revB_2026-01-21.pdf)
 
 ### 12.4 Phase 4 — Preliminary Drawing Set Production
 
 - **P3 inputs**
-  - phases/P3/Inputs/P3-PARK_ParkingLayout_OwnerProvided_2026-01-20.pdf
-  - phases/P3/Inputs/P3-I03_RoutingAssumptions_InstallerMemo_2026-01-20.pdf
+  - [`phases/P3/Inputs/P3-PARK_ParkingLayout_OwnerProvided_2026-01-20.pdf`](https://rc979.github.io/EEIntake/phases/P3/Inputs/P3-PARK_ParkingLayout_OwnerProvided_2026-01-20.pdf)
+  - [`phases/P3/Inputs/P3-I03_RoutingAssumptions_InstallerMemo_2026-01-20.pdf`](https://rc979.github.io/EEIntake/phases/P3/Inputs/P3-I03_RoutingAssumptions_InstallerMemo_2026-01-20.pdf)
 
 - **P3 drawing work products**
-  - phases/P3/Outputs/P3.1_OneLine_Prelim_Unstamped_2026-01-26.pdf
-  - phases/P3/Outputs/P3.2_SitePlan_EVSE_Locations_Prelim_2026-01-26.pdf
-  - phases/P3/Outputs/P3.3_Conduit_Trenching_Details_ElectricalImpacting_2026-01-26.pdf
-  - phases/P3/Outputs/P3.4_PanelSchedules_Updated_MDP_and_EVSP_2026-01-26.pdf
-  - phases/P3/Outputs/P3.5_ElectricalNotes_CodeSheets_2026-01-26.pdf
-  - phases/P3/Outputs/P3.6_PermitSet_Unstamped_2026-01-26.pdf
+  - [`phases/P3/Outputs/P3.1_OneLine_Prelim_Unstamped_2026-01-26.pdf`](https://rc979.github.io/EEIntake/phases/P3/Outputs/P3.1_OneLine_Prelim_Unstamped_2026-01-26.pdf)
+  - [`phases/P3/Outputs/P3.2_SitePlan_EVSE_Locations_Prelim_2026-01-26.pdf`](https://rc979.github.io/EEIntake/phases/P3/Outputs/P3.2_SitePlan_EVSE_Locations_Prelim_2026-01-26.pdf)
+  - [`phases/P3/Outputs/P3.3_Conduit_Trenching_Details_ElectricalImpacting_2026-01-26.pdf`](https://rc979.github.io/EEIntake/phases/P3/Outputs/P3.3_Conduit_Trenching_Details_ElectricalImpacting_2026-01-26.pdf)
+  - [`phases/P3/Outputs/P3.4_PanelSchedules_Updated_MDP_and_EVSP_2026-01-26.pdf`](https://rc979.github.io/EEIntake/phases/P3/Outputs/P3.4_PanelSchedules_Updated_MDP_and_EVSP_2026-01-26.pdf)
+  - [`phases/P3/Outputs/P3.5_ElectricalNotes_CodeSheets_2026-01-26.pdf`](https://rc979.github.io/EEIntake/phases/P3/Outputs/P3.5_ElectricalNotes_CodeSheets_2026-01-26.pdf)
+  - [`phases/P3/Outputs/P3.6_PermitSet_Unstamped_2026-01-26.pdf`](https://rc979.github.io/EEIntake/phases/P3/Outputs/P3.6_PermitSet_Unstamped_2026-01-26.pdf)
 
 ### 12.5 Phase 5 — Permitting Submission (AHJ)
 
 - **P4 inputs**
-  - phases/P4/Inputs/P4-EOR_ReviewNotes_2026-01-28.pdf
+  - [`phases/P4/Inputs/P4-EOR_ReviewNotes_2026-01-28.pdf`](https://rc979.github.io/EEIntake/phases/P4/Inputs/P4-EOR_ReviewNotes_2026-01-28.pdf)
 
 - **P4 submission outputs**
-  - phases/P4/Outputs/P4.1_PermitSet_Stamped_2026-01-29.pdf
-  - phases/P4/Outputs/P4.2_AHJ_ApplicationForms_2026-01-29.pdf
-  - phases/P4/Outputs/P4.2_PermitApplication_Package_Compiled_2026-01-29.pdf
-  - phases/P4/Outputs/P4.SupportingAttachments_Electrical_2026-01-29.pdf
-  - phases/P4/Outputs/P4.SubmissionReceipt_AHJ_Confirmation_2026-01-29.pdf
-  - phases/P4/Outputs/P4.PermitTrackingLog_2026-01-29.xlsx
+  - [`phases/P4/Outputs/P4.1_PermitSet_Stamped_2026-01-29.pdf`](https://rc979.github.io/EEIntake/phases/P4/Outputs/P4.1_PermitSet_Stamped_2026-01-29.pdf)
+  - [`phases/P4/Outputs/P4.2_AHJ_ApplicationForms_2026-01-29.pdf`](https://rc979.github.io/EEIntake/phases/P4/Outputs/P4.2_AHJ_ApplicationForms_2026-01-29.pdf)
+  - [`phases/P4/Outputs/P4.2_PermitApplication_Package_Compiled_2026-01-29.pdf`](https://rc979.github.io/EEIntake/phases/P4/Outputs/P4.2_PermitApplication_Package_Compiled_2026-01-29.pdf)
+  - [`phases/P4/Outputs/P4.SupportingAttachments_Electrical_2026-01-29.pdf`](https://rc979.github.io/EEIntake/phases/P4/Outputs/P4.SupportingAttachments_Electrical_2026-01-29.pdf)
+  - [`phases/P4/Outputs/P4.SubmissionReceipt_AHJ_Confirmation_2026-01-29.pdf`](https://rc979.github.io/EEIntake/phases/P4/Outputs/P4.SubmissionReceipt_AHJ_Confirmation_2026-01-29.pdf)
+  - [`phases/P4/Outputs/P4.PermitTrackingLog_2026-01-29.xlsx`](https://rc979.github.io/EEIntake/phases/P4/Outputs/P4.PermitTrackingLog_2026-01-29.xlsx)
 
 ### 12.6 Phase 6 — Authority Review and Drawing Revision (AHJ)
 
 - **P5 inputs**
-  - phases/P5/Inputs/P5-AHJ_PlanCheckComments_Raw_2026-02-06.pdf
+  - [`phases/P5/Inputs/P5-AHJ_PlanCheckComments_Raw_2026-02-06.pdf`](https://rc979.github.io/EEIntake/phases/P5/Inputs/P5-AHJ_PlanCheckComments_Raw_2026-02-06.pdf)
 
 - **P5 review/revision outputs**
-  - phases/P5/Outputs/P5.1_AHJ_CommentLog_Parsed_2026-02-06.xlsx
-  - phases/P5/Outputs/P5.Redlines_InternalReview_2026-02-10.pdf
-  - phases/P5/Outputs/P5.2_PermitSet_Revised_Stamped_Rev1_2026-02-12.pdf
-  - phases/P5/Outputs/P5.3_CommentResponseLetter_Rev1_2026-02-12.pdf
-  - phases/P5/Outputs/P5.ResubmissionReceipt_AHJ_2026-02-12.pdf
-  - phases/P5/Outputs/P5.4_AHJ_Approval_Notice_2026-02-19.pdf
+  - [`phases/P5/Outputs/P5.1_AHJ_CommentLog_Parsed_2026-02-06.xlsx`](https://rc979.github.io/EEIntake/phases/P5/Outputs/P5.1_AHJ_CommentLog_Parsed_2026-02-06.xlsx)
+  - [`phases/P5/Outputs/P5.Redlines_InternalReview_2026-02-10.pdf`](https://rc979.github.io/EEIntake/phases/P5/Outputs/P5.Redlines_InternalReview_2026-02-10.pdf)
+  - [`phases/P5/Outputs/P5.2_PermitSet_Revised_Stamped_Rev1_2026-02-12.pdf`](https://rc979.github.io/EEIntake/phases/P5/Outputs/P5.2_PermitSet_Revised_Stamped_Rev1_2026-02-12.pdf)
+  - [`phases/P5/Outputs/P5.3_CommentResponseLetter_Rev1_2026-02-12.pdf`](https://rc979.github.io/EEIntake/phases/P5/Outputs/P5.3_CommentResponseLetter_Rev1_2026-02-12.pdf)
+  - [`phases/P5/Outputs/P5.ResubmissionReceipt_AHJ_2026-02-12.pdf`](https://rc979.github.io/EEIntake/phases/P5/Outputs/P5.ResubmissionReceipt_AHJ_2026-02-12.pdf)
+  - [`phases/P5/Outputs/P5.4_AHJ_Approval_Notice_2026-02-19.pdf`](https://rc979.github.io/EEIntake/phases/P5/Outputs/P5.4_AHJ_Approval_Notice_2026-02-19.pdf)
 
 ### 12.7 Phase 7 — Utility Coordination
 
 - **P6 inputs**
-  - phases/P6/Inputs/P6.UtilityRequirements_Capture_2026-02-20.pdf
-  - phases/P6/Inputs/P6.Utility_DeficiencyNotice_2026-02-25.pdf
+  - [`phases/P6/Inputs/P6.UtilityRequirements_Capture_2026-02-20.pdf`](https://rc979.github.io/EEIntake/phases/P6/Inputs/P6.UtilityRequirements_Capture_2026-02-20.pdf)
+  - [`phases/P6/Inputs/P6.Utility_DeficiencyNotice_2026-02-25.pdf`](https://rc979.github.io/EEIntake/phases/P6/Inputs/P6.Utility_DeficiencyNotice_2026-02-25.pdf)
 
 - **P6 coordination outputs**
-  - phases/P6/Outputs/P6.1_UtilityLoadLetter_SingleLine_2026-02-21.pdf
-  - phases/P6/Outputs/P6.2_UtilityApplicationForms_Completed_2026-02-21.pdf
-  - phases/P6/Outputs/P6.SubmissionReceipt_Utility_2026-02-21.pdf
-  - phases/P6/Outputs/P6.CorrespondenceLog_2026-02-24.xlsx
-  - phases/P6/Outputs/P6.3_Utility_ReworkPackage_2026-02-27.pdf
-  - phases/P6/Outputs/P6.ResubmissionReceipt_Utility_2026-02-27.pdf
-  - phases/P6/Outputs/P6.Utility_Approval_Acknowledgment_2026-03-03.pdf
+  - [`phases/P6/Outputs/P6.1_UtilityLoadLetter_SingleLine_2026-02-21.pdf`](https://rc979.github.io/EEIntake/phases/P6/Outputs/P6.1_UtilityLoadLetter_SingleLine_2026-02-21.pdf)
+  - [`phases/P6/Outputs/P6.2_UtilityApplicationForms_Completed_2026-02-21.pdf`](https://rc979.github.io/EEIntake/phases/P6/Outputs/P6.2_UtilityApplicationForms_Completed_2026-02-21.pdf)
+  - [`phases/P6/Outputs/P6.SubmissionReceipt_Utility_2026-02-21.pdf`](https://rc979.github.io/EEIntake/phases/P6/Outputs/P6.SubmissionReceipt_Utility_2026-02-21.pdf)
+  - [`phases/P6/Outputs/P6.CorrespondenceLog_2026-02-24.xlsx`](https://rc979.github.io/EEIntake/phases/P6/Outputs/P6.CorrespondenceLog_2026-02-24.xlsx)
+  - [`phases/P6/Outputs/P6.3_Utility_ReworkPackage_2026-02-27.pdf`](https://rc979.github.io/EEIntake/phases/P6/Outputs/P6.3_Utility_ReworkPackage_2026-02-27.pdf)
+  - [`phases/P6/Outputs/P6.ResubmissionReceipt_Utility_2026-02-27.pdf`](https://rc979.github.io/EEIntake/phases/P6/Outputs/P6.ResubmissionReceipt_Utility_2026-02-27.pdf)
+  - [`phases/P6/Outputs/P6.Utility_Approval_Acknowledgment_2026-03-03.pdf`](https://rc979.github.io/EEIntake/phases/P6/Outputs/P6.Utility_Approval_Acknowledgment_2026-03-03.pdf)
 
 ### 12.8 Phase 8 — Electrical Closeout and Handover
 
 - **P7 inputs**
-  - phases/P7/Inputs/P7.FieldRedlines_Electrical_2026-03-18.pdf
-  - phases/P7/Inputs/P7.AHJ_InspectorNotes_2026-03-24.pdf
+  - [`phases/P7/Inputs/P7.FieldRedlines_Electrical_2026-03-18.pdf`](https://rc979.github.io/EEIntake/phases/P7/Inputs/P7.FieldRedlines_Electrical_2026-03-18.pdf)
+  - [`phases/P7/Inputs/P7.AHJ_InspectorNotes_2026-03-24.pdf`](https://rc979.github.io/EEIntake/phases/P7/Inputs/P7.AHJ_InspectorNotes_2026-03-24.pdf)
 
 - **P7 closeout outputs**
-  - phases/P7/Outputs/P7.EMS_ConfigSummary_AsInstalled_2026-03-21.pdf
-  - phases/P7/Outputs/P7.1_AsBuilt_ElectricalPermitSet_2026-03-22.pdf
-  - phases/P7/Outputs/P7.2_InspectionSupport_Log_2026-03-26.xlsx
-  - phases/P7/Outputs/P7.AHJ_FinalInspection_PermitFinaled_2026-03-26.pdf
+  - [`phases/P7/Outputs/P7.EMS_ConfigSummary_AsInstalled_2026-03-21.pdf`](https://rc979.github.io/EEIntake/phases/P7/Outputs/P7.EMS_ConfigSummary_AsInstalled_2026-03-21.pdf)
+  - [`phases/P7/Outputs/P7.1_AsBuilt_ElectricalPermitSet_2026-03-22.pdf`](https://rc979.github.io/EEIntake/phases/P7/Outputs/P7.1_AsBuilt_ElectricalPermitSet_2026-03-22.pdf)
+  - [`phases/P7/Outputs/P7.2_InspectionSupport_Log_2026-03-26.xlsx`](https://rc979.github.io/EEIntake/phases/P7/Outputs/P7.2_InspectionSupport_Log_2026-03-26.xlsx)
+  - [`phases/P7/Outputs/P7.AHJ_FinalInspection_PermitFinaled_2026-03-26.pdf`](https://rc979.github.io/EEIntake/phases/P7/Outputs/P7.AHJ_FinalInspection_PermitFinaled_2026-03-26.pdf)
 
 
 <a id="addendum-b"></a>
