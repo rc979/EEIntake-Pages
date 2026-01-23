@@ -18,6 +18,7 @@ import html
 import json
 import re
 import shutil
+import subprocess
 import zipfile
 from dataclasses import dataclass
 from pathlib import Path
@@ -221,6 +222,7 @@ def _render_site_index(*, artifact_count: int, gallery_count: int) -> str:
     <div>Galleries generated: <strong>{gallery_count}</strong></div>
   </div>
   <ul>
+    <li><a href="outline/index.html">Browse project outline (HTML)</a></li>
     <li><a href="galleries/index.html">Browse galleries</a></li>
     <li><a href="phases/index.html">Browse phases folder</a></li>
   </ul>
@@ -307,6 +309,34 @@ def _write_directory_indexes(*, docs_dir: Path, out_root: Path) -> None:
         _write_text(d / "index.html", _render_dir_index(title=title, rel_root=rel_root, entries=entries))
 
 
+def _build_outline_html(*, repo_root: Path, docs_dir: Path) -> None:
+    """
+    Generate a standalone HTML version of the main Markdown outline under:
+      docs/outline/index.html
+    """
+    src = repo_root / "EV Charging Project Plan Outline.md"
+    out_dir = docs_dir / "outline"
+    out_html = out_dir / "index.html"
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    cmd = [
+        "pandoc",
+        str(src),
+        "--from",
+        "markdown+pipe_tables+table_captions",
+        "--to",
+        "html",
+        "--standalone",
+        "--metadata",
+        "title=EV Charging Project Plan Outline",
+        "--resource-path",
+        ".",
+        "-o",
+        str(out_html),
+    ]
+    subprocess.run(cmd, check=True, cwd=str(repo_root))
+
+
 def build_site(*, phases_dir: Path, docs_dir: Path, clean: bool) -> dict:
     out_phases_dir = docs_dir / "phases"
     galleries_dir = docs_dir / "galleries"
@@ -335,6 +365,9 @@ def build_site(*, phases_dir: Path, docs_dir: Path, clean: bool) -> dict:
 
     # Directory listing indexes for phases artifacts
     _write_directory_indexes(docs_dir=docs_dir, out_root=out_phases_dir)
+
+    # HTML version of the outline (not at site root)
+    _build_outline_html(repo_root=_repo_root(), docs_dir=docs_dir)
 
     _write_text(galleries_dir / "index.html", _render_galleries_index(galleries))
     _write_text(docs_dir / "index.html", _render_site_index(artifact_count=len(artifacts), gallery_count=len(galleries)))
