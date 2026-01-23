@@ -27,6 +27,7 @@ from pathlib import Path
 IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".webp", ".gif"}
 TABULAR_EXTS = {".csv", ".xlsx"}
 SKIP_NAMES = {".DS_Store"}
+ROBOTS_META = '<meta name="robots" content="noindex, nofollow">'
 
 
 def _repo_root() -> Path:
@@ -138,6 +139,7 @@ def _render_gallery_html(*, zip_rel: str, image_names: list[str]) -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {ROBOTS_META}
   <title>{html.escape(title)}</title>
   <style>
     body {{ font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 24px; }}
@@ -178,6 +180,7 @@ def _render_galleries_index(galleries: list[Gallery]) -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {ROBOTS_META}
   <title>Galleries</title>
   <style>
     body {{ font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 24px; }}
@@ -202,6 +205,7 @@ def _render_site_index(*, artifact_count: int, gallery_count: int) -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {ROBOTS_META}
   <title>EE Intake Artifacts</title>
   <style>
     body {{ font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 24px; max-width: 900px; }}
@@ -259,6 +263,7 @@ def _render_dir_index(*, title: str, rel_root: str, entries: list[tuple[str, str
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {ROBOTS_META}
   <title>{html.escape(title)}</title>
   <style>
     body {{ font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 24px; max-width: 1000px; }}
@@ -334,6 +339,7 @@ def _render_csv_viewer_html(filename: str) -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {ROBOTS_META}
   <title>View CSV: {html.escape(filename)}</title>
   <style>
     body {{ font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 20px; }}
@@ -443,6 +449,7 @@ def _render_xlsx_viewer_html(filename: str) -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {ROBOTS_META}
   <title>View XLSX: {html.escape(filename)}</title>
   <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
   <style>
@@ -567,6 +574,9 @@ code { background: #f6f6f6; padding: 1px 4px; border-radius: 4px; }
 """.lstrip(),
     )
 
+    meta_path = out_dir / "meta.html"
+    _write_text(meta_path, ROBOTS_META + "\n")
+
     cmd = [
         "pandoc",
         str(src),
@@ -579,6 +589,8 @@ code { background: #f6f6f6; padding: 1px 4px; border-radius: 4px; }
         "title=EV Charging Project Plan Outline",
         "--css",
         "outline.css",
+        "--include-in-header",
+        "meta.html",
         "--resource-path",
         ".",
         "-o",
@@ -587,6 +599,14 @@ code { background: #f6f6f6; padding: 1px 4px; border-radius: 4px; }
     # Run with cwd set to output dir so the css href is local.
     # Use absolute paths for input/output so this still works.
     subprocess.run(cmd, check=True, cwd=str(out_dir))
+
+
+def _write_robots_txt(docs_dir: Path) -> None:
+    # Disallow all crawling for the entire Pages site.
+    _write_text(
+        docs_dir / "robots.txt",
+        "User-agent: *\nDisallow: /\n",
+    )
 
 
 def build_site(*, phases_dir: Path, docs_dir: Path, clean: bool) -> dict:
@@ -604,6 +624,7 @@ def build_site(*, phases_dir: Path, docs_dir: Path, clean: bool) -> dict:
 
     docs_dir.mkdir(parents=True, exist_ok=True)
     _write_text(docs_dir / ".nojekyll", "")  # disable Jekyll for consistent handling
+    _write_robots_txt(docs_dir)
 
     artifacts = _copy_tree_excluding(phases_dir, out_phases_dir)
 
