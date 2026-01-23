@@ -222,7 +222,7 @@ def _render_site_index(*, artifact_count: int, gallery_count: int) -> str:
   </div>
   <ul>
     <li><a href="galleries/index.html">Browse galleries</a></li>
-    <li><a href="phases/">Browse phases folder</a> (directory listing depends on host; GitHub Pages may not show folder listings)</li>
+    <li><a href="phases/index.html">Browse phases folder</a></li>
   </ul>
   <p>
     Note: This site is generated locally by <code>scripts/publish/publish_pages_site.py</code>.
@@ -232,6 +232,79 @@ def _render_site_index(*, artifact_count: int, gallery_count: int) -> str:
 </body>
 </html>
 """
+
+
+def _render_dir_index(*, title: str, rel_root: str, entries: list[tuple[str, str, bool]]) -> str:
+    """
+    entries: (name, href, is_dir)
+    rel_root: path from this index.html to docs/ root (e.g. "..", "../..", ".")
+    """
+    rows = "\n".join(
+        f'<tr><td class="kind">{"dir" if is_dir else "file"}</td><td><a href="{html.escape(href)}">{html.escape(name)}</a></td></tr>'
+        for name, href, is_dir in entries
+    )
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{html.escape(title)}</title>
+  <style>
+    body {{ font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 24px; max-width: 1000px; }}
+    a {{ color: #0b57d0; text-decoration: none; }}
+    a:hover {{ text-decoration: underline; }}
+    table {{ border-collapse: collapse; width: 100%; }}
+    th, td {{ border-bottom: 1px solid #eee; padding: 8px 6px; text-align: left; vertical-align: top; }}
+    .kind {{ color: #666; width: 60px; }}
+    code {{ background: #f6f6f6; padding: 1px 4px; border-radius: 4px; }}
+  </style>
+</head>
+<body>
+  <p>
+    <a href="{html.escape(rel_root)}/index.html">Home</a>
+  </p>
+  <h1>{html.escape(title)}</h1>
+  <table>
+    <thead>
+      <tr><th class="kind">Type</th><th>Name</th></tr>
+    </thead>
+    <tbody>
+      {rows or '<tr><td colspan="2">(empty)</td></tr>'}
+    </tbody>
+  </table>
+</body>
+</html>
+"""
+
+
+def _write_directory_indexes(*, docs_dir: Path, out_root: Path) -> None:
+    """
+    GitHub Pages does not provide directory listings. Create index.html pages for out_root
+    and every subdirectory so users can browse artifacts.
+    """
+    for d in sorted([out_root] + [p for p in out_root.rglob("*") if p.is_dir()]):
+        # entries relative to current directory
+        entries: list[tuple[str, str, bool]] = []
+
+        # up link (except for root)
+        if d != out_root:
+            entries.append(("..", "../index.html", True))
+
+        children = [p for p in d.iterdir() if p.name not in SKIP_NAMES]
+        # Do not show generated index itself as an entry
+        children = [p for p in children if p.name != "index.html"]
+
+        dirs = sorted([p for p in children if p.is_dir()], key=lambda p: p.name.lower())
+        files = sorted([p for p in children if p.is_file()], key=lambda p: p.name.lower())
+        for p in dirs:
+            entries.append((p.name + "/", f"{p.name}/index.html", True))
+        for p in files:
+            entries.append((p.name, p.name, False))
+
+        rel_root = str(Path(*([".."] * len(d.relative_to(docs_dir).parts)))) or "."
+        # title relative to docs/
+        title = f"Index of /{d.relative_to(docs_dir).as_posix()}"
+        _write_text(d / "index.html", _render_dir_index(title=title, rel_root=rel_root, entries=entries))
 
 
 def build_site(*, phases_dir: Path, docs_dir: Path, clean: bool) -> dict:
@@ -259,6 +332,9 @@ def build_site(*, phases_dir: Path, docs_dir: Path, clean: bool) -> dict:
         g = _extract_zip_images_to_gallery(phases_dir=phases_dir, zip_path=zip_path, galleries_dir=galleries_dir)
         if g is not None:
             galleries.append(g)
+
+    # Directory listing indexes for phases artifacts
+    _write_directory_indexes(docs_dir=docs_dir, out_root=out_phases_dir)
 
     _write_text(galleries_dir / "index.html", _render_galleries_index(galleries))
     _write_text(docs_dir / "index.html", _render_site_index(artifact_count=len(artifacts), gallery_count=len(galleries)))
