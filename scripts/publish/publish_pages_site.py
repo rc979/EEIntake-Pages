@@ -226,7 +226,8 @@ def _render_site_index(*, artifact_count: int, gallery_count: int) -> str:
   </ul>
   <p>
     Note: This site is generated locally by <code>scripts/publish/publish_pages_site.py</code>.
-    It does not modify the project outline links yet.
+    To update the project outline to point at these public URLs, run <code>scripts/publish/linkify_outline_public_urls.py</code>
+    and then re-export the Word doc.
   </p>
 </body>
 </html>
