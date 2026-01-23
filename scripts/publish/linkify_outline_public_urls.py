@@ -25,7 +25,9 @@ BASE_URL_DEFAULT = "https://rc979.github.io/EEIntake"
 
 
 PHASES_PATH_RE = re.compile(r"phases/P[0-7]/(?:Inputs|Outputs)/[A-Za-z0-9._-]+\.(?:pdf|xlsx|csv|zip)")
-CODE_SPAN_RE = re.compile(r"`(?P<path>" + PHASES_PATH_RE.pattern + r")`")
+# Code spans we can convert into links, but avoid matching the code span inside an existing link
+# like [`phases/...`](...) to prevent double-wrapping.
+CODE_SPAN_RE = re.compile(r"(?<!\[)`(?P<path>" + PHASES_PATH_RE.pattern + r")`")
 
 # "Bare" pointers: appear as standalone tokens (e.g. in Addendum A lists and tables).
 # Carefully avoid URLs and already-linked occurrences by requiring that the preceding character is
@@ -60,9 +62,40 @@ def rewrite_markdown(md: str, *, base_url: str, zip_galleries: dict[str, str]) -
             if not gallery_rel:
                 return None
             return to_public_url(base_url=base_url, path_or_rel=gallery_rel)
+        if path.lower().endswith(".csv") or path.lower().endswith(".xlsx"):
+            # Viewer pages live alongside the artifact in /phases/... as <file>.<ext>.html
+            return to_public_url(base_url=base_url, path_or_rel=path + ".html")
         return to_public_url(base_url=base_url, path_or_rel=path)
 
-    # 1) Replace code spans: `phases/...` -> [`phases/...`](url)
+    # 0) Fix accidental double-wrapped links (idempotency guard).
+    # Pattern produced by older passes: [[<link>](url)](url) where inner+outer URL are identical.
+    nested_re = re.compile(
+        r"\[(?P<link>\[`"
+        + PHASES_PATH_RE.pattern
+        + r"`\]\((?P<url>[^)]+)\))\]\((?P=url)\)"
+    )
+    md, n_nested = nested_re.subn(r"\g<link>", md)
+    changed += n_nested
+
+    # 1) Update existing markdown links to point at viewer pages for CSV/XLSX.
+    # e.g. [`phases/...xlsx`](https://.../phases/...xlsx) -> ...xlsx.html
+    LINK_RE = re.compile(r"\[(?P<text>`(?P<path>" + PHASES_PATH_RE.pattern + r")`)\]\((?P<url>[^)]+)\)")
+
+    def repl_link(m: re.Match[str]) -> str:
+        nonlocal changed
+        path = m.group("path")
+        desired = to_url(path)
+        if not desired:
+            return m.group(0)
+        current = m.group("url")
+        if current == desired:
+            return m.group(0)
+        changed += 1
+        return f"[{m.group('text')}]({desired})"
+
+    md = LINK_RE.sub(repl_link, md)
+
+    # 2) Replace code spans: `phases/...` -> [`phases/...`](url)
     def repl_code(m: re.Match[str]) -> str:
         nonlocal changed
         path = m.group("path")
@@ -74,7 +107,7 @@ def rewrite_markdown(md: str, *, base_url: str, zip_galleries: dict[str, str]) -
 
     md = CODE_SPAN_RE.sub(repl_code, md)
 
-    # 2) Replace bare tokens (Addendum lists/tables/etc).
+    # 3) Replace bare tokens (Addendum lists/tables/etc).
     # Skip if preceding character suggests this is already linkified or part of a URL.
     def repl_bare(m: re.Match[str]) -> str:
         nonlocal changed

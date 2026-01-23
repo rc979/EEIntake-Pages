@@ -25,6 +25,7 @@ from pathlib import Path
 
 
 IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".webp", ".gif"}
+TABULAR_EXTS = {".csv", ".xlsx"}
 SKIP_NAMES = {".DS_Store"}
 
 
@@ -236,15 +237,23 @@ def _render_site_index(*, artifact_count: int, gallery_count: int) -> str:
 """
 
 
-def _render_dir_index(*, title: str, rel_root: str, entries: list[tuple[str, str, bool]]) -> str:
+def _render_dir_index(*, title: str, rel_root: str, entries: list[tuple[str, str, bool, str | None]]) -> str:
     """
-    entries: (name, href, is_dir)
+    entries: (name, href, is_dir, download_href)
     rel_root: path from this index.html to docs/ root (e.g. "..", "../..", ".")
     """
-    rows = "\n".join(
-        f'<tr><td class="kind">{"dir" if is_dir else "file"}</td><td><a href="{html.escape(href)}">{html.escape(name)}</a></td></tr>'
-        for name, href, is_dir in entries
-    )
+    def row_html(name: str, href: str, is_dir: bool, download_href: str | None) -> str:
+        dl = "—" if download_href is None else f'<a href="{html.escape(download_href)}">download</a>'
+        kind = "dir" if is_dir else "file"
+        return (
+            f"<tr>"
+            f'<td class="kind">{kind}</td>'
+            f'<td><a href="{html.escape(href)}">{html.escape(name)}</a></td>'
+            f'<td class="dl">{dl}</td>'
+            f"</tr>"
+        )
+
+    rows = "\n".join(row_html(name, href, is_dir, download_href) for name, href, is_dir, download_href in entries)
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -258,6 +267,7 @@ def _render_dir_index(*, title: str, rel_root: str, entries: list[tuple[str, str
     table {{ border-collapse: collapse; width: 100%; }}
     th, td {{ border-bottom: 1px solid #eee; padding: 8px 6px; text-align: left; vertical-align: top; }}
     .kind {{ color: #666; width: 60px; }}
+    .dl {{ width: 90px; color: #666; }}
     code {{ background: #f6f6f6; padding: 1px 4px; border-radius: 4px; }}
   </style>
 </head>
@@ -268,7 +278,7 @@ def _render_dir_index(*, title: str, rel_root: str, entries: list[tuple[str, str
   <h1>{html.escape(title)}</h1>
   <table>
     <thead>
-      <tr><th class="kind">Type</th><th>Name</th></tr>
+      <tr><th class="kind">Type</th><th>Name</th><th class="dl">Download</th></tr>
     </thead>
     <tbody>
       {rows or '<tr><td colspan="2">(empty)</td></tr>'}
@@ -286,11 +296,11 @@ def _write_directory_indexes(*, docs_dir: Path, out_root: Path) -> None:
     """
     for d in sorted([out_root] + [p for p in out_root.rglob("*") if p.is_dir()]):
         # entries relative to current directory
-        entries: list[tuple[str, str, bool]] = []
+        entries: list[tuple[str, str, bool, str | None]] = []
 
         # up link (except for root)
         if d != out_root:
-            entries.append(("..", "../index.html", True))
+            entries.append(("..", "../index.html", True, None))
 
         children = [p for p in d.iterdir() if p.name not in SKIP_NAMES]
         # Do not show generated index itself as an entry
@@ -299,14 +309,226 @@ def _write_directory_indexes(*, docs_dir: Path, out_root: Path) -> None:
         dirs = sorted([p for p in children if p.is_dir()], key=lambda p: p.name.lower())
         files = sorted([p for p in children if p.is_file()], key=lambda p: p.name.lower())
         for p in dirs:
-            entries.append((p.name + "/", f"{p.name}/index.html", True))
+            entries.append((p.name + "/", f"{p.name}/index.html", True, None))
+
+        # Hide generated viewer helper pages (we link to them from the real file row)
+        viewer_suffixes = (".csv.html", ".xlsx.html")
+        files = [p for p in files if not p.name.lower().endswith(viewer_suffixes)]
+
         for p in files:
-            entries.append((p.name, p.name, False))
+            if p.suffix.lower() in TABULAR_EXTS:
+                # Clicking "Name" opens viewer; "download" fetches the raw file.
+                entries.append((p.name, f"{p.name}.html", False, p.name))
+            else:
+                entries.append((p.name, p.name, False, None))
 
         rel_root = str(Path(*([".."] * len(d.relative_to(docs_dir).parts)))) or "."
         # title relative to docs/
         title = f"Index of /{d.relative_to(docs_dir).as_posix()}"
         _write_text(d / "index.html", _render_dir_index(title=title, rel_root=rel_root, entries=entries))
+
+
+def _render_csv_viewer_html(filename: str) -> str:
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>View CSV: {html.escape(filename)}</title>
+  <style>
+    body {{ font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 20px; }}
+    a {{ color: #0b57d0; text-decoration: none; }}
+    a:hover {{ text-decoration: underline; }}
+    .bar {{ display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin: 10px 0 14px; }}
+    .meta {{ color: #555; font-size: 13px; }}
+    table {{ border-collapse: collapse; width: 100%; font-size: 13px; }}
+    th, td {{ border: 1px solid #eee; padding: 6px 8px; vertical-align: top; }}
+    th {{ position: sticky; top: 0; background: #fafafa; }}
+    code {{ background: #f6f6f6; padding: 1px 4px; border-radius: 4px; }}
+    .warn {{ color: #a14; }}
+  </style>
+</head>
+<body>
+  <div class="bar">
+    <a href="index.html">Back to folder</a>
+    <a href="{html.escape(filename)}" download>Download</a>
+    <span class="meta"><code>{html.escape(filename)}</code></span>
+    <span id="status" class="meta">Loading…</span>
+  </div>
+  <div id="note" class="meta"></div>
+  <div id="table"></div>
+  <script>
+    // Minimal CSV parser (handles quoted fields, commas, CRLF).
+    function parseCSV(text) {{
+      const rows = [];
+      let row = [];
+      let field = '';
+      let i = 0;
+      let inQuotes = false;
+      while (i < text.length) {{
+        const c = text[i];
+        if (inQuotes) {{
+          if (c === '\"') {{
+            if (text[i+1] === '\"') {{ field += '\"'; i += 2; continue; }}
+            inQuotes = false; i++; continue;
+          }}
+          field += c; i++; continue;
+        }}
+        if (c === '\"') {{ inQuotes = true; i++; continue; }}
+        if (c === ',') {{ row.push(field); field = ''; i++; continue; }}
+        if (c === '\\r') {{ i++; continue; }}
+        if (c === '\\n') {{ row.push(field); rows.push(row); row = []; field = ''; i++; continue; }}
+        field += c; i++;
+      }}
+      if (field.length || row.length) {{ row.push(field); rows.push(row); }}
+      return rows;
+    }}
+
+    function esc(s) {{
+      return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
+    }}
+
+    async function main() {{
+      const status = document.getElementById('status');
+      const note = document.getElementById('note');
+      const out = document.getElementById('table');
+      const url = {json.dumps(filename)};
+      const res = await fetch(url);
+      if (!res.ok) {{
+        status.textContent = 'Failed to load CSV';
+        note.innerHTML = '<span class="warn">HTTP ' + res.status + '</span>';
+        return;
+      }}
+      const text = await res.text();
+      const rows = parseCSV(text);
+      if (!rows.length) {{
+        status.textContent = 'Empty CSV';
+        return;
+      }}
+      const maxRows = 2000;
+      const shown = rows.slice(0, maxRows);
+      if (rows.length > maxRows) {{
+        note.textContent = 'Showing first ' + maxRows + ' rows of ' + rows.length + '. Download for full file.';
+      }}
+      const headers = shown[0];
+      let html = '<table><thead><tr>';
+      for (const h of headers) html += '<th>' + esc(h) + '</th>';
+      html += '</tr></thead><tbody>';
+      for (let r = 1; r < shown.length; r++) {{
+        html += '<tr>';
+        const row = shown[r];
+        for (let c = 0; c < headers.length; c++) {{
+          html += '<td>' + esc(row[c] ?? '') + '</td>';
+        }}
+        html += '</tr>';
+      }}
+      html += '</tbody></table>';
+      out.innerHTML = html;
+      status.textContent = 'Loaded';
+    }}
+    main().catch(e => {{
+      document.getElementById('status').textContent = 'Error';
+      document.getElementById('note').innerHTML = '<span class="warn">' + (e?.message || String(e)) + '</span>';
+    }});
+  </script>
+</body>
+</html>
+"""
+
+
+def _render_xlsx_viewer_html(filename: str) -> str:
+    # Client-side parse using SheetJS via CDN.
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>View XLSX: {html.escape(filename)}</title>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+  <style>
+    body {{ font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 20px; }}
+    a {{ color: #0b57d0; text-decoration: none; }}
+    a:hover {{ text-decoration: underline; }}
+    .bar {{ display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin: 10px 0 14px; }}
+    .meta {{ color: #555; font-size: 13px; }}
+    #sheet {{ padding: 6px 8px; }}
+    table {{ border-collapse: collapse; width: 100%; font-size: 13px; }}
+    th, td {{ border: 1px solid #eee; padding: 6px 8px; vertical-align: top; }}
+    code {{ background: #f6f6f6; padding: 1px 4px; border-radius: 4px; }}
+    .warn {{ color: #a14; }}
+    .sheetwrap {{ overflow-x: auto; }}
+  </style>
+</head>
+<body>
+  <div class="bar">
+    <a href="index.html">Back to folder</a>
+    <a href="{html.escape(filename)}" download>Download</a>
+    <span class="meta"><code>{html.escape(filename)}</code></span>
+    <span id="status" class="meta">Loading…</span>
+    <label class="meta">Sheet:
+      <select id="sheet"></select>
+    </label>
+  </div>
+  <div id="note" class="meta"></div>
+  <div class="sheetwrap" id="out"></div>
+  <script>
+    const fileUrl = {json.dumps(filename)};
+    async function main() {{
+      const status = document.getElementById('status');
+      const note = document.getElementById('note');
+      const out = document.getElementById('out');
+      const sel = document.getElementById('sheet');
+
+      const res = await fetch(fileUrl);
+      if (!res.ok) {{
+        status.textContent = 'Failed to load XLSX';
+        note.innerHTML = '<span class="warn">HTTP ' + res.status + '</span>';
+        return;
+      }}
+      const buf = await res.arrayBuffer();
+      const wb = XLSX.read(buf, {{ type: 'array' }});
+      sel.innerHTML = wb.SheetNames.map(n => '<option>' + n.replaceAll('&','&amp;').replaceAll('<','&lt;') + '</option>').join('');
+
+      function renderSheet(name) {{
+        const ws = wb.Sheets[name];
+        if (!ws) return;
+        // Use SheetJS HTML generator (table only)
+        const html = XLSX.utils.sheet_to_html(ws, {{ id: 'sheetTable', editable: false }});
+        out.innerHTML = html;
+        status.textContent = 'Loaded';
+      }}
+
+      sel.addEventListener('change', () => renderSheet(sel.value));
+      renderSheet(wb.SheetNames[0]);
+    }}
+    main().catch(e => {{
+      document.getElementById('status').textContent = 'Error';
+      document.getElementById('note').innerHTML = '<span class="warn">' + (e?.message || String(e)) + '</span>';
+    }});
+  </script>
+</body>
+</html>
+"""
+
+
+def _write_tabular_viewers(out_phases_dir: Path) -> None:
+    """
+    For each *.csv/*.xlsx in docs/phases, write a sibling viewer page:
+      foo.csv.html, foo.xlsx.html
+    """
+    for p in sorted(out_phases_dir.rglob("*")):
+        if not p.is_file():
+            continue
+        if p.name in SKIP_NAMES:
+            continue
+        ext = p.suffix.lower()
+        if ext not in TABULAR_EXTS:
+            continue
+        viewer = p.with_name(p.name + ".html")
+        if ext == ".csv":
+            _write_text(viewer, _render_csv_viewer_html(p.name))
+        else:
+            _write_text(viewer, _render_xlsx_viewer_html(p.name))
 
 
 def _build_outline_html(*, repo_root: Path, docs_dir: Path) -> None:
@@ -392,6 +614,9 @@ def build_site(*, phases_dir: Path, docs_dir: Path, clean: bool) -> dict:
         g = _extract_zip_images_to_gallery(phases_dir=phases_dir, zip_path=zip_path, galleries_dir=galleries_dir)
         if g is not None:
             galleries.append(g)
+
+    # In-browser viewers for CSV/XLSX to avoid forced downloads.
+    _write_tabular_viewers(out_phases_dir)
 
     # Directory listing indexes for phases artifacts
     _write_directory_indexes(docs_dir=docs_dir, out_root=out_phases_dir)
