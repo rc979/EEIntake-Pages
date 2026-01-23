@@ -1,0 +1,42 @@
+\usepackage{geometry}
+\geometry{
+  letterpaper,
+  top=0.35in,
+  bottom=0.35in,
+  left=0.35in,
+  right=0.35in
+}
+
+% Avoid headings stranded at bottom of page (self-contained; no needspace.sty):
+% If remaining space on page is less than N baselines, start a new page.
+\newcommand{\Needspace}[1]{%
+  \par\begingroup
+  \dimen0=#1\relax
+  \ifdim\dimexpr\pagegoal-\pagetotal\relax<\dimen0
+    \newpage
+  \fi
+  \endgroup
+}
+\let\Oldsection\section
+\renewcommand{\section}{\Needspace{5\baselineskip}\Oldsection}
+\let\Oldsubsection\subsection
+\renewcommand{\subsection}{\Needspace{4\baselineskip}\Oldsubsection}
+\let\Oldsubsubsection\subsubsection
+\renewcommand{\subsubsection}{\Needspace{3\baselineskip}\Oldsubsubsection}
+
+% Reduce widows/orphans:
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+
+% Tables: allow page breaks with repeated headers (longtable),
+% and reduce awkward vertical whitespace around them.
+\usepackage{longtable,booktabs,array}
+\setlength{\LTpre}{0pt}
+\setlength{\LTpost}{0pt}
+\renewcommand{\arraystretch}{1.08}
+
+% Slightly tighter spacing to improve "page fill" without harming readability.
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+

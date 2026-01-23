@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EE Intake - Preflight Review</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #f5f5f5;
+            color: #1a1a1a;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: #1a1a2e;
+            color: white;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .project-id {
+            font-size: 13px;
+            color: #a0a0a0;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .tab {
+            padding: 14px 24px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 14px;
+            font-weight: 500;
+            color: #666;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .tab:hover {
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        .tab.active {
+            color: #2563eb;
+            border-bottom-color: #2563eb;
+        }
+
+        .tab-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tab-tier {
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 3px;
+            background: #e5e7eb;
+            color: #666;
+        }
+
+        .tab.active .tab-tier {
+            background: #dbeafe;
+            color: #2563eb;
+        }
+
+        /* Pane Content */
+        .pane {
+            display: none;
+            background: #fff;
+            min-height: 600px;
+        }
+
+        .pane.active {
+            display: block;
+        }
+
+        .pane-content {
+            padding: 24px;
+        }
+
+        /* Section Styling */
+        .section {
+            margin-bottom: 24px;
+        }
+
+        .section-header {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #666;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Form Grid */
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .form-group label {
+            font-size: 12px;
+            font-weight: 500;
+            color: #666;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            background: #fff;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        /* EVSE Block - Boxed */
+        .evse-block {
+            border: 2px solid #2563eb;
+            border-radius: 8px;
+            padding: 20px;
+            background: #f8fafc;
+            margin-bottom: 24px;
+        }
+
+        .evse-block .section-header {
+            color: #2563eb;
+            border-bottom-color: #bfdbfe;
+        }
+
+        /* Radio Group */
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .radio-option:hover {
+            background: #f9f9f9;
+        }
+
+        .radio-option.selected {
+            border-color: #2563eb;
+            background: #eff6ff;
+        }
+
+        .radio-option input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #2563eb;
+        }
+
+        .radio-option .value-input {
+            margin-left: auto;
+            width: 120px;
+        }
+
+        .conflict-warning {
+            display: none;
+            padding: 10px 14px;
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            border-radius: 6px;
+            color: #dc2626;
+            font-size: 13px;
+            margin-top: 12px;
+        }
+
+        .conflict-warning.show {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Toggle Switch */
+        .toggle-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toggle {
+            position: relative;
+            width: 48px;
+            height: 26px;
+            background: #ddd;
+            border-radius: 13px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .toggle.active {
+            background: #2563eb;
+        }
+
+        .toggle::after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+
+        .toggle.active::after {
+            transform: translateX(22px);
+        }
+
+        .toggle-label {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* Pane B - Audit Table */
+        .audit-section {
+            background: #f8f9fa;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .audit-section-header {
+            background: #e5e7eb;
+            padding: 10px 16px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #4b5563;
+        }
+
+        .audit-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .audit-table th,
+        .audit-table td {
+            padding: 10px 16px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 13px;
+        }
+
+        .audit-table th {
+            background: #f3f4f6;
+            font-weight: 600;
+            color: #4b5563;
+        }
+
+        .audit-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .status-badge.found {
+            background: #dcfce7;
+            color: #16a34a;
+        }
+
+        .status-badge.missing {
+            background: #fee2e2;
+            color: #dc2626;
+        }
+
+        .source-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 8px;
+            background: #e5e7eb;
+            border-radius: 4px;
+            font-size: 11px;
+            color: #4b5563;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .source-link:hover {
+            background: #d1d5db;
+            color: #1f2937;
+        }
+
+        .readonly-notice {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 16px;
+            background: #fef3c7;
+            border: 1px solid #fcd34d;
+            border-radius: 6px;
+            font-size: 13px;
+            color: #92400e;
+            margin-bottom: 20px;
+        }
+
+        /* Pane C - Reconciliation */
+        .preflight-summary {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+            padding: 20px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-radius: 10px;
+            color: white;
+        }
+
+        .preflight-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            opacity: 0.9;
+        }
+
+        .preflight-stats {
+            display: flex;
+            gap: 24px;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .stat-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .stat-icon.fail {
+            background: rgba(220, 38, 38, 0.2);
+        }
+
+        .stat-icon.warn {
+            background: rgba(245, 158, 11, 0.2);
+        }
+
+        .stat-icon.pass {
+            background: rgba(22, 163, 74, 0.2);
+        }
+
+        .stat-count {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        /* Reconciliation Table */
+        .recon-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .recon-table th {
+            background: #f8f9fa;
+            padding: 14px 16px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #4b5563;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .recon-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 13px;
+            vertical-align: top;
+        }
+
+        .recon-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .check-name {
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .value-cell {
+            color: #4b5563;
+        }
+
+        .value-highlight {
+            font-weight: 500;
+            color: #1f2937;
+        }
+
+        .status-cell {
+            font-weight: 600;
+        }
+
+        .status-pass {
+            color: #16a34a;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .status-hard-fail {
+            color: #dc2626;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .status-soft-flag {
+            color: #d97706;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .notes-cell {
+            font-size: 12px;
+            color: #6b7280;
+            font-style: italic;
+        }
+
+        .notes-cell.alert {
+            color: #dc2626;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        /* PDF Overlay Simulation */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: white;
+            box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+            z-index: 1000;
+        }
+
+        .overlay.show {
+            display: block;
+        }
+
+        .overlay-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .overlay-title {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .overlay-close {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #6b7280;
+            padding: 4px 8px;
+        }
+
+        .overlay-close:hover {
+            color: #1f2937;
+        }
+
+        .overlay-content {
+            padding: 20px;
+            height: calc(100% - 60px);
+            overflow: auto;
+        }
+
+        .pdf-preview {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 40px;
+            text-align: center;
+            color: #666;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .highlight-box {
+            border: 3px solid #f59e0b;
+            background: rgba(245, 158, 11, 0.1);
+            padding: 20px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        /* Utility */
+        .text-muted {
+            color: #6b7280;
+        }
+
+        .mt-2 {
+            margin-top: 8px;
+        }
+
+        .mt-4 {
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EE Intake — Preflight Review</h1>
+        <span class="project-id">Project: EV-2024-0847 | Version: 1.2</span>
+    </header>
+
+    <div class="tabs">
+        <button class="tab" data-pane="pane-c">
+            <span class="tab-label">
+                Reconciliation & Checks
+                <span class="tab-tier">Default</span>
+            </span>
+        </button>
+        <button class="tab" data-pane="pane-a">
+            <span class="tab-label">
+                Declared Project Facts
+                <span class="tab-tier">Tier 1</span>
+            </span>
+        </button>
+        <button class="tab" data-pane="pane-b">
+            <span class="tab-label">
+                Extracted From Drawings
+                <span class="tab-tier">Tier 2</span>
+            </span>
+        </button>
+    </div>
+
+    <!-- PANE A: Tier 1 - Declared Project Facts -->
+    <div id="pane-a" class="pane">
+        <div class="pane-content">
+
+            <!-- Project Scope -->
+            <div class="section">
+                <div class="section-header">Project Scope</div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Project Type</label>
+                        <select>
+                            <option value="">Select...</option>
+                            <option value="addon" selected>Add-on</option>
+                            <option value="new">New Service</option>
+                            <option value="upgrade">Upgrade</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Service Voltage / Phase</label>
+                        <select>
+                            <option value="">Select...</option>
+                            <option value="120/240-1">120/240V 1Ø</option>
+                            <option value="208/120-3" selected>208Y/120V 3Ø</option>
+                            <option value="480/277-3">480Y/277V 3Ø</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Service Rating (A)</label>
+                        <input type="number" value="400" />
+                    </div>
+                    <div class="form-group">
+                        <label>Utility Coordination Required</label>
+                        <select>
+                            <option value="yes">Yes</option>
+                            <option value="no" selected>No</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EVSE Block -->
+            <div class="evse-block">
+                <div class="section-header">EVSE Configuration</div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>EVSE Count</label>
+                        <input type="number" value="8" />
+                    </div>
+                    <div class="form-group">
+                        <label>kW per EVSE</label>
+                        <input type="number" value="7.6" step="0.1" />
+                    </div>
+                    <div class="form-group">
+                        <label>Voltage / Phase</label>
+                        <select>
+                            <option value="208-1" selected>208V 1Ø</option>
+                            <option value="240-1">240V 1Ø</option>
+                            <option value="480-3">480V 3Ø</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Branch Circuit Rating Intent</label>
+                        <select>
+                            <option value="40">40A</option>
+                            <option value="50" selected>50A</option>
+                            <option value="60">60A</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group mt-4">
+                    <label>Continuous Load Treatment (125% Applied)</label>
+                    <div class="toggle-group mt-2">
+                        <div class="toggle active" onclick="this.classList.toggle('active')"></div>
+                        <span class="toggle-label">Yes — 125% factor applied to EVSE loads</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load Management -->
+            <div class="section">
+                <div class="section-header">Load Management</div>
+                <div class="radio-group">
+                    <label class="radio-option selected" onclick="selectRadio(this)">
+                        <input type="radio" name="load-mgmt" checked />
+                        <div>
+                            <strong>Site kW Cap</strong>
+                            <div class="text-muted" style="font-size: 12px;">Maximum site-wide EVSE power draw</div>
+                        </div>
+                        <input type="number" class="value-input" placeholder="kW" value="45" onclick="event.stopPropagation()" />
+                    </label>
+                    <label class="radio-option" onclick="selectRadio(this)">
+                        <input type="radio" name="load-mgmt" />
+                        <div>
+                            <strong>Diversity Factor</strong>
+                            <div class="text-muted" style="font-size: 12px;">Percentage reduction for coincident loading</div>
+                        </div>
+                        <input type="number" class="value-input" placeholder="%" onclick="event.stopPropagation()" />
+                    </label>
+                </div>
+                <div class="conflict-warning" id="conflict-warning">
+                    <span>⚠️</span>
+                    <span><strong>Conflict:</strong> Both Site kW Cap and Diversity Factor have values. Only one load management method can be applied.</span>
+                </div>
+            </div>
+
+            <!-- Panels / Feeders -->
+            <div class="section">
+                <div class="section-header">Panels / Feeders</div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Feeding Panel Name</label>
+                        <input type="text" value="Panel A" />
+                    </div>
+                    <div class="form-group">
+                        <label>Panel Main Rating (A)</label>
+                        <input type="number" value="225" />
+                    </div>
+                    <div class="form-group">
+                        <label>Declared Spare Capacity (A)</label>
+                        <input type="number" value="75" placeholder="Optional" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- PANE B: Tier 2 - Extracted From Drawings -->
+    <div id="pane-b" class="pane">
+        <div class="pane-content">
+
+            <div class="readonly-notice">
+                <span>🔒</span>
+                <span>This data is machine-extracted from uploaded drawings. Read-only for audit traceability.</span>
+            </div>
+
+            <!-- Detected Sheets -->
+            <div class="audit-section">
+                <div class="audit-section-header">Detected Sheets</div>
+                <table class="audit-table">
+                    <thead>
+                        <tr>
+                            <th>Sheet Type</th>
+                            <th>Status</th>
+                            <th>Details</th>
+                            <th>Source</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>One-Line Diagram</td>
+                            <td><span class="status-badge found">✓ Found</span></td>
+                            <td>E-101</td>
+                            <td><span class="source-link" onclick="showOverlay('E-101')">📄 E-101 | Page 3</span></td>
+                        </tr>
+                        <tr>
+                            <td>Panel Schedule — Panel A</td>
+                            <td><span class="status-badge found">✓ Found</span></td>
+                            <td>E-201</td>
+                            <td><span class="source-link" onclick="showOverlay('E-201')">📄 E-201 | Page 5</span></td>
+                        </tr>
+                        <tr>
+                            <td>Panel Schedule — Panel B</td>
+                            <td><span class="status-badge found">✓ Found</span></td>
+                            <td>E-202</td>
+                            <td><span class="source-link" onclick="showOverlay('E-202')">📄 E-202 | Page 6</span></td>
+                        </tr>
+                        <tr>
+                            <td>Load Calculation</td>
+                            <td><span class="status-badge missing">✗ Missing</span></td>
+                            <td>—</td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td>Site Plan</td>
+                            <td><span class="status-badge found">✓ Found</span></td>
+                            <td>C-100</td>
+                            <td><span class="source-link" onclick="showOverlay('C-100')">📄 C-100 | Page 1</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Extracted Electrical Facts -->
+            <div class="audit-section">
+                <div class="audit-section-header">Extracted Electrical Facts</div>
+                <table class="audit-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Extracted Value</th>
+                            <th>Source</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Detected EVSE Count</td>
+                            <td><strong>8 units</strong></td>
+                            <td><span class="source-link" onclick="showOverlay('C-100')">📄 C-100 | Page 1</span></td>
+                        </tr>
+                        <tr>
+                            <td>Detected kW Total (Unmanaged)</td>
+                            <td><strong>60.8 kW</strong> (8 × 7.6 kW)</td>
+                            <td><span class="source-link" onclick="showOverlay('E-201')">📄 E-201 | Page 5</span></td>
+                        </tr>
+                        <tr>
+                            <td>Detected Breaker Sizes</td>
+                            <td><strong>50A</strong> per circuit (×8)</td>
+                            <td><span class="source-link" onclick="showOverlay('E-201')">📄 E-201 | Page 5</span></td>
+                        </tr>
+                        <tr>
+                            <td>Detected Voltage</td>
+                            <td><strong>208V 1Ø</strong></td>
+                            <td><span class="source-link" onclick="showOverlay('E-101')">📄 E-101 | Page 3</span></td>
+                        </tr>
+                        <tr>
+                            <td>Detected Service Rating</td>
+                            <td><strong>400A</strong></td>
+                            <td><span class="source-link" onclick="showOverlay('E-101')">📄 E-101 | Page 3</span></td>
+                        </tr>
+                        <tr>
+                            <td>Detected Panel A Main</td>
+                            <td><strong>225A</strong></td>
+                            <td><span class="source-link" onclick="showOverlay('E-201')">📄 E-201 | Page 5</span></td>
+                        </tr>
+                        <tr>
+                            <td>Load Management Reference</td>
+                            <td><span class="text-muted">Not detected in drawings</span></td>
+                            <td>—</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- PANE C: Reconciliation & Checks -->
+    <div id="pane-c" class="pane active">
+        <div class="pane-content">
+
+            <!-- Preflight Summary -->
+            <div class="preflight-summary">
+                <div style="flex: 1;">
+                    <div class="preflight-title">Preflight Result</div>
+                    <div class="preflight-stats">
+                        <div class="stat-item">
+                            <div class="stat-icon fail">❌</div>
+                            <div>
+                                <div class="stat-count">2</div>
+                                <div class="stat-label">Hard Failures</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon warn">⚠️</div>
+                            <div>
+                                <div class="stat-count">3</div>
+                                <div class="stat-label">Soft Flags</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon pass">✓</div>
+                            <div>
+                                <div class="stat-count">4</div>
+                                <div class="stat-label">Passed</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reconciliation Table -->
+            <table class="recon-table">
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Check</th>
+                        <th style="width: 22%;">Declared (Tier 1)</th>
+                        <th style="width: 22%;">Extracted (Tier 2)</th>
+                        <th style="width: 12%;">Status</th>
+                        <th style="width: 24%;">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="check-name">EVSE Unmanaged Peak</td>
+                        <td class="value-cell"><span class="value-highlight">60.8 kW</span><br/><span class="text-muted">8 × 7.6 kW</span></td>
+                        <td class="value-cell"><span class="value-highlight">60.8 kW</span><br/><span class="text-muted">8 × 7.6 kW</span></td>
+                        <td class="status-cell"><span class="status-pass">✓ PASS</span></td>
+                        <td class="notes-cell">Values match</td>
+                    </tr>
+                    <tr>
+                        <td class="check-name">EVSE Coincident Peak</td>
+                        <td class="value-cell"><span class="value-highlight">45 kW</span><br/><span class="text-muted">Site cap applied</span></td>
+                        <td class="value-cell"><span class="value-highlight">60.8 kW</span><br/><span class="text-muted">No cap detected</span></td>
+                        <td class="status-cell"><span class="status-hard-fail">✗ HARD FAIL</span></td>
+                        <td class="notes-cell alert">Declared cap not reflected in load calculation</td>
+                    </tr>
+                    <tr>
+                        <td class="check-name">Branch OCPD Sizing</td>
+                        <td class="value-cell"><span class="value-highlight">50A</span><br/><span class="text-muted">Per NEC 625.42</span></td>
+                        <td class="value-cell"><span class="value-highlight">50A</span><br/><span class="text-muted">All circuits</span></td>
+                        <td class="status-cell"><span class="status-pass">✓ PASS</span></td>
+                        <td class="notes-cell">Breaker sizing verified</td>
+                    </tr>
+                    <tr>
+                        <td class="check-name">Panel Utilization</td>
+                        <td class="value-cell"><span class="value-highlight">150A / 225A</span><br/><span class="text-muted">67% utilized</span></td>
+                        <td class="value-cell"><span class="value-highlight">183A / 225A</span><br/><span class="text-muted">81% utilized</span></td>
+                        <td class="status-cell"><span class="status-soft-flag">⚠ SOFT FLAG</span></td>
+                        <td class="notes-cell">Extracted utilization higher than declared</td>
+                    </tr>
+                    <tr>
+                        <td class="check-name">Service Utilization</td>
+                        <td class="value-cell"><span class="value-highlight">285A / 400A</span><br/><span class="text-muted">71% utilized</span></td>
+                        <td class="value-cell"><span class="value-highlight">285A / 400A</span><br/><span class="text-muted">71% utilized</span></td>
+                        <td class="status-cell"><span class="status-pass">✓ PASS</span></td>
+                        <td class="notes-cell">Within service capacity</td>
+                    </tr>
+                    <tr>
+                        <td class="check-name">Required Sheets</td>
+                        <td class="value-cell"><span class="text-muted">—</span></td>
+                        <td class="value-cell"><span class="value-highlight">4 of 5 found</span><br/><span class="text-muted">Load calc missing</span></td>
+                        <td class="status-cell"><span class="status-hard-fail">✗ HARD FAIL</span></td>
+                        <td class="notes-cell alert">Load calculation sheet not found in submittal</td>
+                    </tr>
+                    <tr>
+                        <td class="check-name">EVSE Count Match</td>
+                        <td class="value-cell"><span class="value-highlight">8 units</span></td>
+                        <td class="value-cell"><span class="value-highlight">8 units</span></td>
+                        <td class="status-cell"><span class="status-pass">✓ PASS</span></td>
+                        <td class="notes-cell">Counts match</td>
+                    </tr>
+                    <tr>
+                        <td class="check-name">Voltage Consistency</td>
+                        <td class="value-cell"><span class="value-highlight">208V 1Ø</span></td>
+                        <td class="value-cell"><span class="value-highlight">208V 1Ø</span></td>
+                        <td class="status-cell"><span class="status-pass">✓ PASS</span></td>
+                        <td class="notes-cell">Voltages consistent</td>
+                    </tr>
+                    <tr>
+                        <td class="check-name">Continuous Load Factor</td>
+                        <td class="value-cell"><span class="value-highlight">125% applied</span><br/><span class="text-muted">Per NEC 210.20</span></td>
+                        <td class="value-cell"><span class="value-highlight">Unclear</span><br/><span class="text-muted">Not shown in schedule</span></td>
+                        <td class="status-cell"><span class="status-soft-flag">⚠ SOFT FLAG</span></td>
+                        <td class="notes-cell">Cannot verify 125% in panel schedule</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <!-- PDF Overlay -->
+    <div class="overlay" id="overlay">
+        <div class="overlay-header">
+            <span class="overlay-title" id="overlay-title">Sheet E-201 | Page 5</span>
+            <button class="overlay-close" onclick="hideOverlay()">×</button>
+        </div>
+        <div class="overlay-content">
+            <div class="pdf-preview">
+                <div style="font-size: 48px; opacity: 0.3;">📄</div>
+                <div style="font-size: 16px; font-weight: 500;">PDF Preview Area</div>
+                <div style="font-size: 13px;">Sheet would render here with detected region highlighted</div>
+                <div class="highlight-box">
+                    <div style="font-size: 12px; font-weight: 600; color: #92400e; margin-bottom: 8px;">DETECTED REGION</div>
+                    <div style="font-size: 14px;">Panel A Schedule — 8× 50A circuits for EVSE</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab switching
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.pane').forEach(p => p.classList.remove('active'));
+
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.pane).classList.add('active');
+            });
+        });
+
+        // Initialize default tab
+        document.querySelector('[data-pane="pane-c"]').classList.add('active');
+
+        // Radio button selection
+        function selectRadio(element) {
+            document.querySelectorAll('.radio-option').forEach(opt => {
+                opt.classList.remove('selected');
+                opt.querySelector('input[type="radio"]').checked = false;
+            });
+            element.classList.add('selected');
+            element.querySelector('input[type="radio"]').checked = true;
+        }
+
+        // Overlay functions
+        function showOverlay(sheet) {
+            document.getElementById('overlay-title').textContent = `Sheet ${sheet}`;
+            document.getElementById('overlay').classList.add('show');
+        }
+
+        function hideOverlay() {
+            document.getElementById('overlay').classList.remove('show');
+        }
+
+        // Close overlay on escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') hideOverlay();
+        });
+    </script>
+</body>
+</html>
