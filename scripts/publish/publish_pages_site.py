@@ -319,6 +319,32 @@ def _build_outline_html(*, repo_root: Path, docs_dir: Path) -> None:
     out_html = out_dir / "index.html"
     out_dir.mkdir(parents=True, exist_ok=True)
 
+    # Pandoc's default HTML template uses a very narrow max-width (36em) and large padding.
+    # Provide a light override: readable, but not edge-to-edge.
+    css_path = out_dir / "outline.css"
+    _write_text(
+        css_path,
+        """
+/* EEIntake outline HTML tweaks (overrides Pandoc defaults) */
+html { background-color: #fff; }
+body {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 20px;
+  line-height: 1.45;
+}
+@media (min-width: 1400px) {
+  body { max-width: 1200px; }
+}
+@media (max-width: 600px) {
+  body { padding: 14px 12px; }
+}
+table { width: 100%; }
+pre { padding: 10px 12px; border-radius: 8px; background: #f6f6f6; }
+code { background: #f6f6f6; padding: 1px 4px; border-radius: 4px; }
+""".lstrip(),
+    )
+
     cmd = [
         "pandoc",
         str(src),
@@ -329,12 +355,16 @@ def _build_outline_html(*, repo_root: Path, docs_dir: Path) -> None:
         "--standalone",
         "--metadata",
         "title=EV Charging Project Plan Outline",
+        "--css",
+        "outline.css",
         "--resource-path",
         ".",
         "-o",
         str(out_html),
     ]
-    subprocess.run(cmd, check=True, cwd=str(repo_root))
+    # Run with cwd set to output dir so the css href is local.
+    # Use absolute paths for input/output so this still works.
+    subprocess.run(cmd, check=True, cwd=str(out_dir))
 
 
 def build_site(*, phases_dir: Path, docs_dir: Path, clean: bool) -> dict:
