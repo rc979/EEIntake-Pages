@@ -145,9 +145,9 @@ The two comparison tables below make these claims concrete by showing how differ
 - **MSP**: Mobility Service Provider (roaming/payment operator in EU charging ecosystems).
 - **NEC**: National Electrical Code (US); in California this is adopted/amended via the California Electrical Code.
 
-### Comparative liability context (California vs. Germany vs. Costa Rica)
+### Comparative liability context (California vs. EU/Germany vs. Costa Rica)
 
-| Category | California (USA) | Germany (EU) | Costa Rica |
+| Category | California (USA) | EU/Germany | Costa Rica |
 |:---|:---|:---|:---|
 | Primary Liability Basis | Tort & Negligence: Focus on “Duty of Care” and unlimited potential for indirect damages (loss of profit). | Statutory/Contractual: Governed by the BGB (Civil Code) and VOB; focus is on “Direct Damage” only. | Professional Responsibility: Governed by Law 3663 and CFIA; linked to the “Bitácora Digital” logs. |
 | Personal vs. Corporate | Individual Signature: The PE who stamps the plans carries “Responsible Charge” and personal liability. | Corporate Focused: Liability typically sits with the firm (GmbH) as the contracting party under the BGB. | Personal & Solidary: The signing engineer and the firm are jointly liable for the 10-year stability. |
