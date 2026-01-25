@@ -116,6 +116,8 @@ Utilities must be modeled with the same rigor. Written utility standards, handbo
 
 Profitability depends on this discipline starting early. Correctly characterizing a project’s regulatory and utility risk at intake—based on service conditions, load posture, AHJ enforcement behavior, and utility sensitivity—and fitting it into a canonical, repeatable form is what enables accurate pricing. When risk is explicitly classified rather than discovered midstream, fees can reflect true exposure, delivery plans can be matched to risk class, and engineers can execute with confidence that the work is achievable within tolerable margins. In California EE practice, traceability, AHJ and utility modeling, and early risk canonicalization are prerequisites for operating profitably under scarcity and scrutiny.
 
+The two comparison tables below make these claims concrete by showing how differences in grid/permit governance and liability structure can force additional phases, rework loops, or evidence requirements (relative to California).
+
 ### Comparative regulatory context (California vs. EU vs. Costa Rica)
 
 | Category | California (USA) | European Union (EU) | Costa Rica | Phase Impact (EU/CR vs. CA) |
@@ -135,22 +137,23 @@ Profitability depends on this discipline starting early. Correctly characterizin
 - **AB 1236**: California Assembly Bill 1236 (EV charging “streamlined permitting” requirements for jurisdictions).
 - **ADA**: Americans with Disabilities Act (accessibility requirements).
 - **AFIR**: Alternative Fuels Infrastructure Regulation (EU).
-- **APC**: Plataforma/Administración de Proyectos del CFIA (Costa Rica’s centralized digital plan validation platform; naming varies in practice).
-- **CFIA**: Colegio Federado de Ingenieros y de Arquitectos (Costa Rica’s national engineers/architects college).
-- **CNFL**: Compañía Nacional de Fuerza y Luz (Costa Rica utility entity).
 - **CPO**: Charge Point Operator.
 - **Consuel**: Comité National pour la Sécurité des Usagers de l’Électricité (France; common third‑party electrical conformity body).
 - **DSO**: Distribution System Operator (EU).
 - **GCA**: Grid Connection Agreement (EU).
-- **ICE**: Instituto Costarricense de Electricidad (Costa Rica state electricity/telecom operator).
 - **IEC**: International Electrotechnical Commission (standards family widely used in the EU context).
-- **kWh**: kilowatt-hour (energy unit).
 - **MSP**: Mobility Service Provider (roaming/payment operator in EU charging ecosystems).
 - **NEC**: National Electrical Code (US); in California this is adopted/amended via the California Electrical Code.
-- **ROI**: Return on investment.
-- **SETENA**: Secretaría Técnica Nacional Ambiental (Costa Rica environmental authority).
-- **TÜV**: Technischer Überwachungsverein (independent technical inspection/certification bodies).
 
+### Comparative liability context (California vs. Germany vs. Costa Rica)
+
+| Category | California (USA) | Germany (EU) | Costa Rica |
+|:---|:---|:---|:---|
+| Primary Liability Basis | Tort & Negligence: Focus on “Duty of Care” and unlimited potential for indirect damages (loss of profit). | Statutory/Contractual: Governed by the BGB (Civil Code) and VOB; focus is on “Direct Damage” only. | Professional Responsibility: Governed by Law 3663 and CFIA; linked to the “Bitácora Digital” logs. |
+| Personal vs. Corporate | Individual Signature: The PE who stamps the plans carries “Responsible Charge” and personal liability. | Corporate Focused: Liability typically sits with the firm (GmbH) as the contracting party under the BGB. | Personal & Solidary: The signing engineer and the firm are jointly liable for the 10-year stability. |
+| Duration of Liability | 10 Years: Statute of repose for latent defects (California Code of Civil Procedure 337.15). | 5 Years: Standard warranty period for construction works under § 634a BGB. | 10 Years: Civil liability for structural/safety defects (Article 1185 of the Civil Code). |
+| Damages Scope | Unlimited: Includes punitive and indirect damages if negligence is proven. | Capped/Direct: Usually limited to the cost of repair; “indirect damages” are excluded unless specifically in the contract. | Direct & Rectification: Focus on the legal obligation to fix the defect at the engineer’s expense. |
+| Insurance Reality | High Premium: Professional Liability (E&O) is expensive and critical for risk mitigation. | Standardized: Coverage is often tied to the HOAI fee structure and is a market standard for firms. | The “Garantía”: Engineers often rely on a mandatory CFIA-backed guarantee or professional bond. |
 
 <a id="phase-1"></a>
 
