@@ -408,6 +408,127 @@ For each exported category, open 1–2 exported chat URLs, scroll to the very to
 - **Few chats**: use Gemini’s in-product **Share & export → Export to Docs**, then save/copy the doc content here.
 - **Many chats**: use **Google Takeout** for Gemini Apps data, then filter by chat title(s).
 
+## Post-processing exports (ChatGPT + Gemini) into Q&As
+
+This repo includes scripts that convert the exported JSON files into:
+
+- **HTML**: one page with a TOC, each Q visible, answer collapsed/expandable
+- **JSONL**: one Q/A per line (useful for downstream processing)
+- **Markdown**: per-chat Q/A files
+- **Integrated Markdown**: topic-grouped narrative documents built from the HTML export
+
+### Where exports should live
+
+Do **not** commit raw exports to GitHub; they can contain sensitive content.
+
+- `chats/.gitignore` ignores `*.json`, `*.zip`, and `*.html` within `chats/`.
+
+In practice we kept the raw exports under `~/Downloads/EEProject-Chats/` and generated derived views next to them.
+
+### 1) Extract Q/A pairs from export JSON
+
+Script: `scripts/chats/extract_qa.py`
+
+#### Gemini category export → Q/A
+
+Input is the DevTools-exported Gemini JSON (contains `panel_text` per chat).
+
+```bash
+python3 "scripts/chats/extract_qa.py" \
+  -i "$HOME/Downloads/EEProject-Chats/gemini-category-EE-2026-01-24-3.json" \
+  --out-jsonl "$HOME/Downloads/EEProject-Chats/gemini-category-EE-2026-01-24-3.qa.jsonl" \
+  --out-md-dir "$HOME/Downloads/EEProject-Chats/gemini-category-EE-2026-01-24-3.qa-md"
+```
+
+Notes:
+
+- Gemini Q/A extraction is **best-effort** and relies on `Show thinking` markers inside `panel_text`.
+
+#### ChatGPT Project export → Q/A
+
+Input is the DevTools-exported ChatGPT JSON bundle.
+
+```bash
+python3 "scripts/chats/extract_qa.py" \
+  -i "$HOME/Downloads/EEProject-Chats/chatgpt-project-export-2026-01-24.json" \
+  --out-jsonl "$HOME/Downloads/EEProject-Chats/chatgpt-project-export-2026-01-24.qa.jsonl" \
+  --out-md-dir "$HOME/Downloads/EEProject-Chats/chatgpt-project-export-2026-01-24.qa-md"
+```
+
+Notes:
+
+- ChatGPT per-message `create_time` is preserved and attached to each extracted Q/A as:
+  - `question_create_time_iso` / `answer_create_time_iso` (UTC)
+
+### 2) Create HTML viewers (answers collapsed; click to expand)
+
+These are convenient for browsing everything quickly.
+
+#### Combined (ChatGPT + Gemini)
+
+```bash
+python3 "scripts/chats/extract_qa.py" \
+  -i "$HOME/Downloads/EEProject-Chats/chatgpt-project-export-2026-01-24.json" \
+  -i "$HOME/Downloads/EEProject-Chats/gemini-category-EE-2026-01-24-3.json" \
+  --out-html "$HOME/Downloads/EEProject-Chats/chat-qa-all.html"
+```
+
+#### ChatGPT-only
+
+```bash
+python3 "scripts/chats/extract_qa.py" \
+  -i "$HOME/Downloads/EEProject-Chats/chatgpt-project-export-2026-01-24.json" \
+  --out-html "$HOME/Downloads/EEProject-Chats/chat-qa-chatgpt.html"
+```
+
+#### Gemini-only
+
+```bash
+python3 "scripts/chats/extract_qa.py" \
+  -i "$HOME/Downloads/EEProject-Chats/gemini-category-EE-2026-01-24-3.json" \
+  --out-html "$HOME/Downloads/EEProject-Chats/chat-qa-gemini.html"
+```
+
+### 3) “Original custom instructions no longer available” in ChatGPT exports
+
+ChatGPT’s export JSON sometimes includes messages like:
+
+- `Original custom instructions no longer available`
+
+These appear as `author.role: "user"` but are tagged as hidden/system metadata:
+
+- `metadata.is_user_system_message: true`
+- `metadata.is_visually_hidden_from_conversation: true`
+
+We **do not skip any messages**; instead the HTML marks these entries with a `hidden/system` badge so you can recognize them without altering their text.
+
+### 4) Build topic-grouped Markdown from the HTML export
+
+Script: `scripts/chats/html_to_narrative_md.py`
+
+#### Verbatim topic grouping
+
+```bash
+python3 "scripts/chats/html_to_narrative_md.py" \
+  -i "$HOME/Downloads/EEProject-Chats/chat-qa-all.html" \
+  -o "chats/chat-qa-all.narrative.md" \
+  --mode verbatim
+```
+
+#### Integrated narrative (connective prose + verbatim Q&As inline)
+
+```bash
+python3 "scripts/chats/html_to_narrative_md.py" \
+  -i "$HOME/Downloads/EEProject-Chats/chat-qa-all.html" \
+  -o "chats/chat-qa-all.integrated.md" \
+  --mode narrative
+```
+
+Notes:
+
+- Very long “doc review” prompts can be omitted by heuristic (see script); everything else is included.
+- Q&As that don’t match any topic bucket are placed under **Unsorted** at the end.
+
 ## Google AI Studio (aistudio.google.com): export options (high level)
 
 - The most practical approach is usually a **browser exporter extension** that downloads the current conversation as JSON/Markdown.
