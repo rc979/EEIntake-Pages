@@ -130,6 +130,27 @@ Profitability depends on this discipline starting early. Correctly characterizin
 | Compliance Check | PE Seal + AHJ: PE stamps plans; City Inspector performs the final field walk. | Independent Audit: Often requires a third-party certificate (e.g., TÜV, Consuel) before turn-on. | CFIA Validation: Final project “Seal of Approval” is issued via the digital Bitácora platform. | Add Phase (EU): Independent Regulatory Audit. |
 | Significant Constraint | ADA Accessibility: Strict prescriptive design for van-spaces and accessible paths. | Grid Congestion: High-speed DC rollouts are often limited by local grid “waitlists”. | Environmental (SETENA): Coastal or protected zone projects require a lengthy environmental track. | Add Phase (CR): SETENA Environmental Screening. |
 
+**Acronyms used above (not defined earlier in this document):**
+
+- **AB 1236**: California Assembly Bill 1236 (EV charging “streamlined permitting” requirements for jurisdictions).
+- **ADA**: Americans with Disabilities Act (accessibility requirements).
+- **AFIR**: Alternative Fuels Infrastructure Regulation (EU).
+- **APC**: Plataforma/Administración de Proyectos del CFIA (Costa Rica’s centralized digital plan validation platform; naming varies in practice).
+- **CFIA**: Colegio Federado de Ingenieros y de Arquitectos (Costa Rica’s national engineers/architects college).
+- **CNFL**: Compañía Nacional de Fuerza y Luz (Costa Rica utility entity).
+- **CPO**: Charge Point Operator.
+- **Consuel**: Comité National pour la Sécurité des Usagers de l’Électricité (France; common third‑party electrical conformity body).
+- **DSO**: Distribution System Operator (EU).
+- **GCA**: Grid Connection Agreement (EU).
+- **ICE**: Instituto Costarricense de Electricidad (Costa Rica state electricity/telecom operator).
+- **IEC**: International Electrotechnical Commission (standards family widely used in the EU context).
+- **kWh**: kilowatt-hour (energy unit).
+- **MSP**: Mobility Service Provider (roaming/payment operator in EU charging ecosystems).
+- **NEC**: National Electrical Code (US); in California this is adopted/amended via the California Electrical Code.
+- **ROI**: Return on investment.
+- **SETENA**: Secretaría Técnica Nacional Ambiental (Costa Rica environmental authority).
+- **TÜV**: Technischer Überwachungsverein (independent technical inspection/certification bodies).
+
 
 <a id="phase-1"></a>
 
