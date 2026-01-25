@@ -19,3 +19,4 @@ exports/*.raw.docx
 # Exported chat transcripts (may contain sensitive info)
 chats/*.json
 chats/*.zip
+chats/*.md
