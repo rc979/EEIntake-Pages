@@ -13,7 +13,7 @@ pandoc "$IN" \
   -V urlcolor=blue \
   -V linkcolor=blue \
   -V fontsize=10pt \
-  -V mainfont="Helvetica" \
+  -V mainfont="Arial" \
   -o "$OUT"
 
 echo "Wrote: $OUT"

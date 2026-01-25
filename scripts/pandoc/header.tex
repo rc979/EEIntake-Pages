@@ -40,3 +40,17 @@
 \setlength{\parskip}{4pt}
 \setlength{\parindent}{0pt}
 
+% Ensure hyperref works with HTML anchors converted to LaTeX labels
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue,
+  pdfencoding=auto,
+  unicode=true
+}
+
+% Convert HTML anchor IDs to LaTeX labels (Pandoc should do this, but ensure it works)
+% This helps when markdown TOC links reference HTML anchors
+\newcommand{\htmlanchor}[1]{\hypertarget{#1}{}\label{#1}}
+
