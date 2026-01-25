@@ -7,6 +7,8 @@ OUT="exports/EV Charging Project Plan Outline.pdf"
 pandoc "$IN" \
   --from markdown+pipe_tables+table_captions \
   --pdf-engine=xelatex \
+  --toc \
+  --toc-depth=2 \
   --resource-path="." \
   --include-in-header="scripts/pandoc/header.tex" \
   -V colorlinks=true \
