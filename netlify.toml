@@ -3,7 +3,6 @@
   publish = "docs"
   # No build command needed (static HTML)
   command = ""
-  # Clear cache on deploy to ensure fresh build
 
 # Redirect rules (optional - for clean URLs)
 [[redirects]]
@@ -17,3 +16,5 @@
   [headers.values]
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
+    # Test header to verify netlify.toml is being read
+    X-Netlify-Config = "active"
