@@ -9,11 +9,18 @@
   <script>
     // Auth0 protection - redirect to login if not authenticated
     (function() {
+      // Wait for Auth0 SDK to load
+      if (typeof auth0 === 'undefined') {
+        console.error('Auth0 SDK not loaded');
+        return;
+      }
+      
       const AUTH0_DOMAIN = 'dev-etm8p8yhx6s75syc.auth0.com';
       const AUTH0_CLIENT_ID = 'T8rMJ51UJ6efeHrRauKN4x29jpvlRL85';
       const REDIRECT_URI = window.location.origin;
       
-      const auth0 = new auth0.WebAuth({
+      // Use different variable name to avoid shadowing global auth0
+      const webAuth = new auth0.WebAuth({
         domain: AUTH0_DOMAIN,
         clientID: AUTH0_CLIENT_ID,
         redirectUri: REDIRECT_URI,
@@ -23,7 +30,7 @@
 
       // Handle Auth0 callback first (if returning from login)
       if (window.location.hash) {
-        auth0.parseHash((err, authResult) => {
+        webAuth.parseHash((err, authResult) => {
           if (err) {
             console.error('Auth0 error:', err);
             return;
@@ -48,7 +55,7 @@
       if (!isAuthenticated || !accessToken) {
         // Not authenticated, redirect to Auth0 login immediately
         console.log('Not authenticated, redirecting to Auth0...');
-        auth0.authorize();
+        webAuth.authorize();
         return;
       }
       
