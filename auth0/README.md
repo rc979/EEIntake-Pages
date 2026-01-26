@@ -2,12 +2,14 @@
 
 This directory contains Auth0 configuration files and Action code for reference and version control.
 
-## Important Note
+## Deployment Options
 
-**Auth0 Actions cannot be deployed via Netlify CLI or any automated tool.** They must be created and managed manually in the Auth0 Dashboard. These files are stored here for:
-- Version control and documentation
-- Easy reference when updating Actions
-- Team collaboration
+You can deploy Auth0 Actions in two ways:
+
+1. **Auth0 CLI** (Recommended) - Deploy Actions programmatically from your repo
+2. **Auth0 Dashboard** (Manual) - Copy/paste code into the dashboard
+
+Both methods are documented below.
 
 ## Files
 
@@ -15,7 +17,67 @@ This directory contains Auth0 configuration files and Action code for reference 
 
 ## How to Deploy Auth0 Actions
 
-### 1. Create the Action in Auth0 Dashboard
+### Option 1: Using Auth0 CLI (Recommended)
+
+#### Install Auth0 CLI
+
+```bash
+# macOS/Linux
+brew tap auth0/auth0-cli
+brew install auth0-cli
+
+# Or using npm
+npm install -g @auth0/auth0-cli
+
+# Or using curl (macOS/Linux)
+curl -sSfL https://raw.githubusercontent.com/auth0/auth0-cli/main/install.sh | sh
+```
+
+#### Authenticate
+
+```bash
+auth0 login
+```
+
+This will open your browser to authenticate with Auth0.
+
+#### Deploy an Action
+
+```bash
+# Deploy the filter-google-accounts action
+cd auth0/actions
+auth0 actions deploy filter-google-accounts.js
+
+# Or deploy interactively (will prompt for file)
+auth0 actions deploy
+```
+
+#### List Actions
+
+```bash
+auth0 actions list
+```
+
+#### Attach Action to Login Flow
+
+After deploying, you still need to attach it to the Login flow:
+
+1. Go to **Auth0 Dashboard** → **Actions** → **Flows** → **Login**
+2. Drag your deployed Action into the flow (between **Start** and **Complete**)
+3. Click **Apply**
+
+#### Update an Existing Action
+
+```bash
+# Update the action code
+auth0 actions update <action-id> --code filter-google-accounts.js
+```
+
+---
+
+### Option 2: Using Auth0 Dashboard (Manual)
+
+#### 1. Create the Action in Auth0 Dashboard
 
 1. Go to **Auth0 Dashboard** → **Actions** → **Flows**
 2. Click **Login** flow
@@ -23,14 +85,14 @@ This directory contains Auth0 configuration files and Action code for reference 
 4. Name it (e.g., "Filter Google Accounts")
 5. Click **Create**
 
-### 2. Copy Code from This Repo
+#### 2. Copy Code from This Repo
 
 1. Open the Action file from `auth0/actions/` in this repo
 2. Copy the entire code
 3. Paste it into the Auth0 Action editor
 4. Update the configuration arrays (allowedDomains, allowedEmails) with your values
 
-### 3. Deploy and Attach
+#### 3. Deploy and Attach
 
 1. Click **Deploy** (top right)
 2. Go back to **Actions** → **Flows** → **Login**
