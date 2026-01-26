@@ -1,0 +1,18 @@
+[build]
+  # Publish the docs/ folder as the site root
+  publish = "docs"
+  # No build command needed (static HTML)
+  command = ""
+
+# Redirect rules (optional - for clean URLs)
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
+
+# Ensure .nojekyll is respected (Netlify doesn't need it, but good practice)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
