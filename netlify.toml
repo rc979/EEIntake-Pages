@@ -19,3 +19,12 @@
     X-Content-Type-Options = "nosniff"
     # Test header to verify netlify.toml is being read
     X-Netlify-Config = "active"
+
+# Password protection configuration
+# Note: Password protection must be enabled in Netlify dashboard (not configurable via toml)
+# To enable: Site settings → Access control → Password protection → Enable
+# Set a password in the dashboard; it will protect the entire site
+
+# Password protection (set password in Netlify dashboard: Site settings → Access control)
+# Note: Password protection must be enabled in Netlify dashboard; this file documents the intent.
+# To enable: Go to Site settings → Access control → Password protection → Enable
