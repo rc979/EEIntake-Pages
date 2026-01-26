@@ -15,7 +15,9 @@
         return;
       }
       
-      const AUTH0_DOMAIN = 'dev-etm8p8yhx6s75syc.auth0.com';
+      // Try US region format first (most common)
+      // If this doesn't work, check your Auth0 Dashboard → Settings → General → Domain
+      const AUTH0_DOMAIN = 'dev-etm8p8yhx6s75syc.us.auth0.com';
       const AUTH0_CLIENT_ID = 'T8rMJ51UJ6efeHrRauKN4x29jpvlRL85';
       const REDIRECT_URI = window.location.origin;
       
