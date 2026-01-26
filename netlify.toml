@@ -11,6 +11,13 @@
   to = "/index.html"
   status = 200
 
+# Auth0 protection is handled client-side via JavaScript in docs/index.html
+# Get your Auth0 Client ID from: Auth0 Dashboard → Applications → Your App → Settings
+# Then update docs/index.html with the correct clientID
+
+# Note: Password protection redirects are handled client-side via JavaScript
+# See docs/index.html and docs/_password_gate.html
+
 # Ensure .nojekyll is respected (Netlify doesn't need it, but good practice)
 [[headers]]
   for = "/*"
@@ -20,11 +27,21 @@
     # Test header to verify netlify.toml is being read
     X-Netlify-Config = "active"
 
-# Password protection configuration
-# Note: Password protection must be enabled in Netlify dashboard (not configurable via toml)
-# To enable: Site settings → Access control → Password protection → Enable
-# Set a password in the dashboard; it will protect the entire site
-
-# Password protection (set password in Netlify dashboard: Site settings → Access control)
-# Note: Password protection must be enabled in Netlify dashboard; this file documents the intent.
-# To enable: Go to Site settings → Access control → Password protection → Enable
+# Free password protection alternatives (Netlify's built-in password protection is paid):
+# 
+# Option 1: Client-side JavaScript password gate (docs/_password_gate.html)
+#   - Not secure (can be bypassed), but deters casual access
+#   - Edit docs/_password_gate.html and set CORRECT_PASSWORD
+#   - Redirect root to password gate, or add auth check to each page
+#
+# Option 2: Cloudflare Access (if using Cloudflare for DNS)
+#   - Free tier available
+#   - Set up in Cloudflare dashboard → Zero Trust → Access
+#
+# Option 3: Cloudflare Workers (if using Cloudflare)
+#   - Free tier: 100k requests/day
+#   - Add HTTP Basic Auth via Worker script
+#
+# Option 4: Vercel (alternative hosting)
+#   - Password protection NOT available on free tier (Enterprise/Pro only)
+#   - Vercel Authentication available on free tier, but requires Vercel accounts
