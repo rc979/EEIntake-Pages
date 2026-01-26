@@ -8,35 +8,53 @@
   <script src="https://cdn.auth0.com/js/auth0/9.24.1/auth0.min.js"></script>
   <script>
     // Auth0 protection - redirect to login if not authenticated
-    const auth0 = new auth0.WebAuth({
-      domain: 'dev-etm8p8yhx6s75syc.auth0.com',
-      clientID: 'T8rMJ51UJ6efeHrRauKN4x29jpvlRL85',
-      redirectUri: window.location.origin,
-      responseType: 'token id_token',
-      scope: 'openid profile email'
-    });
-
-    // Check if user is authenticated
-    const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
-    const accessToken = localStorage.getItem('access_token');
-    
-    if (!isAuthenticated || !accessToken) {
-      // Not authenticated, redirect to Auth0 login
-      auth0.authorize();
-    }
-    
-    // Handle Auth0 callback (if returning from login)
-    if (window.location.hash) {
-      auth0.parseHash((err, authResult) => {
-        if (authResult && authResult.accessToken) {
-          localStorage.setItem('access_token', authResult.accessToken);
-          localStorage.setItem('id_token', authResult.idToken);
-          localStorage.setItem('isAuthenticated', 'true');
-          window.location.hash = '';
-          window.location.reload();
-        }
+    (function() {
+      const AUTH0_DOMAIN = 'dev-etm8p8yhx6s75syc.auth0.com';
+      const AUTH0_CLIENT_ID = 'T8rMJ51UJ6efeHrRauKN4x29jpvlRL85';
+      const REDIRECT_URI = window.location.origin;
+      
+      const auth0 = new auth0.WebAuth({
+        domain: AUTH0_DOMAIN,
+        clientID: AUTH0_CLIENT_ID,
+        redirectUri: REDIRECT_URI,
+        responseType: 'token id_token',
+        scope: 'openid profile email'
       });
-    }
+
+      // Handle Auth0 callback first (if returning from login)
+      if (window.location.hash) {
+        auth0.parseHash((err, authResult) => {
+          if (err) {
+            console.error('Auth0 error:', err);
+            return;
+          }
+          if (authResult && authResult.accessToken) {
+            localStorage.setItem('access_token', authResult.accessToken);
+            localStorage.setItem('id_token', authResult.idToken);
+            localStorage.setItem('isAuthenticated', 'true');
+            // Clear hash and reload
+            window.location.hash = '';
+            window.location.reload();
+            return;
+          }
+        });
+        return; // Don't check auth while processing callback
+      }
+
+      // Check if user is authenticated
+      const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
+      const accessToken = localStorage.getItem('access_token');
+      
+      if (!isAuthenticated || !accessToken) {
+        // Not authenticated, redirect to Auth0 login immediately
+        console.log('Not authenticated, redirecting to Auth0...');
+        auth0.authorize();
+        return;
+      }
+      
+      // User is authenticated, continue loading the page
+      console.log('User authenticated');
+    })();
   </script>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 24px; max-width: 900px; }
