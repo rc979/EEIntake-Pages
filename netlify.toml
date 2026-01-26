@@ -5,6 +5,7 @@
   command = ""
 
 # Redirect rules (optional - for clean URLs)
+# Test change: updated redirect rule
 [[redirects]]
   from = "/"
   to = "/index.html"
