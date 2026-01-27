@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <title>View CSV: P0-I01_GreenButton_IntervalData_2025.csv</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 20px; }
+    a { color: #0b57d0; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .bar { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin: 10px 0 14px; }
+    .meta { color: #555; font-size: 13px; }
+    table { border-collapse: collapse; width: 100%; font-size: 13px; }
+    th, td { border: 1px solid #eee; padding: 6px 8px; vertical-align: top; }
+    th { position: sticky; top: 0; background: #fafafa; }
+    code { background: #f6f6f6; padding: 1px 4px; border-radius: 4px; }
+    .warn { color: #a14; }
+  </style>
+</head>
+<body>
+  <div class="bar">
+    <a href="index.html">Back to folder</a>
+    <a href="P0-I01_GreenButton_IntervalData_2025.csv" download>Download</a>
+    <span class="meta"><code>P0-I01_GreenButton_IntervalData_2025.csv</code></span>
+    <span id="status" class="meta">Loading…</span>
+  </div>
+  <div id="note" class="meta"></div>
+  <div id="table"></div>
+  <script>
+    // Minimal CSV parser (handles quoted fields, commas, CRLF).
+    function parseCSV(text) {
+      const rows = [];
+      let row = [];
+      let field = '';
+      let i = 0;
+      let inQuotes = false;
+      while (i < text.length) {
+        const c = text[i];
+        if (inQuotes) {
+          if (c === '"') {
+            if (text[i+1] === '"') { field += '"'; i += 2; continue; }
+            inQuotes = false; i++; continue;
+          }
+          field += c; i++; continue;
+        }
+        if (c === '"') { inQuotes = true; i++; continue; }
+        if (c === ',') { row.push(field); field = ''; i++; continue; }
+        if (c === '\r') { i++; continue; }
+        if (c === '\n') { row.push(field); rows.push(row); row = []; field = ''; i++; continue; }
+        field += c; i++;
+      }
+      if (field.length || row.length) { row.push(field); rows.push(row); }
+      return rows;
+    }
+
+    function esc(s) {
+      return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
+    }
+
+    async function main() {
+      const status = document.getElementById('status');
+      const note = document.getElementById('note');
+      const out = document.getElementById('table');
+      const url = "P0-I01_GreenButton_IntervalData_2025.csv";
+      const res = await fetch(url);
+      if (!res.ok) {
+        status.textContent = 'Failed to load CSV';
+        note.innerHTML = '<span class="warn">HTTP ' + res.status + '</span>';
+        return;
+      }
+      const text = await res.text();
+      const rows = parseCSV(text);
+      if (!rows.length) {
+        status.textContent = 'Empty CSV';
+        return;
+      }
+      const maxRows = 2000;
+      const shown = rows.slice(0, maxRows);
+      if (rows.length > maxRows) {
+        note.textContent = 'Showing first ' + maxRows + ' rows of ' + rows.length + '. Download for full file.';
+      }
+      const headers = shown[0];
+      let html = '<table><thead><tr>';
+      for (const h of headers) html += '<th>' + esc(h) + '</th>';
+      html += '</tr></thead><tbody>';
+      for (let r = 1; r < shown.length; r++) {
+        html += '<tr>';
+        const row = shown[r];
+        for (let c = 0; c < headers.length; c++) {
+          html += '<td>' + esc(row[c] ?? '') + '</td>';
+        }
+        html += '</tr>';
+      }
+      html += '</tbody></table>';
+      out.innerHTML = html;
+      status.textContent = 'Loaded';
+    }
+    main().catch(e => {
+      document.getElementById('status').textContent = 'Error';
+      document.getElementById('note').innerHTML = '<span class="warn">' + (e?.message || String(e)) + '</span>';
+    });
+  </script>
+</body>
+</html>
