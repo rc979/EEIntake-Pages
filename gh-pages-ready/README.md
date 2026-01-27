@@ -24,7 +24,7 @@ Last updated: 2026-01-26
 
 ### Updating the Site
 
-**Fastest Method - GitHub Actions Workflow (Recommended):**
+**Recommended Method - Git Subtree Push (Fast & Simple):**
 
 From the main EEIntake repo directory:
 
@@ -32,53 +32,43 @@ From the main EEIntake repo directory:
 # 1. Prepare files (updates links, regenerates HTML, etc.)
 ./scripts/publish/prepare_gh_pages.sh EEIntake-Pages rc979
 
-# 2. Commit and push the gh-pages-ready folder to main repo
+# 2. Commit the gh-pages-ready folder to main repo
 git add gh-pages-ready/
 git commit -m "Update Pages site files"
 git push
 
-# 3. Trigger the sync workflow (runs on GitHub servers - FAST!)
+# 3. Push to Pages repo using git subtree (single fast operation!)
+SPLIT_SHA=$(git subtree split --prefix=gh-pages-ready 2>/dev/null)
+sleep 1
+git push pages-repo $SPLIT_SHA:main --force
+```
+
+**Why this is recommended:**
+- ✅ Uses regular git push (no API calls)
+- ✅ Single operation (not 170+ API calls)
+- ✅ Fast (~5-10 seconds)
+- ✅ Works reliably (verified method)
+
+**Alternative Method - GitHub Actions Workflow:**
+
+If you prefer automated syncing:
+
+```bash
+# 1. Prepare files
+./scripts/publish/prepare_gh_pages.sh EEIntake-Pages rc979
+
+# 2. Commit and push to main repo
+git add gh-pages-ready/
+git commit -m "Update Pages site files"
+git push
+
+# 3. Trigger the sync workflow
 gh workflow run sync-from-main.yml --repo rc979/EEIntake-Pages
 ```
 
 Or manually trigger:
 - Go to: https://github.com/rc979/EEIntake-Pages/actions
 - Click "Sync from Main Repo" → "Run workflow" → "Run workflow"
-
-**Why this is fastest:**
-- ✅ Runs entirely on GitHub's servers (no local uploads)
-- ✅ Handles all 170+ files in one operation
-- ✅ Automatically commits and deploys
-- ✅ Takes ~30 seconds total
-
-**Alternative Methods (slower):**
-- Manual git push (requires cloning locally)
-- API upload script (uploads files one by one - slow)
-
-#### Option 2: Manual Git Push
-
-If you prefer using git directly:
-
-```bash
-# From the main EEIntake repo
-cd ~/Downloads
-git clone https://github.com/rc979/EEIntake-Pages.git
-cd EEIntake-Pages
-
-# Copy updated files
-cp -r "/path/to/EEIntake/gh-pages-ready"/* .
-
-# Commit and push
-git add .
-git commit -m "Update GitHub Pages site $(date +%Y-%m-%d)"
-git push origin main
-```
-
-#### Option 3: Using the Quick Push Script
-
-```bash
-bash "/path/to/EEIntake/PUSH_PAGES.sh"
-```
 
 ## File Structure
 
