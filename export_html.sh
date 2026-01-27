@@ -14,7 +14,7 @@ cp "$IN" "$TEMP_MD"
 python3 "scripts/publish/linkify_outline_public_urls.py" \
   --md "$TEMP_MD" \
   --manifest "$MANIFEST" \
-  --base-url "https://rc979.github.io/EEIntake"
+  --base-url "https://heroic-sunburst-405f92.netlify.app"
 
 # 2) Pandoc export to HTML
 pandoc "$TEMP_MD" \
