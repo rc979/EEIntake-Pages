@@ -11,6 +11,32 @@
   to = "/index.html"
   status = 200
 
+# Redirect direct .xlsx/.csv file access to viewer pages
+# This ensures clicking on file links opens the viewer instead of downloading
+[[redirects]]
+  from = "/phases/*/Outputs/*.xlsx"
+  to = "/phases/:splat/Outputs/:filename.xlsx.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/phases/*/Inputs/*.xlsx"
+  to = "/phases/:splat/Inputs/:filename.xlsx.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/phases/*/Outputs/*.csv"
+  to = "/phases/:splat/Outputs/:filename.csv.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/phases/*/Inputs/*.csv"
+  to = "/phases/:splat/Inputs/:filename.csv.html"
+  status = 301
+  force = true
+
 # Auth0 protection is handled client-side via JavaScript in docs/index.html
 # Get your Auth0 Client ID from: Auth0 Dashboard → Applications → Your App → Settings
 # Then update docs/index.html with the correct clientID
