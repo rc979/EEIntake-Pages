@@ -339,6 +339,7 @@ def _render_csv_viewer_html(filename: str) -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   {ROBOTS_META}
   <title>View CSV: {html.escape(filename)}</title>
   <style>
@@ -449,6 +450,7 @@ def _render_xlsx_viewer_html(filename: str) -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   {ROBOTS_META}
   <title>View XLSX: {html.escape(filename)}</title>
   <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
