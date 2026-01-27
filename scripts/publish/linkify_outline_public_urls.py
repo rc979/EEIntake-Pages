@@ -21,7 +21,7 @@ import re
 from pathlib import Path
 
 
-BASE_URL_DEFAULT = "https://heroic-sunburst-405f92.netlify.app"
+BASE_URL_DEFAULT = "https://rc979.github.io/EEIntake-Pages"
 
 
 PHASES_PATH_RE = re.compile(r"phases/P[0-7]/(?:Inputs|Outputs)/[A-Za-z0-9._-]+\.(?:pdf|xlsx|csv|zip)")
