@@ -1,0 +1,44 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'gh-pages-ready/**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout pages repo
+        uses: actions/checkout@v4
+        with:
+          repository: rc979/EEIntake-Pages
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: pages-repo
+
+      - name: Checkout source repo
+        uses: actions/checkout@v4
+        with:
+          path: source-repo
+
+      - name: Copy files to pages repo
+        run: |
+          cd pages-repo
+          # Remove everything except .git
+          find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          # Copy all files from gh-pages-ready
+          cp -r ../source-repo/gh-pages-ready/* .
+
+      - name: Commit and push
+        run: |
+          cd pages-repo
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add -A
+          git commit -m "Deploy from EEIntake repo $(date +%Y-%m-%d)" || exit 0
+          git push origin main
