@@ -1,0 +1,4547 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>EV Charging Project Plan Outline</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="outline.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">EV Charging Project Plan Outline</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#ev-charging-site-project-plan"
+id="toc-ev-charging-site-project-plan">EV Charging Site Project Plan</a>
+<ul>
+<li><a href="#executive-summary" id="toc-executive-summary">Executive
+Summary</a></li>
+<li><a href="#table-of-contents" id="toc-table-of-contents">Table of
+Contents</a></li>
+<li><a href="#overview" id="toc-overview">Overview</a></li>
+<li><a href="#introduction" id="toc-introduction">Introduction</a></li>
+<li><a href="#phase-1-project-initiation-and-feasibility-1"
+id="toc-phase-1-project-initiation-and-feasibility-1">Phase 1: Project
+Initiation and Feasibility</a></li>
+<li><a href="#phase-2-data-collection-and-site-analysis-1"
+id="toc-phase-2-data-collection-and-site-analysis-1">Phase 2: Data
+Collection and Site Analysis</a></li>
+<li><a href="#phase-3-system-design-and-load-calculation-1"
+id="toc-phase-3-system-design-and-load-calculation-1">Phase 3: System
+Design and Load Calculation</a></li>
+<li><a href="#phase-4-preliminary-drawing-set-production-1"
+id="toc-phase-4-preliminary-drawing-set-production-1">Phase 4:
+Preliminary Drawing Set Production</a></li>
+<li><a href="#phase-5-permitting-submission-1"
+id="toc-phase-5-permitting-submission-1">Phase 5: Permitting
+Submission</a></li>
+<li><a href="#phase-6-authority-review-and-drawing-revision-1"
+id="toc-phase-6-authority-review-and-drawing-revision-1">Phase 6:
+Authority Review and Drawing Revision</a></li>
+<li><a href="#phase-7-utility-coordination-1"
+id="toc-phase-7-utility-coordination-1">Phase 7: Utility
+Coordination</a></li>
+<li><a href="#phase-8-electrical-closeout-and-handover-1"
+id="toc-phase-8-electrical-closeout-and-handover-1">Phase 8: Electrical
+Closeout and Handover</a></li>
+<li><a href="#addendum-a-stable-filename-index-by-phase"
+id="toc-addendum-a-stable-filename-index-by-phase">12 Addendum A: Stable
+Filename Index (by Phase)</a></li>
+<li><a href="#addendum-b-party-directory-roles-contacts"
+id="toc-addendum-b-party-directory-roles-contacts">13 Addendum B: Party
+Directory (Roles + Contacts)</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="ev-charging-site-project-plan">EV Charging Site Project
+Plan</h1>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>This document is the <strong>master, traceable closeout
+deliverable</strong> for an EV charging site electrical project. It
+presents a complete, phase-structured record of how an EV charging
+installation was engineered, reviewed, submitted, revised, and
+finalized, with every key decision tied back to its inputs and
+supporting evidence.</p>
+<p>The plan is organized into <strong>eight phases (Phase 1 through
+Phase 8)</strong>. Within each phase, the document identifies the
+prerequisite inputs and how they were provided, establishes a stable
+evidence index (so files can be retrieved unambiguously), and summarizes
+how each deliverable was created (calculations, decision records,
+compilation/QA logs). It also preserves an audit trail of external
+review cycles—authority plan check and serving utility review—by
+capturing submission packages, receipts, comment logs, response letters,
+and approvals/finaled evidence.</p>
+<p>The intent is not to restate every technical detail in prose, but to
+provide a defensible chain of custody: what information was relied on,
+how assumptions were verified and frozen, what artifacts were produced,
+and what evidence demonstrates acceptance at each checkpoint.</p>
+<p>For readers who are not familiar with how electrical work is reviewed
+and validated in California, the <strong>Introduction</strong> section
+provides the operational context—how AHJs and utilities function as
+separate audit systems, why “written code” and “enforced code” diverge
+in practice, and why traceability and early risk characterization
+materially affect delivery outcomes.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#overview">Overview (includes Phase Overview)</a></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#phase-1">Phase 1: Project Initiation and
+Feasibility</a></li>
+<li><a href="#phase-2">Phase 2: Data Collection and Site
+Analysis</a></li>
+<li><a href="#phase-3">Phase 3: System Design and Load
+Calculation</a></li>
+<li><a href="#phase-4">Phase 4: Preliminary Drawing Set
+Production</a></li>
+<li><a href="#phase-5">Phase 5: Permitting Submission</a></li>
+<li><a href="#phase-6">Phase 6: Authority Review and Drawing
+Revision</a></li>
+<li><a href="#phase-7">Phase 7: Utility Coordination</a></li>
+<li><a href="#phase-8">Phase 8: Electrical Closeout and
+Handover</a></li>
+<li><a href="#addendum-a">Addendum A: Stable Filename Index (by
+Phase)</a></li>
+<li><a href="#addendum-b">Addendum B: Party Directory (Roles +
+Contacts)</a></li>
+</ul>
+<p><a id="overview"></a></p>
+<h2 id="overview">Overview</h2>
+<p><a id="phase-overview"></a></p>
+<h3 id="phase-overview-deliverables-by-phase">Phase Overview
+(Deliverables by Phase)</h3>
+<h4 id="phase-1-project-initiation-and-feasibility">Phase 1: Project
+Initiation and Feasibility</h4>
+<p>This phase establishes the foundational viability of the project.</p>
+<ul>
+<li><strong>Phase 1 Project Technical Intake Record</strong>: Captures
+project identifiers, technical constraints, stakeholders/roles, and
+approvers.</li>
+<li><strong>Phase 1 Feasibility Memo / Go–No-Go
+(Screening-Level)</strong>: Uses Phase 1 inputs to determine preliminary
+electrical viability and define conditions to proceed.</li>
+<li><strong>Phase 1 Input Register + Evidence Index</strong>: Lists
+every prerequisite input with provenance (who/when/how provided),
+versioning, verification method, and evidence pointers.</li>
+<li><strong>Phase 1 Assumption + Exclusion Register</strong>: Records
+Phase 1 assumptions (with owners to validate) and explicit exclusions
+(including civil/constructability and business/cost/schedule).</li>
+<li><strong>Phase 1 Preliminary Electrical Basis of Design
+(BOD)</strong>: Freezes the Phase 1 “technical truth” set (or explicitly
+flags TBDs) used to seed later deliverables.</li>
+<li><strong>Phase 1 Forward Traceability Map</strong>: Shows how Phase 1
+inputs/assumptions flow into deliverables in Phases 2–8.</li>
+</ul>
+<h4 id="phase-2-data-collection-and-site-analysis">Phase 2: Data
+Collection and Site Analysis</h4>
+<p>This phase involves gathering and standardizing all necessary
+information about the existing site.</p>
+<ul>
+<li><strong>Phase 2 Intake Checklist – Complete</strong>: Requires Site
+plans (Owner/Architect), Panel schedules (Electrician), Photos
+(Installer), Charger SKUs (Installer/Vendor), and AHJ (Address).</li>
+<li><strong>Phase 2 Normalized Site Data Package</strong>: Requires Raw
+plans (Phase 2), Photos (Phase 2), and Schedules (Phase 2).</li>
+</ul>
+<h4 id="phase-3-system-design-and-load-calculation">Phase 3: System
+Design and Load Calculation</h4>
+<p>The focus of this phase is on determining the site’s electrical
+capacity and selecting the appropriate EV charging system
+architecture.</p>
+<ul>
+<li><strong>Phase 3 NEC Load Calculation</strong>: Requires Panel
+schedules (Electrician), EVSE ratings (Manufacturer), and NEC methods
+(Code).</li>
+<li><strong>Phase 3 EV System Architecture Decision</strong>: Requires
+Load results (EE, Phase 3), Charger mix (Installer/Owner), and Site
+constraints (Phase 2).</li>
+</ul>
+<h4 id="phase-4-preliminary-drawing-set-production">Phase 4: Preliminary
+Drawing Set Production</h4>
+<p>This phase produces the necessary detailed
+<strong>electrical</strong> drawings required for permitting review.</p>
+<ul>
+<li><strong>Phase 4 Preliminary One-Line Diagram</strong>: Requires
+Architecture decision (Phase 3), Service info (Utility bill/As-builts),
+and Charger specs (Manufacturer).</li>
+<li><strong>Phase 4 Site Plan w/ EVSE Locations</strong>: Requires Base
+site plan (Owner/Architect) and Parking layout (Owner).</li>
+<li><strong>Phase 4 Conduit &amp; Trenching Details</strong>: Requires
+Routing assumptions (Installer) and Site conditions (Photos, Phase
+2).</li>
+<li><strong>Phase 4 Updated Panel Schedules</strong>: Requires Existing
+schedules (Electrician) and New EV loads (EE, Phase 3).</li>
+<li><strong>Phase 4 Electrical Notes &amp; Code Sheets</strong>:
+Requires Jurisdiction (Address) and Standard templates (Internal).</li>
+<li><strong>Phase 4 Permit Drawing Set – Unstamped</strong>: Requires
+One-line (Phase 4), Site plan (Phase 4), Details (Phase 4), Schedules
+(Phase 4), and Notes (Phase 4).</li>
+</ul>
+<h4 id="phase-5-permitting-submission">Phase 5: Permitting
+Submission</h4>
+<p>This phase focuses on the formal submission of documents required to
+obtain construction permits.</p>
+<ul>
+<li><strong>Phase 5 Stamped Permit Drawings</strong>: Requires Unstamped
+drawing set (Phase 4).</li>
+<li><strong>Phase 5 Permit Application Package</strong>: Requires
+Stamped plans (Phase 5), Permit forms (AHJ), and Project metadata (Phase
+2 / Phase 4).</li>
+</ul>
+<h4 id="phase-6-authority-review-and-drawing-revision">Phase 6:
+Authority Review and Drawing Revision</h4>
+<p>This phase addresses any feedback or comments received from the AHJ
+and ensures that all drawing revisions are complete.</p>
+<ul>
+<li><strong>Phase 6 AHJ Comment Log – Parsed</strong>: Requires Plan
+check comments (AHJ).</li>
+<li><strong>Phase 6 Revised Drawings – Post-Comments</strong>: Requires
+Comment log (Phase 6) and Prior drawings (Phase 4 / Phase 5).</li>
+<li><strong>Phase 6 Comment Response Letter</strong>: Requires AHJ
+comments (AHJ) and Revised drawings (Phase 6).</li>
+</ul>
+<h4 id="phase-7-utility-coordination">Phase 7: Utility Coordination</h4>
+<p>This phase handles all necessary applications and coordination with
+the local electrical utility company.</p>
+<ul>
+<li><strong>Phase 7 Utility Load Letter / Single-Line</strong>: Requires
+Load calc (Phase 3) and Service info (Utility bill/As-builts).</li>
+<li><strong>Phase 7 Utility Application Forms</strong>: Requires Utility
+requirements (Utility portal) and Project data (Phase 3 / Phase 4).</li>
+</ul>
+<h4 id="phase-8-electrical-closeout-and-handover">Phase 8: Electrical
+Closeout and Handover</h4>
+<p>The final phase involves documenting the completed site and providing
+necessary support for final inspections and system activation.</p>
+<ul>
+<li><strong>Phase 8 As-Built Drawings</strong>: Requires Field redlines
+(Electrician/Installer) and Inspector notes (AHJ).</li>
+<li><strong>Phase 8 Inspection Support Responses</strong>: Requires
+Inspector feedback (AHJ).</li>
+</ul>
+<p><a id="introduction"></a></p>
+<h2 id="introduction">Introduction</h2>
+<p>In California, electrical engineering work is validated externally by
+two independent authorities: the Authority Having Jurisdiction (AHJ) and
+the serving electrical utility. AHJs enforce the adopted California
+Electrical Code and local amendments through plan check and inspection.
+Utilities are not code enforcers; they manage grid and asset risk,
+reviewing added load, service impacts, fault duty, and—in EV
+projects—the credibility of any claimed load-management scheme. These
+entities do not coordinate with each other and do not participate in
+design. They review finished artifacts only.</p>
+<p>In the San Francisco Bay Area, the AHJ is typically the city or
+county building department responsible for electrical permits. A
+multifamily EV project in Palo Alto, for example, is reviewed by the
+City of Palo Alto – Building Division, while a similar project nearby
+may face a different department with different amendments, reviewer
+expectations, and enforcement thresholds. The serving utility runs a
+parallel review with different criteria and timelines. Same written
+code, materially different enforcement outcomes.</p>
+<p>Both AHJs and utilities operate as audit systems. They do not accept
+undocumented reasoning, verbal explanations, or implied engineering
+intent. Anything not written, indexed, and traceable is treated as
+nonexistent. Most comments and deficiencies are not about incorrect
+calculations but about failure to demonstrate how inputs flowed into
+outputs and whether assumptions were verified, frozen, and consistently
+applied. This is why written code ≠ enforced code in practice, and why
+designing purely to the most conservative interpretation everywhere
+results in systematic over-engineering.</p>
+<p>Over-engineering is not a neutral safety margin in California; it is
+economically destructive. The state faces a chronic scarcity of licensed
+EEs and especially PEs, which drives very high labor costs. Every
+unnecessary design iteration, oversizing decision, or avoidable service
+upgrade consumes scarce senior hours that cannot be amortized. When
+firms respond to regulatory uncertainty with blanket conservatism, they
+burn the most expensive resource they have and compress margins without
+meaningfully reducing approval risk.</p>
+<p>Modeling each AHJ—what they actually enforce, what they routinely
+question, and where they allow judgment—is therefore critical. Precise
+alignment to enforcement reality allows designs that are code-compliant,
+defensible, and no more complex than necessary. This reduces PE touch
+time, limits redesign cycles, and keeps projects within a labor envelope
+that is survivable given market scarcity.</p>
+<p>Utilities must be modeled with the same rigor. Written utility
+standards, handbooks, or greenbooks do not reflect how load increases,
+EMS claims, or service constraints are actually reviewed in practice.
+Utilities differ materially in what they flag, what they defer, what
+they require upfront, and what they reopen later in the process.
+Treating utilities as deterministic rule engines leads to the same
+failure mode as over-interpreting code: unnecessary conservatism, late
+surprises, and unplanned rework. Capturing utility behavior—what
+documentation they demand, how they evaluate managed load, and where
+they apply discretion—is essential to avoiding service upgrades and
+uncontrolled scope growth.</p>
+<p>Profitability depends on this discipline starting early. Correctly
+characterizing a project’s regulatory and utility risk at intake—based
+on service conditions, load posture, AHJ enforcement behavior, and
+utility sensitivity—and fitting it into a canonical, repeatable form is
+what enables accurate pricing. When risk is explicitly classified rather
+than discovered midstream, fees can reflect true exposure, delivery
+plans can be matched to risk class, and engineers can execute with
+confidence that the work is achievable within tolerable margins. In
+California EE practice, traceability, AHJ and utility modeling, and
+early risk canonicalization are prerequisites for operating profitably
+under scarcity and scrutiny.</p>
+<p>The two comparison tables below make these claims concrete by showing
+how differences in grid/permit governance and liability structure can
+force additional phases, rework loops, or evidence requirements
+(relative to California).</p>
+<h3
+id="comparative-regulatory-context-california-vs.-eu-vs.-costa-rica">Comparative
+regulatory context (California vs. EU vs. Costa Rica)</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Category</th>
+<th style="text-align: left;">California (USA)</th>
+<th style="text-align: left;">European Union (EU)</th>
+<th style="text-align: left;">Costa Rica</th>
+<th style="text-align: left;">Phase Impact (EU/CR vs. CA)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Grid Contract Status</td>
+<td style="text-align: left;">Standard Customer: You request a utility
+service/meter upgrade (e.g., Taylor Nguyen).</td>
+<td style="text-align: left;">Market Participant: You sign a bilateral
+GCA (Grid Connection Agreement) as an active grid asset.</td>
+<td style="text-align: left;">Public Service User: You apply for a
+“Public Service Connection” from the state monopoly (ICE/CNFL).</td>
+<td style="text-align: left;">Add Phase (EU): GCA Legal Negotiation
+&amp; Signing.</td>
+</tr>
+<tr>
+<td style="text-align: left;">GCA Throttling</td>
+<td style="text-align: left;">Passive/Local: System is capped internally
+to protect building breakers.</td>
+<td style="text-align: left;">Active/Remote: GCA legally permits the DSO
+to remotely throttle your load during grid stress.</td>
+<td style="text-align: left;">Regulated Limit: Strict “Hosting Capacity”
+limits (often 15%) on local distribution circuits.</td>
+<td style="text-align: left;">Add Phase (EU): DSO Signal Integration
+&amp; Testing.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Market Operations</td>
+<td style="text-align: left;">Open/Deregulated: Any business can sell
+energy by kWh/minute. Focus on uptime.</td>
+<td style="text-align: left;">Harmonized (AFIR): Mandated ad-hoc
+payment, price transparency, and open roaming.</td>
+<td style="text-align: left;">State Monopoly: Law 9518 restricts resale
+to utilities; private sites often offer “Free Amenity”.</td>
+<td style="text-align: left;">Add Phase (EU): MSP/Roaming Integration.
+Modify (CR): Legal Resale Review.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Project Steward</td>
+<td style="text-align: left;">CPO-Focused: The software vendor often
+“pilots” the project to ensure operational ROI.</td>
+<td style="text-align: left;">DSO-Focused: The regulated Grid Operator
+is the gatekeeper of timelines and capacity terms.</td>
+<td style="text-align: left;">EE/Consultor-Led: The licensed engineer is
+the steward, navigating the CFIA and ICE.</td>
+<td style="text-align: left;">Shift: Stewardship moves from vendor to
+grid authority or engineer.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Technical Steward</td>
+<td style="text-align: left;">EE Firm: Licensed PE (Priya Shah) stewards
+NEC 625.42 and the “Right to a Permit”.</td>
+<td style="text-align: left;">EE Firm: Technical executor ensuring
+design meets both IEC and DSO-specific GCA signals.</td>
+<td style="text-align: left;">EE Firm: Responsible for the Bitácora
+Digital (mandatory legal project log).</td>
+<td style="text-align: left;">Add Task (CR): Continuous Bitácora Logging
+(Phase 3–7).</td>
+</tr>
+<tr>
+<td style="text-align: left;">EMS Architecture</td>
+<td style="text-align: left;">EE-Led: Design must be “fail-safe” to
+satisfy the AHJ and avoid $50k utility upgrades.</td>
+<td style="text-align: left;">CPO-Driven: Software logic often dictates
+the load profile to match volatile energy markets.</td>
+<td style="text-align: left;">EE-Led: Must prove site stability to
+prevent local transformer failure in residential zones.</td>
+<td style="text-align: left;">Neutral: Responsibility shift within Phase
+2.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Permit Authority</td>
+<td style="text-align: left;">Ministerial (AHJ): Cities must approve per
+AB 1236 if health/safety codes are met.</td>
+<td style="text-align: left;">Discretionary: Local municipalities often
+have “Urban Design” or “Public Realm” veto power.</td>
+<td style="text-align: left;">APC (CFIA): Centralized digital platform
+where plans are validated by the National College of Engineers.</td>
+<td style="text-align: left;">Add Phase (EU): Public Design Review.
+Consolidate (CR): Single APC track.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Compliance Check</td>
+<td style="text-align: left;">PE Seal + AHJ: PE stamps plans; City
+Inspector performs the final field walk.</td>
+<td style="text-align: left;">Independent Audit: Often requires a
+third-party certificate (e.g., TÜV, Consuel) before turn-on.</td>
+<td style="text-align: left;">CFIA Validation: Final project “Seal of
+Approval” is issued via the digital Bitácora platform.</td>
+<td style="text-align: left;">Add Phase (EU): Independent Regulatory
+Audit.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Significant Constraint</td>
+<td style="text-align: left;">ADA Accessibility: Strict prescriptive
+design for van-spaces and accessible paths.</td>
+<td style="text-align: left;">Grid Congestion: High-speed DC rollouts
+are often limited by local grid “waitlists”.</td>
+<td style="text-align: left;">Environmental (SETENA): Coastal or
+protected zone projects require a lengthy environmental track.</td>
+<td style="text-align: left;">Add Phase (CR): SETENA Environmental
+Screening.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Acronyms used above (not defined earlier in this
+document):</strong></p>
+<ul>
+<li><strong>AB 1236</strong>: California Assembly Bill 1236 (EV charging
+“streamlined permitting” requirements for jurisdictions).</li>
+<li><strong>ADA</strong>: Americans with Disabilities Act (accessibility
+requirements).</li>
+<li><strong>AFIR</strong>: Alternative Fuels Infrastructure Regulation
+(EU).</li>
+<li><strong>CPO</strong>: Charge Point Operator.</li>
+<li><strong>Consuel</strong>: Comité National pour la Sécurité des
+Usagers de l’Électricité (France; common third‑party electrical
+conformity body).</li>
+<li><strong>DSO</strong>: Distribution System Operator (EU).</li>
+<li><strong>GCA</strong>: Grid Connection Agreement (EU).</li>
+<li><strong>IEC</strong>: International Electrotechnical Commission
+(standards family widely used in the EU context).</li>
+<li><strong>MSP</strong>: Mobility Service Provider (roaming/payment
+operator in EU charging ecosystems).</li>
+<li><strong>NEC</strong>: National Electrical Code (US); in California
+this is adopted/amended via the California Electrical Code.</li>
+</ul>
+<h3
+id="comparative-liability-context-california-vs.-eugermany-vs.-costa-rica">Comparative
+liability context (California vs. EU/Germany vs. Costa Rica)</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Category</th>
+<th style="text-align: left;">California (USA)</th>
+<th style="text-align: left;">EU/Germany</th>
+<th style="text-align: left;">Costa Rica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Primary Liability Basis</td>
+<td style="text-align: left;">Tort &amp; Negligence: Focus on “Duty of
+Care” and unlimited potential for indirect damages (loss of
+profit).</td>
+<td style="text-align: left;">Statutory/Contractual: Governed by the BGB
+(Civil Code) and VOB; focus is on “Direct Damage” only.</td>
+<td style="text-align: left;">Professional Responsibility: Governed by
+Law 3663 and CFIA; linked to the “Bitácora Digital” logs.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Personal vs. Corporate</td>
+<td style="text-align: left;">Individual Signature: The PE who stamps
+the plans carries “Responsible Charge” and personal liability.</td>
+<td style="text-align: left;">Corporate Focused: Liability typically
+sits with the firm (GmbH) as the contracting party under the BGB.</td>
+<td style="text-align: left;">Personal &amp; Solidary: The signing
+engineer and the firm are jointly liable for the 10-year stability.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Duration of Liability</td>
+<td style="text-align: left;">10 Years: Statute of repose for latent
+defects (California Code of Civil Procedure 337.15).</td>
+<td style="text-align: left;">5 Years: Standard warranty period for
+construction works under § 634a BGB.</td>
+<td style="text-align: left;">10 Years: Civil liability for
+structural/safety defects (Article 1185 of the Civil Code).</td>
+</tr>
+<tr>
+<td style="text-align: left;">Damages Scope</td>
+<td style="text-align: left;">Unlimited: Includes punitive and indirect
+damages if negligence is proven.</td>
+<td style="text-align: left;">Capped/Direct: Usually limited to the cost
+of repair; “indirect damages” are excluded unless specifically in the
+contract.</td>
+<td style="text-align: left;">Direct &amp; Rectification: Focus on the
+legal obligation to fix the defect at the engineer’s expense.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Insurance Reality</td>
+<td style="text-align: left;">High Premium: Professional Liability
+(E&amp;O) is expensive and critical for risk mitigation.</td>
+<td style="text-align: left;">Standardized: Coverage is often tied to
+the HOAI fee structure and is a market standard for firms.</td>
+<td style="text-align: left;">The “Garantía”: Engineers often rely on a
+mandatory CFIA-backed guarantee or professional bond.</td>
+</tr>
+</tbody>
+</table>
+<p><a id="phase-1"></a></p>
+<h2 id="phase-1-project-initiation-and-feasibility-1">Phase 1: Project
+Initiation and Feasibility</h2>
+<h3 id="phase-1-purpose-and-boundaries">Phase 1 Purpose and
+Boundaries</h3>
+<p>Phase 1 exists to produce a <strong>traceable, evidence-backed,
+screening-level</strong> feasibility determination for the project’s
+electrical viability and to define the prerequisite inputs needed to
+complete later phases.</p>
+<p><strong>Phase 1 is NOT permit-grade engineering</strong>. Any
+screening calculations in Phase 1 are explicitly <strong>superseded by
+Phase 3 (NEC Load Calculation)</strong> and must not be reused for
+permit submittals.</p>
+<p><strong>NOTE:</strong> The Phase 1 register fields below are filled
+with <strong>example data</strong> to demonstrate a “completed”
+deliverable package. Replace all names, dates, and evidence pointers
+with real project records before using this document externally.</p>
+<h3 id="project-technical-intake-record">1.2 Project Technical Intake
+Record</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Project name</td>
+<td style="text-align: left;">EV Charging Site Project</td>
+</tr>
+<tr>
+<td style="text-align: left;">Site address</td>
+<td style="text-align: left;">Place (Palo Alto, CA)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Building type</td>
+<td style="text-align: left;">Multifamily residential (common-area
+charging)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Applicable code basis (prelim)</td>
+<td style="text-align: left;">2022 California Electrical Code (CEC)
+(confirm in Phase 2)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Electrical constraint</td>
+<td style="text-align: left;">Use existing service; avoid service
+upgrade <strong>unless unavoidable for code compliance</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Intended EVSE deployment (prelim)</td>
+<td style="text-align: left;">8 ports, Level 2 (confirm by cut
+sheets)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Primary stakeholders</td>
+<td style="text-align: left;">Owner, Installer, Electrician,
+Engineer-of-Record, Project Manager</td>
+</tr>
+<tr>
+<td style="text-align: left;">Technical approvers</td>
+<td style="text-align: left;">Engineer-of-Record (final), Owner (program
+intent), Installer (equipment selection)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="input-register-evidence-index-prerequisite-inputs">1.3 Input
+Register + Evidence Index (Prerequisite Inputs)</h3>
+<p>This register is the authoritative list of Phase 1 inputs and
+<strong>how they were provided</strong>.</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Input ID</th>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Provenance (who / how / when)</th>
+<th style="text-align: left;">Evidence reference ID(s)</th>
+<th style="text-align: left;">Verification + downstream use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1-I01</td>
+<td style="text-align: left;">Utility bills / usage history (≥12
+months)</td>
+<td style="text-align: left;">Nora Patel (Owner Rep)<br>Owner email +
+shared drive link<br>Received: 2026-01-08 (v1.0)</td>
+<td style="text-align: left;">1-I01</td>
+<td style="text-align: left;">Verify: service address + meter/account
+match; 12-month coverage<br>Used in: Phase 1, Phase 1, Phase 3, Phase
+7</td>
+</tr>
+<tr>
+<td style="text-align: left;">1-I02</td>
+<td style="text-align: left;">Service characteristics (rating,
+voltage/phase)</td>
+<td style="text-align: left;">Luis Romero (Electrician) + utility portal
+export<br>Electrician upload + portal capture PDF<br>Received:
+2026-01-09 (v1.1)</td>
+<td style="text-align: left;">1-I02</td>
+<td style="text-align: left;">Verify: nameplate vs utility letter;
+voltage/phase match<br>Used in: Phase 1, Phase 1, Phase 3, Phase 4,
+Phase 7</td>
+</tr>
+<tr>
+<td style="text-align: left;">1-I03</td>
+<td style="text-align: left;">EVSE intent (make/model)</td>
+<td style="text-align: left;">Mia Chen (Installer PM)<br>Installer email
+(PDF cut sheet)<br>Received: 2026-01-10 (v1.0)</td>
+<td style="text-align: left;">1-I03</td>
+<td style="text-align: left;">Verify: cut sheet ratings + OCPD
+guidance<br>Used in: Phase 1, Phase 1, Phase 2, Phase 3, Phase 3, Phase
+4</td>
+</tr>
+<tr>
+<td style="text-align: left;">1-I04</td>
+<td style="text-align: left;">Site photos (electrical gear +
+context)</td>
+<td style="text-align: left;">Mia Chen (Installer PM)<br>Installer
+upload (photo set)<br>Received: 2026-01-10 (v1.0)</td>
+<td style="text-align: left;">1-I04</td>
+<td style="text-align: left;">Verify: readable ratings/labels + gear
+context<br>Used in: Phase 1, Phase 1, Phase 2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="assumption-exclusion-register">1.4 Assumption + Exclusion
+Register</h3>
+<h4 id="exclusions-scope-guardrails">1.4.1 Exclusions (Scope
+Guardrails)</h4>
+<p>This master deliverable intentionally excludes:</p>
+<ul>
+<li><strong>Civil / constructability</strong> topics (trenching,
+routing, demolition, means-and-methods, etc.)</li>
+</ul>
+<h4 id="assumptions">1.4.2 Assumptions</h4>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Assumption ID</th>
+<th style="text-align: left;">Assumption</th>
+<th style="text-align: left;">Rationale + risk</th>
+<th style="text-align: left;">Validation (owner + when)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1-A01</td>
+<td style="text-align: left;">EV charging loads treated as continuous
+per applicable code</td>
+<td style="text-align: left;">Rationale: standard EVSE
+treatment<br>Risk: under/over-sizing; feasibility error</td>
+<td style="text-align: left;">Owner: Engineer-of-Record<br>Validate by:
+Phase 3</td>
+</tr>
+<tr>
+<td style="text-align: left;">1-A02</td>
+<td style="text-align: left;">Service rating and voltage/phase match
+evidence</td>
+<td style="text-align: left;">Rationale: screening requires
+best-available verified data<br>Risk: Phase 1 conclusions invalid</td>
+<td style="text-align: left;">Owner: Electrician / EOR<br>Validate by:
+Phase 2 + Phase 3</td>
+</tr>
+<tr>
+<td style="text-align: left;">1-A03</td>
+<td style="text-align: left;">EVSE may be provisional in Phase 1; frozen
+in Phase 2</td>
+<td style="text-align: left;">Rationale: SKU selection often finalizes
+after feasibility<br>Risk: Phase 1 estimates diverge materially</td>
+<td style="text-align: left;">Owner: Installer<br>Validate by: Phase
+2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="preliminary-electrical-basis-of-design-bod">1.5 Preliminary
+Electrical Basis of Design (BOD)</h3>
+<p>This BOD is the <strong>single source of truth for Phase 1</strong>
+and is the seed for later deliverables. Any “TBD” items must be closed
+in Phase 2.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">BOD Item</th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Evidence (Input ID)</th>
+<th style="text-align: left;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Service rating</td>
+<td style="text-align: left;">800A</td>
+<td style="text-align: left;">1-I02</td>
+<td style="text-align: left;">Verified (nameplate + utility letter)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Service voltage/phase</td>
+<td style="text-align: left;">208Y/120V, 3-phase</td>
+<td style="text-align: left;">1-I02</td>
+<td style="text-align: left;">Verified (nameplate + utility letter)</td>
+</tr>
+<tr>
+<td style="text-align: left;">EVSE quantity (ports)</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">1-I03</td>
+<td style="text-align: left;">Verified (installer intent + cut sheet
+basis)</td>
+</tr>
+<tr>
+<td style="text-align: left;">EVSE electrical characteristics</td>
+<td style="text-align: left;">208V, 3-phase; 32A continuous per port;
+40A OCPD recommended</td>
+<td style="text-align: left;">1-I03</td>
+<td style="text-align: left;">Verified (cut sheet revA)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Load management posture</td>
+<td style="text-align: left;">Required (aggregate cap to ≤250A service
+headroom)</td>
+<td style="text-align: left;">1-I01 + 1-I03</td>
+<td style="text-align: left;">Screening-level: confirm
+method/justification in Phase 3/Phase 3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="feasibility-memo-gono-go-screening-level">1.6 Feasibility Memo /
+Go–No-Go (Screening-Level)</h3>
+<h4 id="project-intent-and-goal">1.6.1 Project Intent and Goal</h4>
+<p>The goal of this project is to deploy shared, common-area Level-2 EV
+charging for a multifamily residential building. The deployment must
+utilize existing electrical infrastructure without triggering a service
+upgrade, while preserving operational headroom and future
+expandability.</p>
+<h4 id="project-scope">1.6.2 Project Scope</h4>
+<ul>
+<li>Install 8 Level-2 EVSE (approximately 7.6 kW each) in the garage
+common area.</li>
+<li>Serve all EV loads from a dedicated EV subpanel fed from the
+existing 800A service.</li>
+<li>Size all electrical infrastructure per NEC continuous-load
+requirements.</li>
+</ul>
+<h4 id="required-inputs-checklist-phase-1">1.6.3 Required Inputs
+Checklist (Phase 1)</h4>
+<p>The Phase 1 inputs are controlled by the <strong>Phase 1 Input
+Register + Evidence Index</strong> above. This memo references those
+inputs by ID to maintain provenance and traceability.</p>
+<h4 id="input-summaries-and-analysis">1.6.4 Input Summaries and
+Analysis</h4>
+<h4 id="utility-bills-summary-owner">1.6.5 Utility Bills Summary
+(Owner)</h4>
+<p>The provided utility bills/usage history were analyzed to estimate
+existing service utilization. This is a screening-level assessment and
+must be cross-checked using the formal NEC methodology in Phase 3 (),
+using verified panel schedules and EVSE ratings.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Key Metric</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Main Service Size</td>
+<td style="text-align: left;">800 Amps @ 208Y/120V</td>
+</tr>
+<tr>
+<td style="text-align: left;">Peak Demand (Past 12 Mo.)</td>
+<td style="text-align: left;">550 Amps</td>
+</tr>
+<tr>
+<td style="text-align: left;">Average Demand (Past 12 Mo.)</td>
+<td style="text-align: left;">380 Amps</td>
+</tr>
+<tr>
+<td style="text-align: left;">Service Capacity Utilization (Peak)</td>
+<td style="text-align: left;">68.75%</td>
+</tr>
+<tr>
+<td style="text-align: left;">Available Headroom (Peak)</td>
+<td style="text-align: left;">250 Amps</td>
+</tr>
+</tbody>
+</table>
+<p>The existing service has a <strong>250 Amp</strong> capacity margin
+based on the historical peak demand of 550 Amps (out of 800 Amps
+total).</p>
+<h4 id="service-size-utility-bill">1.6.6 Service Size (Utility
+Bill)</h4>
+<p>The existing service is confirmed to be an <strong>800 Amp,
+208Y/120V, 3-Phase</strong> service. This matches the data used in the
+utility bill analysis.</p>
+<h4 id="charger-intent-installerowner">1.6.7 Charger Intent
+(Installer/Owner)</h4>
+<p>The project intent is the installation of <strong>8 Level-2 EVSE
+ports</strong>. At Phase 1, the EVSE electrical characteristics may be
+provisional until manufacturer cut sheets are provided and frozen in
+Phase 2 ().</p>
+<p><strong>Phase 1 screening approach:</strong> to avoid false
+certainty, Phase 1 uses a bounded estimate based on available intent
+data and clearly states the conditions under which the result
+changes.</p>
+<h4 id="feasibility-memo-gono-go">1.6.8 Feasibility Memo / Go–No-Go</h4>
+<p><strong>Date:</strong> 2026-01-12</p>
+<p><strong>To:</strong> Project Stakeholders (Owner, Installer,
+Electrician, Engineering)</p>
+<p><strong>From:</strong> Jordan Lee, Project Manager</p>
+<p><strong>Subject:</strong> Feasibility and Recommendation for
+Multifamily EV Charging Project</p>
+<p>Based on the preliminary data collection and analysis (Phase 1.1),
+this memo assesses the viability of the proposed scope against the
+project goal of deploying 8 Level-2 EVSE without a service upgrade.</p>
+<h4 id="screening-calculation-basis-not-permit-grade">1.6.9 Screening
+Calculation Basis (Not Permit-Grade)</h4>
+<p>Per applicable code requirements, EV charging loads are typically
+treated as continuous for feeder and equipment sizing. The
+<strong>formal</strong> load calculation methodology, demand factors (if
+applicable), and any load management justification must be documented in
+<strong>Phase 3 ()</strong> using verified inputs.</p>
+<h4 id="inputs-used-by-id">1.6.10 Inputs used (by ID)</h4>
+<ul>
+<li>Utility usage history: <strong>1-I01</strong></li>
+<li>Service characteristics: <strong>1-I02</strong></li>
+<li>EVSE intent (provisional): <strong>1-I03</strong></li>
+</ul>
+<h4 id="method">1.6.11 Method</h4>
+<p>Phase 1 computes a screening current envelope using best-available
+intent data and applies a continuous-load factor where appropriate. If
+EVSE cut sheets later show a higher continuous current than assumed
+here, Phase 1 conclusions must be revisited and may require load
+management or other architecture changes (Phase 3).</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Calculation</th>
+<th style="text-align: left;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">EVSE cut sheet continuous current (per
+port)</td>
+<td style="text-align: left;">Per manufacturer cut sheet (revA)</td>
+<td style="text-align: left;">32 A</td>
+</tr>
+<tr>
+<td style="text-align: left;">Unmanaged continuous feeder current (8
+ports)</td>
+<td style="text-align: left;">8 * (32 A * 125%)</td>
+<td style="text-align: left;">320 A</td>
+</tr>
+<tr>
+<td style="text-align: left;">Target managed aggregate cap</td>
+<td style="text-align: left;">Service headroom basis (see below)</td>
+<td style="text-align: left;">250 A (cap)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="existing-service-headroom-analysis">1.6.12 Existing Service
+Headroom Analysis</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Value (Amps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Existing Service Size</td>
+<td style="text-align: left;">800 A</td>
+</tr>
+<tr>
+<td style="text-align: left;">Historical Peak Demand</td>
+<td style="text-align: left;">550 A</td>
+</tr>
+<tr>
+<td style="text-align: left;">Available Headroom</td>
+<td style="text-align: left;">250 A</td>
+</tr>
+<tr>
+<td style="text-align: left;">Unmanaged EV load (continuous)</td>
+<td style="text-align: left;">320 A</td>
+</tr>
+<tr>
+<td style="text-align: left;">Headroom deficit (unmanaged)</td>
+<td style="text-align: left;">-70 A</td>
+</tr>
+<tr>
+<td style="text-align: left;">Feasible path</td>
+<td style="text-align: left;">Load management to cap EV demand at ≤250
+A</td>
+</tr>
+</tbody>
+</table>
+<h4 id="gono-go-criteria-phase-1">1.6.13 Go/No-Go Criteria (Phase
+1)</h4>
+<p><strong>GO</strong> is valid only if all conditions below remain true
+after Phase 2 validation:</p>
+<ul>
+<li>Verified service characteristics (1-I02) match the screening basis
+(rating and voltage/phase).</li>
+<li>Verified EVSE cut sheets (1-I03 → frozen in Phase 2) do not
+materially increase the continuous current beyond the screening
+assumptions.</li>
+<li>Formal NEC/CEC load calculation (Phase 3) confirms compliance; if
+unmanaged loading exceeds headroom, a compliant load-management
+architecture must be adopted (Phase 3).</li>
+</ul>
+<h4 id="conclusion-and-recommendation">1.6.14 Conclusion and
+Recommendation</h4>
+<p><strong>GO (Conditional – Managed Load Required)</strong></p>
+<p>Based on screening-level inputs <strong>1-I01 / 1-I02 /
+1-I03</strong>, the unmanaged code-continuous EV load for 8 ports is
+<strong>320 A</strong>, which exceeds the estimated <strong>250
+A</strong> historical service headroom by <strong>70 A</strong>.</p>
+<p>This is a <strong>conditional GO</strong> that requires a compliant
+<strong>load management / EMS</strong> approach in Phase 3 (/Phase 3) to
+cap aggregate EV demand at or below the available headroom, or an
+alternate approach (e.g., fewer ports or different EVSE ratings) to be
+validated by the Engineer-of-Record.</p>
+<h3 id="next-steps">1.7 Next Steps</h3>
+<p>Proceed to <strong>Phase 2: Data Collection and Site
+Analysis</strong> to (a) freeze EVSE cut sheets and electrical
+characteristics in the intake package (Phase 2) and (b) verify
+service/gear data. Then proceed to <strong>Phase 3</strong> to complete
+the formal load calculation (Phase 3) and system architecture decision
+(Phase 3).</p>
+<h3 id="forward-traceability-map-phase-1-later-deliverables">1.8 Forward
+Traceability Map (Phase 1 → Later Deliverables)</h3>
+<p>This map explains how Phase 1 inputs are used to craft deliverables
+in later phases.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Later deliverable</th>
+<th style="text-align: left;">Crafted from Phase 1 items</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Phase 2 Intake Checklist – Complete</td>
+<td style="text-align: left;">Phase 1 (Input Register)</td>
+<td style="text-align: left;">Phase 1 defines required evidence and
+provenance fields that Phase 2 must complete/verify.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Phase 2 Normalized Site Data Package</td>
+<td style="text-align: left;">Phase 1 (BOD) + Phase 1 (Assumptions)</td>
+<td style="text-align: left;">Phase 1 sets the “truth set” that Phase 2
+must confirm and normalize.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Phase 3 NEC Load Calculation</td>
+<td style="text-align: left;">1-I02 + 1-I03 + Phase 1</td>
+<td style="text-align: left;">Phase 3 supersedes Phase 1 screening;
+Phase 1 documents what was assumed and what must be validated.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Phase 3 EV System Architecture
+Decision</td>
+<td style="text-align: left;">Phase 1 (criteria) + Phase 3 results</td>
+<td style="text-align: left;">Phase 1 defines the decision constraint
+(use existing service unless unavoidable) and conditions that trigger
+load management.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Phase 4 Preliminary One-Line Diagram</td>
+<td style="text-align: left;">1-I02 + Phase 1</td>
+<td style="text-align: left;">Phase 1 establishes service basis and
+initial BOD identifiers; Phase 4 depicts the engineered architecture
+selected in Phase 3.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Phase 7 Utility Load Letter /
+Single-Line</td>
+<td style="text-align: left;">1-I01 + 1-I02</td>
+<td style="text-align: left;">Phase 1 records usage history and service
+basis; Phase 7 uses the validated versions.</td>
+</tr>
+</tbody>
+</table>
+<p><a id="phase-2"></a></p>
+<h2 id="phase-2-data-collection-and-site-analysis-1">Phase 2: Data
+Collection and Site Analysis</h2>
+<p>This section documents the completion of <strong>Phase 2: Data
+Collection and Site Analysis</strong> for the Electric Vehicle (EV)
+Charging Project. Phase 2 gathers, verifies, and normalizes the
+<strong>electrical design prerequisites</strong> into a controlled
+package suitable for engineering (Phase 3).</p>
+<p><strong>NOTE:</strong> The Phase 2 fields below are filled with
+<strong>example data</strong> to demonstrate a “completed” master
+deliverable package (provenance, evidence pointers, and logs). Replace
+all names, dates, and evidence pointers with real project records before
+using this document externally.</p>
+<h3 id="phase-2-boundaries-electrical-only">2.1 Phase 2 Boundaries
+(Electrical-Only)</h3>
+<p>Phase 2 captures information required to perform electrical
+engineering and code compliance tasks. It intentionally excludes:</p>
+<ul>
+<li><strong>Civil / constructability</strong> topics
+(routing/trenching/means-and-methods, installation sequencing,
+etc.)</li>
+</ul>
+<h3 id="intake-checklist-complete">2.2 Intake Checklist – Complete</h3>
+<p>This checklist confirms the acquisition of required Phase 2 inputs
+and links each item to an evidence record in <strong>Phase 2</strong>.
+Acceptance criteria are included to make “Complete” auditable.</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>Input ID</th>
+<th>Input</th>
+<th>Source</th>
+<th>Status</th>
+<th>Acceptance criteria (electrical-only)</th>
+<th>Verified by</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2-I01</td>
+<td>Site plans (electrical context excerpts)</td>
+<td>Owner/Architect</td>
+<td>Complete</td>
+<td>Includes service room location and electrical-room plan excerpts;
+revision/date visible</td>
+<td>Priya Shah (Project Engineer)</td>
+<td>2026-01-18</td>
+</tr>
+<tr>
+<td>2-I02</td>
+<td>Panel schedules (MDP + relevant subpanels)</td>
+<td>Electrician</td>
+<td>Complete</td>
+<td>Legible; identifies main breaker rating, bus rating, voltage/phase,
+spare spaces; latest revision noted</td>
+<td>Priya Shah (Project Engineer)</td>
+<td>2026-01-18</td>
+</tr>
+<tr>
+<td>2-I03</td>
+<td>Photo set (service gear + nameplates + breaker labels)</td>
+<td>Installer</td>
+<td>Complete</td>
+<td>Nameplates readable; includes context + closeups; photos
+indexed/annotated</td>
+<td>Priya Shah (Project Engineer)</td>
+<td>2026-01-18</td>
+</tr>
+<tr>
+<td>2-I04</td>
+<td>EVSE cut sheets (final for design basis)</td>
+<td>Installer/Vendor</td>
+<td>Complete</td>
+<td>Includes electrical ratings, continuous current, OCPD guidance;
+revision identified; matches program intent</td>
+<td>Priya Shah (Project Engineer)</td>
+<td>2026-01-18</td>
+</tr>
+<tr>
+<td>2-I05</td>
+<td>AHJ + adopted electrical code edition</td>
+<td>Owner/Address + AHJ website</td>
+<td>Complete</td>
+<td>Electrical permitting authority identified; code edition and
+amendments source recorded</td>
+<td>Jordan Lee (Project Manager)</td>
+<td>2026-01-18</td>
+</tr>
+</tbody>
+</table>
+<h3 id="input-register-evidence-index-stable-filenames">2.3 Input
+Register + Evidence Index (Stable Filenames)</h3>
+<p>This register records <strong>how inputs were provided</strong> and
+where they are stored. File names are stable and referenced throughout
+the master deliverable.</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Input ID</th>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Provenance (who / how / when)</th>
+<th style="text-align: left;">Evidence reference ID(s)</th>
+<th style="text-align: left;">Verification + downstream use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2-I01</td>
+<td style="text-align: left;">Site plans (electrical context
+excerpts)</td>
+<td style="text-align: left;">Nora Patel (Owner Rep)<br>Owner email +
+shared drive link<br>Received: 2026-01-15 (v2.0)</td>
+<td style="text-align: left;">2-I01</td>
+<td style="text-align: left;">Verify: revision/date + title block +
+electrical-room location<br>Derived from: 1-I04 (context)<br>Used in:
+Phase 2, Phase 2, Phase 4</td>
+</tr>
+<tr>
+<td style="text-align: left;">2-I02</td>
+<td style="text-align: left;">Panel schedules (MDP + relevant
+subpanels)</td>
+<td style="text-align: left;">Luis Romero (Electrician)<br>Electrician
+upload (PDF)<br>Received: 2026-01-16 (v1.0)</td>
+<td style="text-align: left;">2-I02</td>
+<td style="text-align: left;">Verify: cross-check MDP ratings vs 1-I02;
+legibility; spare spaces<br>Derived from: 1-I02<br>Used in: Phase 2,
+Phase 2, Phase 3, Phase 4</td>
+</tr>
+<tr>
+<td style="text-align: left;">2-I03</td>
+<td style="text-align: left;">Photo set (service gear + nameplates +
+labels)</td>
+<td style="text-align: left;">Mia Chen (Installer PM)<br>Installer
+upload (photo set + index)<br>Received: 2026-01-16 (v1.0)</td>
+<td style="text-align: left;">2-I03</td>
+<td style="text-align: left;">Verify: nameplates readable; photos
+correspond to MDP + meter/service gear<br>Derived from: 1-I02 +
+1-I04<br>Used in: Phase 2, Phase 2, Phase 4</td>
+</tr>
+<tr>
+<td style="text-align: left;">2-I04</td>
+<td style="text-align: left;">EVSE cut sheets (final for design
+basis)</td>
+<td style="text-align: left;">Mia Chen (Installer PM)<br>Installer email
+(PDF)<br>Received: 2026-01-16 (revA)</td>
+<td style="text-align: left;">2-I04</td>
+<td style="text-align: left;">Verify: voltage/phase + continuous current
++ OCPD; matches Phase 1 intent<br>Derived from: 1-I03<br>Used in: Phase
+2, Phase 2, Phase 3, Phase 3, Phase 4</td>
+</tr>
+<tr>
+<td style="text-align: left;">2-I05</td>
+<td style="text-align: left;">AHJ + code basis evidence</td>
+<td style="text-align: left;">Jordan Lee (PM)<br>AHJ website capture +
+notes<br>Received: 2026-01-17 (v1.0)</td>
+<td style="text-align: left;">2-I05</td>
+<td style="text-align: left;">Verify: AHJ name + adopted code edition +
+capture metadata<br>Derived from: N/A<br>Used in: Phase 2, Phase 2,
+Phase 4, Phase 5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-excerpts-electrical-only">2.4 Key Excerpts
+(Electrical-Only)</h3>
+<p>To satisfy master-deliverable traceability, the following excerpts
+capture the <strong>minimum critical information</strong> needed to
+proceed. Full documents remain indexed in <strong>Phase 2</strong>.</p>
+<h4 id="site-plans-electrical-context-excerpts-2-i01">2.4.1 Site Plans –
+Electrical Context Excerpts (2-I01)</h4>
+<p><strong>Excerpted findings (from plan title block and electrical-room
+plan excerpt):</strong></p>
+<ul>
+<li>Building address and revision/date shown on drawings (Rev 2,
+2026-01-15).</li>
+<li>Electrical service room identified on plan (label: “Electrical Room
+/ Main Switchgear”).</li>
+<li>Service entry point and main electrical gear room boundary shown for
+reference (no routing/constructability assumptions made here).</li>
+</ul>
+<h4 id="panel-schedules-mdp-excerpt-2-i02">2.4.2 Panel Schedules – MDP
+Excerpt (2-I02)</h4>
+<p><strong>Excerpted data (MDP schedule header and key
+fields):</strong></p>
+<ul>
+<li>Panel designation: <strong>MDP</strong></li>
+<li>Main device: <strong>800A main</strong></li>
+<li>Bus rating: <strong>800A</strong></li>
+<li>System: <strong>208Y/120V, 3-phase</strong></li>
+<li>Available spaces: <strong>4 (3-pole)</strong></li>
+</ul>
+<h4 id="photo-set-nameplatelabel-verification-excerpts-2-i03">2.4.3
+Photo Set – Nameplate/Label Verification Excerpts (2-I03)</h4>
+<p><strong>Excerpted verifications (from annotated photo
+index):</strong></p>
+<ul>
+<li>MDP nameplate confirms <strong>800A</strong>,
+<strong>208Y/120V</strong>, <strong>3-phase</strong>.</li>
+<li>Meter/service labeling matches the service characteristics used in
+Phase 1.</li>
+<li>Breaker labeling is legible for engineering validation of schedules
+(no field-modification assumptions made).</li>
+</ul>
+<h4 id="evse-cut-sheet-electrical-rating-excerpt-2-i04">2.4.4 EVSE Cut
+Sheet – Electrical Rating Excerpt (2-I04)</h4>
+<p><strong>Excerpted electrical basis (from cut sheet
+revA):</strong></p>
+<ul>
+<li>Model: <strong>ElectriCharge L2-7.6-G</strong></li>
+<li>Supply: <strong>208V, 3-phase</strong></li>
+<li>Continuous current: <strong>32A</strong></li>
+<li>Recommended OCPD: <strong>40A</strong></li>
+</ul>
+<h4 id="ahj-code-basis-evidence-excerpt-2-i05">2.4.5 AHJ / Code Basis –
+Evidence Excerpt (2-I05)</h4>
+<p><strong>Excerpted jurisdiction basis:</strong></p>
+<ul>
+<li>Electrical permitting authority (AHJ): <strong>City of Palo Alto –
+Building Division (Electrical Permits)</strong> (as documented in
+evidence capture)</li>
+<li>Adopted code basis: <strong>2022 California Electrical Code
+(CEC)</strong> (source captured in 2-I05)</li>
+</ul>
+<h3 id="required-input-details">2.5 Required Input Details</h3>
+<h4 id="site-plans">2.5.1 Site Plans</h4>
+<p>The site plans confirm the location of the primary service/electrical
+room and provide electrical-context plan excerpts for engineering
+reference. Phase 2 does not assert installation routing, trenching, or
+constructability.</p>
+<h4 id="panel-schedules-electrician">2.5.2 Panel Schedules
+(Electrician)</h4>
+<p>The schedules below are for the Main Distribution Panel (MDP),
+confirming the service details and available space.</p>
+<ul>
+<li><strong>Panel Designation:</strong> MDP</li>
+<li><strong>Main Service:</strong> 800A Main</li>
+<li><strong>Bus Rating:</strong> 800A</li>
+<li><strong>Service Voltage:</strong> 208Y/120V, 3-Phase</li>
+<li><strong>Connected Load:</strong> 550A</li>
+<li><strong>Available Spaces:</strong> 4 (Three-Pole)</li>
+</ul>
+<h4 id="photos-installer">2.5.3 Photos (Installer)</h4>
+<p>Photos were taken to document the existing main service gear and the
+physical conditions of the proposed installation location.</p>
+<h4 id="charger-skus-installervendor">2.5.4 Charger SKUs
+(Installer/Vendor)</h4>
+<p>The selected EVSE model specifications are detailed below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Model Name</td>
+<td style="text-align: left;">ElectriCharge L2-7.6-G</td>
+</tr>
+<tr>
+<td style="text-align: left;">Output Power</td>
+<td style="text-align: left;">7.6 kW (Nominal)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Voltage</td>
+<td style="text-align: left;">208V, 3-Phase</td>
+</tr>
+<tr>
+<td style="text-align: left;">Continuous Current Draw</td>
+<td style="text-align: left;">32A @ 208V</td>
+</tr>
+<tr>
+<td style="text-align: left;">Required OCPD Size</td>
+<td style="text-align: left;">40A</td>
+</tr>
+</tbody>
+</table>
+<h4 id="authority-having-jurisdiction-ahj">2.5.5 Authority Having
+Jurisdiction (AHJ)</h4>
+<p>The electrical permitting jurisdiction and adopted code basis are
+confirmed (see 2-I05 evidence capture).</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Data Point</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Jurisdiction (Electrical)</td>
+<td style="text-align: left;">City of Palo Alto – Building Division
+(Electrical Permits)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Site Address</td>
+<td style="text-align: left;">Place (Palo Alto, CA)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Applicable Code</td>
+<td style="text-align: left;">2022 California Electrical Code (CEC)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="normalized-site-data-package">2.6 Normalized Site Data
+Package</h3>
+<p>The raw inputs from <strong>Phase 2/Phase 2</strong> have been
+processed, cross-referenced, and standardized into a controlled package
+for engineering use. This ensures all teams reference consistent,
+verified figures and stable filenames.</p>
+<h3 id="normalization-rules-document-control">2.7 Normalization Rules
+(Document Control)</h3>
+<p>The following rules were applied to create a consistent engineering
+package:</p>
+<ul>
+<li><strong>File naming</strong>:
+<code>P1.2_&lt;Category&gt;_&lt;Descriptor&gt;_&lt;YYYY-MM-DD&gt;.&lt;ext&gt;</code></li>
+<li><strong>PDF standard</strong>: all PDFs normalized to portrait
+orientation where feasible, searchable text (OCR applied when needed),
+and bookmarks added for long sets</li>
+<li><strong>Redactions</strong>: personal information removed where
+present (non-technical)</li>
+<li><strong>Revisions</strong>: latest revision is used; superseded
+versions retained but marked “Superseded” in filenames</li>
+<li><strong>Extraction</strong>: key electrical data extracted into
+tables for engineering use; extraction sources are cited back to
+<code>Phase 2</code> evidence pointers</li>
+</ul>
+<h3 id="normalization-validation-log-raw-normalized">2.8 Normalization /
+Validation Log (Raw → Normalized)</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Log ID</th>
+<th style="text-align: left;">Raw → Normalized (evidence IDs)</th>
+<th style="text-align: left;">Transformation performed</th>
+<th style="text-align: left;">Validated (by/date)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">P1-N01</td>
+<td style="text-align: left;">Raw: 2-I01 → Out: Phase 2
+Electrical-context plan excerpts</td>
+<td style="text-align: left;">Extracted electrical-room/service-context
+sheets; bookmarks; OCR verified</td>
+<td style="text-align: left;">Priya Shah / 2026-01-18</td>
+</tr>
+<tr>
+<td style="text-align: left;">P1-N02</td>
+<td style="text-align: left;">Raw: 2-I02 → Out: Phase 2 Normalized panel
+schedules</td>
+<td style="text-align: left;">Cleaned scan; OCR; standardized order;
+header callouts</td>
+<td style="text-align: left;">Priya Shah / 2026-01-18</td>
+</tr>
+<tr>
+<td style="text-align: left;">P1-N03</td>
+<td style="text-align: left;">Raw: 2-I03 → Out: Phase 2 Annotated photo
+index</td>
+<td style="text-align: left;">Selected nameplate/label photos;
+annotated; created index</td>
+<td style="text-align: left;">Priya Shah / 2026-01-18</td>
+</tr>
+<tr>
+<td style="text-align: left;">P1-N04</td>
+<td style="text-align: left;">Raw: 2-I04 → Out: Phase 2 EVSE cut sheet
+(frozen for design)</td>
+<td style="text-align: left;">Marked “Frozen for design basis”;
+extracted ratings summary</td>
+<td style="text-align: left;">Priya Shah / 2026-01-18</td>
+</tr>
+<tr>
+<td style="text-align: left;">P1-N05</td>
+<td style="text-align: left;">Raw: 2-I05 → Out: Phase 2 AHJ/code basis
+evidence</td>
+<td style="text-align: left;">Verified AHJ naming; standardized capture;
+recorded metadata</td>
+<td style="text-align: left;">Jordan Lee / 2026-01-18</td>
+</tr>
+</tbody>
+</table>
+<p>The following table summarizes standardized data points derived from
+Phase 2 inputs and their normalized outputs.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Data Element</th>
+<th style="text-align: left;">Standardized Value</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Electrical context plan excerpts</td>
+<td
+style="text-align: left;"><code>P1.2_SitePlans_ElectricalContext_Excerpts_2026-01-18.pdf</code></td>
+<td style="text-align: left;">Electrical-room/service context only; no
+routing assumptions.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Panel schedule package (MDP +
+relevant)</td>
+<td
+style="text-align: left;"><code>P1.2_PanelSchedules_Normalized_MDP_Subpanels_2026-01-18.pdf</code></td>
+<td style="text-align: left;">Used for Phase 3 load calc and Phase 4
+schedule updates.</td>
+</tr>
+<tr>
+<td style="text-align: left;">EVSE design-basis cut sheet</td>
+<td
+style="text-align: left;"><code>P1.2_EVSE_CutSheet_FrozenForDesign_revA_2026-01-18.pdf</code></td>
+<td style="text-align: left;">Frozen for Phase 3 design basis.</td>
+</tr>
+<tr>
+<td style="text-align: left;">AHJ/code basis evidence</td>
+<td
+style="text-align: left;"><code>P1.2_AHJ_CodeBasis_Normalized_2026-01-18.pdf</code></td>
+<td style="text-align: left;">Supports code sheets and permit
+application package.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Service gear photo index</td>
+<td
+style="text-align: left;"><code>P1.2_Photos_Annotated_Index_2026-01-18.pdf</code></td>
+<td style="text-align: left;">Confirms ratings/labels used in Phases 1,
+3, and 4.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Utility coordination contact
+(technical)</td>
+<td style="text-align: left;">Utility account rep: Taylor Nguyen</td>
+<td style="text-align: left;">Technical point of contact for Phase 7
+coordination.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-standardization-certification">2.9 Data Standardization
+Certification</h3>
+<p>The data package is formally certified for completeness and
+integrity.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Certification Point</th>
+<th>Status</th>
+<th>Certified By</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Integrity</td>
+<td>Certified</td>
+<td>Priya Shah (Project Engineer)</td>
+<td>2026-01-18</td>
+</tr>
+<tr>
+<td>File Format Standardization</td>
+<td>Certified</td>
+<td>Ethan Brooks (Document Control)</td>
+<td>2026-01-18</td>
+</tr>
+<tr>
+<td>Completeness Check</td>
+<td>Certified</td>
+<td>Jordan Lee (Project Manager)</td>
+<td>2026-01-18</td>
+</tr>
+</tbody>
+</table>
+<h3 id="next-steps-1">2.10 Next Steps</h3>
+<p>Phase 2 is complete. The <strong>Normalized Site Data Package (Phase
+2)</strong> is finalized and is the required input for all subsequent
+design and engineering activities.</p>
+<p>The project proceeds to <strong>Phase 3: System Design and Load
+Calculation</strong>, using the certified data package (Phase 2) to
+perform the NEC Load Calculation (Phase 3) and determine the final EV
+System Architecture (Phase 3).</p>
+<p><a id="phase-3"></a></p>
+<h2 id="phase-3-system-design-and-load-calculation-1">Phase 3: System
+Design and Load Calculation</h2>
+<h4 id="ev-charging-project-plan-phase-3-documentation">3.1.1 EV
+Charging Project Plan: Phase 3 Documentation</h4>
+<p>This section formalizes the outputs of <strong>Phase 3: System Design
+and Load Calculation</strong> for the Electric Vehicle (EV) Charging
+Site Project. Phase 3 uses the controlled Phase 2 package (Phase 2) to
+produce a <strong>permit-relevant electrical load calculation</strong>
+and an <strong>architecture decision record</strong> suitable to seed
+the drawing set in Phase 4.</p>
+<p><strong>NOTE:</strong> The Phase 3 fields below are filled with
+<strong>example data</strong> to demonstrate a “completed” master
+deliverable package (provenance, stable evidence pointers, and decision
+logs). Replace all names, dates, and evidence pointers with real project
+records before using this document externally.</p>
+<h3 id="phase-3-boundaries-electrical-only">3.2 Phase 3 Boundaries
+(Electrical-Only)</h3>
+<p>Phase 3 captures information required to perform electrical
+engineering and code compliance tasks. It intentionally excludes:</p>
+<ul>
+<li><strong>Civil / constructability</strong> topics
+(routing/trenching/means-and-methods, installation sequencing,
+etc.)</li>
+</ul>
+<p>The goal of Phase 3 is to confirm that the proposed EV charging
+system is electrically viable and compliant with the applicable code
+basis (CEC/NEC as adopted by the AHJ), and to select a compliant system
+architecture that satisfies the project’s electrical constraint of
+avoiding a service upgrade unless unavoidable.</p>
+<h3 id="phase-3-evidence-index-engineering-work-products">3.3 Phase 3
+Evidence Index + Engineering Work Products</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Item ID</th>
+<th style="text-align: left;">Work product</th>
+<th style="text-align: left;">Provenance (who / how / when)</th>
+<th style="text-align: left;">Evidence reference ID(s)</th>
+<th style="text-align: left;">Inputs + downstream use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">3-W01</td>
+<td style="text-align: left;">Load calculation workbook + summary</td>
+<td style="text-align: left;">Priya Shah, PE <br>Spreadsheet + PDF
+export<br>Date: 2026-01-22 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P2/Outputs/P2.1_LoadCalc_Workbook_2026-01-22.xlsx.html"><code>phases/P2/Outputs/P2.1_LoadCalc_Workbook_2026-01-22.xlsx</code></a><br><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P2/Outputs/P2.1_LoadCalc_Summary_2026-01-22.pdf"><code>phases/P2/Outputs/P2.1_LoadCalc_Summary_2026-01-22.pdf</code></a></td>
+<td style="text-align: left;">Inputs: Phase 2 panel schedules + EVSE cut
+sheet + AHJ/code basis<br>Used in: Phase 3, Phase 4, Phase 5, Phase
+7</td>
+</tr>
+<tr>
+<td style="text-align: left;">3-W02</td>
+<td style="text-align: left;">Independent load calc check memo</td>
+<td style="text-align: left;">Alex Kim, EE <br>Redline review +
+sign-off<br>Date: 2026-01-22 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P2/Outputs/P2.1_LoadCalc_CheckMemo_2026-01-22.pdf"><code>phases/P2/Outputs/P2.1_LoadCalc_CheckMemo_2026-01-22.pdf</code></a></td>
+<td style="text-align: left;">Inputs: 3-W01<br>Used in: Phase 3</td>
+</tr>
+<tr>
+<td style="text-align: left;">3-W03</td>
+<td style="text-align: left;">Architecture decision record</td>
+<td style="text-align: left;">Priya Shah, PE <br>Engineering memo +
+diagram<br>Date: 2026-01-22 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P2/Outputs/P2.2_Architecture_Decision_Record_2026-01-22.pdf"><code>phases/P2/Outputs/P2.2_Architecture_Decision_Record_2026-01-22.pdf</code></a></td>
+<td style="text-align: left;">Inputs: 3-W01 + Phase 2 evidence<br>Used
+in: Phase 3, Phase 4, Phase 4, Phase 4</td>
+</tr>
+<tr>
+<td style="text-align: left;">3-W04</td>
+<td style="text-align: left;">EMS technical brief</td>
+<td style="text-align: left;">Mia Chen (Installer PM)<br>Vendor
+PDF<br>Date: 2026-01-21 (revB)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P2/Inputs/P2-W04_EMS_TechnicalBrief_revB_2026-01-21.pdf"><code>phases/P2/Inputs/P2-W04_EMS_TechnicalBrief_revB_2026-01-21.pdf</code></a></td>
+<td style="text-align: left;">Inputs: N/A<br>Used in: Phase 3, Phase 4,
+Phase 4</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-excerpts-electrical-only-1">3.4 Key Excerpts
+(Electrical-Only)</h3>
+<h4 id="load-calc-summary-excerpt-3-w01">3.4.1 Load Calc Summary Excerpt
+(3-W01)</h4>
+<p><strong>Excerpted results:</strong></p>
+<ul>
+<li>EVSE continuous current basis: <strong>32A per port</strong> (from
+Phase 2 EVSE cut sheet)</li>
+<li>Continuous load factor applied per code basis:
+<strong>125%</strong></li>
+<li>Aggregate unmanaged EV continuous load: <strong>320A</strong></li>
+<li>Available historical headroom basis (screening, from Phase 1):
+<strong>250A</strong></li>
+<li>Outcome: unmanaged load <strong>exceeds headroom</strong>; a
+compliant load-management method is required to avoid service
+upgrade</li>
+</ul>
+<h4 id="independent-check-excerpt-3-w02">3.4.2 Independent Check Excerpt
+(3-W02)</h4>
+<p><strong>Excerpted check outcome:</strong> “Calculation logic and
+arithmetic verified; inputs align to Phase 2 evidence pointers;
+conclusions supported.”</p>
+<h4 id="architecture-decision-excerpt-3-w03">3.4.3 Architecture Decision
+Excerpt (3-W03)</h4>
+<p><strong>Excerpted decision:</strong> “Proceed with a 400A bus-rated
+EV subpanel with feeder sized for the full unmanaged continuous load,
+combined with a listed EMS/load management method to cap aggregate
+demand to ≤250A.”</p>
+<h3 id="nec-load-calculation">3.5 NEC Load Calculation</h3>
+<p>The NEC Load Calculation confirms the exact electrical capacity
+required for the new EV charging infrastructure. This calculation is
+mandatory for permitting (Phase 5) and utility coordination (Phase
+7).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Source (evidence ID)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Panel schedules</td>
+<td style="text-align: left;">2-I02 (normalized in Phase 2)</td>
+</tr>
+<tr>
+<td style="text-align: left;">EVSE ratings</td>
+<td style="text-align: left;">2-I04 (frozen for design in Phase 2)</td>
+</tr>
+<tr>
+<td style="text-align: left;">AHJ/code basis</td>
+<td style="text-align: left;">2-I05 (normalized in Phase 2)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="load-calculation-summary-nec-625.42---continuous-load">3.5.1
+Load Calculation Summary (NEC 625.42 - Continuous Load)</h4>
+<p>Based on the required 8 Level-2 EVSE and the NEC 625.42 requirement
+for 125% continuous loading:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Calculation</th>
+<th style="text-align: left;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Single EVSE Continuous Load</td>
+<td style="text-align: left;">32A * 125%</td>
+<td style="text-align: left;">40 A</td>
+</tr>
+<tr>
+<td style="text-align: left;">Total New Connected Load</td>
+<td style="text-align: left;">8 EVSE * 40 A</td>
+<td style="text-align: left;">320 A</td>
+</tr>
+<tr>
+<td style="text-align: left;">Required Subpanel Bus Rating</td>
+<td style="text-align: left;">320 A</td>
+<td style="text-align: left;"><strong>400 A</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Required Subpanel Feeder Breaker</td>
+<td style="text-align: left;">320 A</td>
+<td style="text-align: left;"><strong>350 A</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conclusion:</strong> The total NEC continuous load is
+<strong>320 Amps</strong>. This confirms that the previously available
+<strong>250 Amps</strong> of service headroom (Phase 1) is
+<em>insufficient</em> to support the full, unmanaged, NEC-mandated
+continuous load.</p>
+<h4 id="service-headroom-re-evaluation">3.5.2 Service Headroom
+Re-Evaluation</h4>
+<p>Phase 1 () established that an unmanaged, code-continuous EV load for
+8 ports would exceed the available historical headroom and therefore
+requires a managed load approach. The formal Phase 3 calculation
+confirms <strong>320 Amps</strong> unmanaged continuous load versus
+<strong>250 Amps</strong> available headroom, necessitating an
+<strong>Energy Management System (EMS)</strong> (or another compliant
+demand/management method) per NEC 625.42(A)(2).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Value (Amps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Existing Service Size</td>
+<td style="text-align: left;">800 A</td>
+</tr>
+<tr>
+<td style="text-align: left;">Historical Peak Demand</td>
+<td style="text-align: left;">550 A</td>
+</tr>
+<tr>
+<td style="text-align: left;">Available Headroom (Unmanaged)</td>
+<td style="text-align: left;">250 A</td>
+</tr>
+<tr>
+<td style="text-align: left;">Required New EV Load (Unmanaged)</td>
+<td style="text-align: left;">320 A</td>
+</tr>
+<tr>
+<td style="text-align: left;">Load Deficit (Triggering Service
+Upgrade)</td>
+<td style="text-align: left;">-70 A</td>
+</tr>
+</tbody>
+</table>
+<p>The project must proceed with an EMS, or the core project goal of
+avoiding a service upgrade (Phase 1) is invalid.</p>
+<h3 id="ev-system-architecture-decision">3.6 EV System Architecture
+Decision</h3>
+<p>This phase selects the system components and architecture to manage
+the required 320A load within the 250A service headroom using a Load
+Management System.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Load results</td>
+<td style="text-align: left;">EE (Phase 3)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Charger mix</td>
+<td style="text-align: left;">Installer/Owner (Phase 2 EVSE basis)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Existing electrical conditions</td>
+<td style="text-align: left;">Phase 2 (panel schedules + photos)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Load management technical basis</td>
+<td style="text-align: left;">3-W04 (EMS technical brief)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="system-architecture-proposal">3.6.1 System Architecture
+Proposal</h4>
+<p>To reconcile the 320A required load with the 250A available headroom,
+the system must incorporate an EMS that limits the total current draw of
+the EV subpanel to <strong>250 Amps</strong>.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Element</th>
+<th style="text-align: left;">Specification</th>
+<th style="text-align: left;">Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Subpanel Feeder</strong></td>
+<td style="text-align: left;">350A feeder OCPD (3-pole)</td>
+<td style="text-align: left;">Sized for the full 320A continuous load
+per NEC.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>EV Subpanel Bus</strong></td>
+<td style="text-align: left;">400A Rated</td>
+<td style="text-align: left;">Sized for the full 320A continuous load
+per NEC.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>EMS System</strong></td>
+<td style="text-align: left;">Integrated Panel-level EMS</td>
+<td style="text-align: left;">Limits total current draw to <strong>250
+Amps</strong> to fit within service headroom.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Charger Count</strong></td>
+<td style="text-align: left;">8 Level-2 EVSE</td>
+<td style="text-align: left;">No change to the original project
+scope.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Charger Circuits</strong></td>
+<td style="text-align: left;">40A OCPD, 8 circuits</td>
+<td style="text-align: left;">Individual circuits are sized per the NEC
+for each charger’s continuous load.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="decision">3.6.2 Decision</h4>
+<p><strong>EV System Architecture Decision: Managed Load System
+(Go)</strong></p>
+<p>The project will utilize a 400A bus-rated EV subpanel fed by a 350A
+breaker, integrated with an EMS to dynamically limit the total demand to
+<strong>250 Amps</strong>. This meets all requirements: NEC compliance
+(via subpanel rating) and project goal (via EMS management to avoid
+service upgrade).</p>
+<h3 id="phase-3-engineering-certification">3.7 Phase 3 Engineering
+Certification</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Certification Point</th>
+<th style="text-align: left;">Status</th>
+<th style="text-align: left;">Certified By</th>
+<th style="text-align: left;">Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Load calculation prepared</td>
+<td style="text-align: left;">Certified</td>
+<td style="text-align: left;">Priya Shah, PE</td>
+<td style="text-align: left;">2026-01-22</td>
+</tr>
+<tr>
+<td style="text-align: left;">Independent check completed</td>
+<td style="text-align: left;">Certified</td>
+<td style="text-align: left;">Alex Kim, EE</td>
+<td style="text-align: left;">2026-01-22</td>
+</tr>
+<tr>
+<td style="text-align: left;">Architecture decision documented</td>
+<td style="text-align: left;">Certified</td>
+<td style="text-align: left;">Priya Shah, PE</td>
+<td style="text-align: left;">2026-01-22</td>
+</tr>
+<tr>
+<td style="text-align: left;">Inputs traceable to Phase 2 evidence
+pointers</td>
+<td style="text-align: left;">Certified</td>
+<td style="text-align: left;">Ethan Brooks (Document Control)</td>
+<td style="text-align: left;">2026-01-22</td>
+</tr>
+</tbody>
+</table>
+<h3 id="next-steps-2">3.8 Next Steps</h3>
+<p>Phase 3 is complete. The system architecture and exact load
+requirements are confirmed.</p>
+<p>The project proceeds to <strong>Phase 4: Preliminary Drawing Set
+Production</strong>. The outputs of Phase 3, including the Phase 3 Load
+Calculation and the Phase 3 Architecture Decision, are the mandatory
+inputs for all drawings in Phase 4.</p>
+<p><a id="phase-4"></a></p>
+<h2 id="phase-4-preliminary-drawing-set-production-1">Phase 4:
+Preliminary Drawing Set Production</h2>
+<h4 id="ev-charging-project-plan-phase-4-documentation">4.1.1 EV
+Charging Project Plan: Phase 4 Documentation</h4>
+<p>This section formalizes the outputs of <strong>Phase 4: Preliminary
+Drawing Set Production</strong> for the Electric Vehicle (EV) Charging
+Site Project. Phase 4 translates the approved system design (Phase 3)
+into an <strong>unstamped electrical permit drawing set</strong>
+suitable for engineering stamp (Phase 5) and AHJ electrical review.</p>
+<p><strong>NOTE:</strong> The Phase 4 fields below are filled with
+<strong>example data</strong> to demonstrate a “completed” master
+deliverable package (provenance, stable filenames, and compilation
+logs). Replace all names, dates, and evidence pointers with real project
+records before using this document externally.</p>
+<h3 id="phase-4-boundaries-electrical-only">4.2 Phase 4 Boundaries
+(Electrical-Only)</h3>
+<p>Phase 4 captures permit-drawing content required for electrical
+engineering and code compliance. It intentionally excludes:</p>
+<ul>
+<li><strong>Civil / constructability</strong> topics
+(routing/trenching/means-and-methods, installation sequencing,
+etc.)</li>
+</ul>
+<p>The goal of Phase 4 is to produce the <strong>unstamped electrical
+permit drawing set</strong> that incorporates the electrical design and
+code requirements confirmed in Phases 1 and 2.</p>
+<h3 id="evidence-index-drawing-work-products-stable-filenames">4.3
+Evidence Index + Drawing Work Products (Stable Filenames)</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Item ID</th>
+<th style="text-align: left;">Work product</th>
+<th style="text-align: left;">Provenance (who / how / when)</th>
+<th style="text-align: left;">Evidence reference ID(s)</th>
+<th style="text-align: left;">Inputs + downstream use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">4-W01</td>
+<td style="text-align: left;">Preliminary one-line diagram (sheet)</td>
+<td style="text-align: left;">Sam Ortega (CAD Tech, ) + Priya Shah, PE
+<br>CAD + PDF export<br>Date: 2026-01-26 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P3/Outputs/P3.1_OneLine_Prelim_Unstamped_2026-01-26.pdf"><code>phases/P3/Outputs/P3.1_OneLine_Prelim_Unstamped_2026-01-26.pdf</code></a></td>
+<td style="text-align: left;">Inputs: Phase 3 decision; Phase 2
+schedules; Phase 2 EVSE; Phase 2 code basis<br>Used in: Phase 4, Phase
+4</td>
+</tr>
+<tr>
+<td style="text-align: left;">4-W02</td>
+<td style="text-align: left;">Site plan w/ EVSE locations
+(electrical-impacting)</td>
+<td style="text-align: left;">Sam Ortega (CAD Tech, )<br>CAD + PDF
+export<br>Date: 2026-01-26 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P3/Outputs/P3.2_SitePlan_EVSE_Locations_Prelim_2026-01-26.pdf"><code>phases/P3/Outputs/P3.2_SitePlan_EVSE_Locations_Prelim_2026-01-26.pdf</code></a></td>
+<td style="text-align: left;">Inputs: base site plan (owner/architect) +
+parking layout (owner) + Phase 2 context<br>Used in: Phase 4, Phase
+4</td>
+</tr>
+<tr>
+<td style="text-align: left;">4-W03</td>
+<td style="text-align: left;">Conduit &amp; trenching details
+(electrical-impacting)</td>
+<td style="text-align: left;">Priya Shah, PE + Sam Ortega (CAD Tech,
+)<br>CAD notes + PDF export<br>Date: 2026-01-26 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P3/Outputs/P3.3_Conduit_Trenching_Details_ElectricalImpacting_2026-01-26.pdf"><code>phases/P3/Outputs/P3.3_Conduit_Trenching_Details_ElectricalImpacting_2026-01-26.pdf</code></a></td>
+<td style="text-align: left;">Inputs: routing assumptions (installer) +
+Phase 2 photos + code basis<br>Used in: Phase 4, Phase 4</td>
+</tr>
+<tr>
+<td style="text-align: left;">4-W04</td>
+<td style="text-align: left;">Updated panel schedules (MDP +
+EVSP-1)</td>
+<td style="text-align: left;">Priya Shah, PE <br>Spreadsheet + PDF
+export<br>Date: 2026-01-26 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P3/Outputs/P3.4_PanelSchedules_Updated_MDP_and_EVSP_2026-01-26.pdf"><code>phases/P3/Outputs/P3.4_PanelSchedules_Updated_MDP_and_EVSP_2026-01-26.pdf</code></a></td>
+<td style="text-align: left;">Inputs: Phase 2 schedules + Phase 3 +
+Phase 3<br>Used in: Phase 4, Phase 4</td>
+</tr>
+<tr>
+<td style="text-align: left;">4-W05</td>
+<td style="text-align: left;">Electrical notes &amp; code sheets</td>
+<td style="text-align: left;">Priya Shah, PE <br>Template + PDF
+export<br>Date: 2026-01-26 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P3/Outputs/P3.5_ElectricalNotes_CodeSheets_2026-01-26.pdf"><code>phases/P3/Outputs/P3.5_ElectricalNotes_CodeSheets_2026-01-26.pdf</code></a></td>
+<td style="text-align: left;">Inputs: Phase 2 code basis + P2 decision +
+EMS brief<br>Used in: Phase 4, Phase 4</td>
+</tr>
+<tr>
+<td style="text-align: left;">4-W06</td>
+<td style="text-align: left;">Permit drawing set (unstamped,
+compiled)</td>
+<td style="text-align: left;">Ethan Brooks (Document Control)<br>PDF
+compilation<br>Date: 2026-01-26 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P3/Outputs/P3.6_PermitSet_Unstamped_2026-01-26.pdf"><code>phases/P3/Outputs/P3.6_PermitSet_Unstamped_2026-01-26.pdf</code></a></td>
+<td style="text-align: left;">Inputs: 4-W01..4-W05<br>Used in: Phase 4,
+Phase 5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-excerpts-electrical-only-2">4.4 Key Excerpts
+(Electrical-Only)</h3>
+<h4 id="one-line-diagram-excerpt-4-w01">4.4.1 One-Line Diagram Excerpt
+(4-W01)</h4>
+<p><strong>Excerpted design basis:</strong></p>
+<ul>
+<li>Existing service: <strong>800A, 208Y/120V, 3Φ</strong> (Phase 2
+evidence)</li>
+<li>New EV subpanel: <strong>400A bus</strong>; feeder OCPD:
+<strong>350A, 3-pole</strong></li>
+<li>EVSE branch circuits: <strong>8 circuits</strong>, each <strong>40A
+OCPD</strong> for <strong>32A continuous</strong> ports</li>
+<li>Load management: <strong>EMS caps aggregate EV demand to
+≤250A</strong> per Phase 3 decision</li>
+</ul>
+<h4 id="site-plan-w-evse-locations-excerpt-4-w02">4.4.2 Site Plan w/
+EVSE Locations Excerpt (4-W02)</h4>
+<p><strong>Excerpted content:</strong> EVSE locations are shown based on
+owner/parking layout inputs, along with electrical equipment
+identifiers. Only items that affect electrical design are called out
+(equipment locations, electrical room reference, and design-relevant
+constraints).</p>
+<h4 id="conduit-trenching-details-excerpt-4-w03">4.4.3 Conduit &amp;
+Trenching Details Excerpt (4-W03)</h4>
+<p><strong>Excerpted content:</strong> Electrical-impacting routing
+assumptions and site-condition constraints are documented for
+engineering use (e.g., feeder length basis for voltage drop/derating),
+without specifying construction means-and-methods.</p>
+<h4 id="drawing-set-compilation-excerpt-4-w06">4.4.4 Drawing Set
+Compilation Excerpt (4-W06)</h4>
+<p><strong>Excerpted compilation rule:</strong> “Phase 4 includes Phase
+4–Phase 4 in the sheet order defined below; filenames and sheet titles
+must match the evidence pointers exactly.”</p>
+<h3 id="preliminary-one-line-diagram">4.5 Preliminary One-Line
+Diagram</h3>
+<p>This one-line diagram depicts the complete electrical system from the
+utility source to the EV charging equipment. It defines major equipment,
+ratings, overcurrent protection, grounding intent, and the Energy
+Management System (EMS) used to manage aggregate EV load.</p>
+<h4 id="inputs-traceable">4.5.1 Inputs (traceable)</h4>
+<ul>
+<li><p>Architecture Decision: 3-W03 (see Addendum A for
+filenames)</p></li>
+<li><p>Service / MDP information: 2-I02 + 2-I03 (see Addendum A for
+filenames)</p></li>
+<li><p>EVSE cut sheet (design basis): 2-I04 (see Addendum A for
+filenames)</p></li>
+</ul>
+<h4 id="system-description-summary">4.5.2 System Description
+(summary)</h4>
+<p>The one-line diagram shows a new <strong>400A, 120/208V, 3-phase EV
+subpanel</strong> connected to the existing <strong>800A MDP</strong>
+via a <strong>350A, 3-pole feeder OCPD</strong>. A listed <strong>Energy
+Management System (EMS)</strong> is shown controlling aggregate EV
+demand to <strong>≤250A</strong> in accordance with the managed-load
+approach documented in Phase 3.</p>
+<h4
+id="technical-specifications-shown-on-the-diagram-excerpt-list">4.5.3
+Technical Specifications Shown on the Diagram (excerpt list)</h4>
+<h4 id="utility-source-and-fault-data-design-inputs">4.5.4 Utility
+Source and Fault Data ( design inputs)</h4>
+<ul>
+<li><p>Utility transformer identifier: TX-485-A</p></li>
+<li><p>Available fault current at MDP bus: 42 kA (utility-provided
+short-circuit data)</p></li>
+<li><p>Calculated available fault current at EV subpanel bus: 38 kA
+(based on feeder impedance)</p></li>
+</ul>
+<h4 id="panel-and-protection-ratings">4.5.5 Panel and Protection
+Ratings</h4>
+<ul>
+<li><p>MDP bus rating: 800 A</p></li>
+<li><p>EV subpanel bus rating: 400 A</p></li>
+<li><p>EV feeder OCPD: 350 A, 3-pole</p></li>
+<li><p>Breaker interrupting rating: 65 kAIC minimum at 120/208
+V</p></li>
+</ul>
+<h4 id="feeder-conductors-design-basis">4.5.6 Feeder Conductors (design
+basis)</h4>
+<ul>
+<li><p>Phase conductors: three (3) parallel sets per phase of 250 kcmil
+copper, THHN/THWN-2 (design basis)</p></li>
+<li><p>Neutral conductor: not required (EVSE loads are line-to-line
+only)</p></li>
+<li><p>Equipment grounding conductor: one (1) 4/0 AWG copper (design
+basis)</p></li>
+<li><p>Ampacity basis: sized at 75°C terminal rating per applicable code
+requirements; final conductor sizing to be confirmed in stamped
+set</p></li>
+</ul>
+<h4 id="wiring-method-electrical-only">4.5.7 Wiring Method
+(electrical-only)</h4>
+<ul>
+<li>Wiring method is specified as a code-compliant raceway system sized
+per NEC Chapter 9 and applicable articles. <strong>No
+routing/trenching/constructability means-and-methods are specified in
+this master deliverable.</strong></li>
+</ul>
+<h4 id="grounding-and-bonding-intent">4.5.8 Grounding and Bonding
+(intent)</h4>
+<ul>
+<li><p>Equipment grounding conductor routed with feeder conductors in
+all raceways</p></li>
+<li><p>Bonding jumpers provided where required by wiring method and
+transitions</p></li>
+<li><p>EV subpanel grounding bar bonded to the building grounding
+electrode system (referenced on details sheet)</p></li>
+</ul>
+<h4 id="energy-management-system-ems">4.5.9 Energy Management System
+(EMS)</h4>
+<ul>
+<li><p>EMS device identified on the diagram as “Schlage / ChargePoint
+EMS Unit”</p></li>
+<li><p>Dedicated EMS symbol legend included</p></li>
+<li><p>Control interface shown between EMS and EV feeder/EVSE branch
+circuits</p></li>
+<li><p>Fail-safe behavior note: on EMS fault/loss of comms, system
+defaults to a safe state that prevents EV feeder demand from exceeding
+the configured cap</p></li>
+</ul>
+<h4 id="coordination-and-selectivity">4.5.10 Coordination and
+Selectivity</h4>
+<ul>
+<li>Coordination note: verify time-current coordination between feeder
+OCPD and downstream branch OCPD in final stamped set</li>
+</ul>
+<p>This one-line diagram is intended to be code-complete for permit
+review, subject to final PE stamp and any jurisdiction-specific
+refinements identified during Phase 5.</p>
+<h3 id="site-plan-w-evse-locations">4.6 Site Plan w/ EVSE Locations</h3>
+<p>This plan overlays EVSE and electrical equipment identifiers onto the
+base plan to show EVSE locations provided by the owner/parking layout
+inputs and to capture any <strong>site placement constraints that affect
+electrical design</strong> (equipment adjacency, electrical-room
+reference, and plan-check clarity). It intentionally does
+<strong>not</strong> provide constructability means-and-methods.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Base site plan</td>
+<td style="text-align: left;">2-I01 (normalized in Phase 2)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Parking layout</td>
+<td style="text-align: left;">P3-PARK (see Addendum A)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Photo context (verification)</td>
+<td style="text-align: left;">2-I03 (normalized in Phase 2)</td>
+</tr>
+</tbody>
+</table>
+<p>Electrical-impacting plan outputs (excerpt):</p>
+<ul>
+<li>EVSE locations labeled <strong>EVSE-01</strong> through
+<strong>EVSE-08</strong> per owner parking layout input</li>
+<li>EV subpanel identified as <strong>EVSP-1</strong> relative to the
+existing <strong>MDP</strong> room (reference only)</li>
+<li>Notes call out placement constraints that affect electrical design
+only (e.g., maximum assumed feeder path length basis for voltage drop
+checks; any “no-penetration” zones that constrain electrical
+routing)</li>
+</ul>
+<h3 id="conduit-trenching-details-electrical-impacting">4.7 Conduit
+&amp; Trenching Details (Electrical-Impacting)</h3>
+<p>This detail sheet documents <strong>routing assumptions</strong> and
+<strong>site-condition constraints</strong> that affect electrical
+design outcomes (feeder length basis, voltage drop basis, conductor
+derating basis, separation requirements, and transition points), using
+installer-provided assumptions and Phase 2 site photos. It intentionally
+avoids non-electrical constructability means-and-methods.</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Routing assumptions</td>
+<td style="text-align: left;">4-I03 (see Addendum A)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Site conditions</td>
+<td style="text-align: left;">2-I03 (normalized in Phase 2)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Code basis (separation/wiring method
+references)</td>
+<td style="text-align: left;">2-I05 (normalized in Phase 2)</td>
+</tr>
+</tbody>
+</table>
+<p>Electrical-impacting detail content (excerpt):</p>
+<ul>
+<li><strong>Feeder length basis:</strong> 165 ft electrical path length
+used for voltage-drop checks and fault/impedance assumptions (final
+field-verified)</li>
+<li><strong>Wiring method basis:</strong> raceway system sized per NEC
+Chapter 9 and applicable articles; conductor temperature/termination
+basis 75°C unless equipment requires otherwise</li>
+<li><strong>Derating basis:</strong> parallel conductors and conduit
+fill assumptions documented for engineering sizing; final installation
+must comply with applicable adjustment factors</li>
+<li><strong>Separation:</strong> power/communications separation and
+grounding/bonding intent documented for electrical compliance (final
+routing by installer)</li>
+<li><strong>Transitions/constraints:</strong> identifies
+electrical-impacting transition points (e.g., “MDP room exit point” and
+“EVSP-1 entry point”) and any photo-identified constraints impacting
+electrical routing decisions</li>
+</ul>
+<h3 id="updated-panel-schedules">4.8 Updated Panel Schedules</h3>
+<p>The existing panel schedule for the MDP is updated to reflect the new
+downstream load (the 350A breaker for the EV subpanel), and a new
+schedule for the EV subpanel is created.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Existing schedules</td>
+<td style="text-align: left;">2-I02 (normalized in Phase 2)</td>
+</tr>
+<tr>
+<td style="text-align: left;">New EV loads (calc + decision)</td>
+<td style="text-align: left;">3-W01 + 3-W03</td>
+</tr>
+</tbody>
+</table>
+<p>The updated MDP schedule shows:</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Slot</th>
+<th style="text-align: left;">Breaker</th>
+<th style="text-align: left;">Load</th>
+<th style="text-align: left;">Amps</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">40, 42, 44</td>
+<td style="text-align: left;">3-Pole, 350A</td>
+<td style="text-align: left;">EV Subpanel</td>
+<td style="text-align: left;">250A Managed</td>
+<td style="text-align: left;">Connection to New EV Subpanel</td>
+</tr>
+</tbody>
+</table>
+<p>The New EV Subpanel schedule shows:</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Slot</th>
+<th style="text-align: left;">Breaker</th>
+<th style="text-align: left;">Load</th>
+<th style="text-align: left;">Amps</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1, 3, 5</td>
+<td style="text-align: left;">3-Pole, 40A</td>
+<td style="text-align: left;">EVSE #1</td>
+<td style="text-align: left;">40A</td>
+<td style="text-align: left;">Dedicated Circuit for Continuous Load</td>
+</tr>
+<tr>
+<td style="text-align: left;">7, 9, 11</td>
+<td style="text-align: left;">3-Pole, 40A</td>
+<td style="text-align: left;">EVSE #2</td>
+<td style="text-align: left;">40A</td>
+<td style="text-align: left;">Dedicated Circuit for Continuous Load</td>
+</tr>
+<tr>
+<td style="text-align: left;">13, 15, 17</td>
+<td style="text-align: left;">3-Pole, 40A</td>
+<td style="text-align: left;">EVSE #3</td>
+<td style="text-align: left;">40A</td>
+<td style="text-align: left;">Dedicated Circuit for Continuous Load</td>
+</tr>
+<tr>
+<td style="text-align: left;">19, 21, 23</td>
+<td style="text-align: left;">3-Pole, 40A</td>
+<td style="text-align: left;">EVSE #4</td>
+<td style="text-align: left;">40A</td>
+<td style="text-align: left;">Dedicated Circuit for Continuous Load</td>
+</tr>
+<tr>
+<td style="text-align: left;">25, 27, 29</td>
+<td style="text-align: left;">3-Pole, 40A</td>
+<td style="text-align: left;">EVSE #5</td>
+<td style="text-align: left;">40A</td>
+<td style="text-align: left;">Dedicated Circuit for Continuous Load</td>
+</tr>
+<tr>
+<td style="text-align: left;">31, 33, 35</td>
+<td style="text-align: left;">3-Pole, 40A</td>
+<td style="text-align: left;">EVSE #6</td>
+<td style="text-align: left;">40A</td>
+<td style="text-align: left;">Dedicated Circuit for Continuous Load</td>
+</tr>
+<tr>
+<td style="text-align: left;">37, 39, 41</td>
+<td style="text-align: left;">3-Pole, 40A</td>
+<td style="text-align: left;">EVSE #7</td>
+<td style="text-align: left;">40A</td>
+<td style="text-align: left;">Dedicated Circuit for Continuous Load</td>
+</tr>
+<tr>
+<td style="text-align: left;">43, 45, 47</td>
+<td style="text-align: left;">3-Pole, 40A</td>
+<td style="text-align: left;">EVSE #8</td>
+<td style="text-align: left;">40A</td>
+<td style="text-align: left;">Dedicated Circuit for Continuous Load</td>
+</tr>
+</tbody>
+</table>
+<h3 id="electrical-notes-code-sheets">4.9 Electrical Notes &amp; Code
+Sheets</h3>
+<p>This document compiles the necessary general and project-specific
+notes, ensuring the construction documents clearly articulate the
+applicable codes, standards, and installation methods.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AHJ/code basis</td>
+<td style="text-align: left;">2-I05 (normalized in Phase 2)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Architecture decision</td>
+<td style="text-align: left;">3-W03</td>
+</tr>
+<tr>
+<td style="text-align: left;">Standard templates</td>
+<td style="text-align: left;">Internal</td>
+</tr>
+</tbody>
+</table>
+<p>The notes sheet explicitly references the <strong>2022 California
+Electrical Code (CEC)</strong> and the use of the <strong>NEC
+625.42(A)(2)</strong> method (EMS) to justify the 250A managed load. Key
+notes include:</p>
+<ul>
+<li><strong>A. Load Management:</strong> The EV subpanel utilizes a
+listed Energy Management System (EMS) to cap the maximum aggregate
+demand at 250 Amps to prevent exceeding the available service
+headroom.</li>
+<li><strong>B. Continuous Loads:</strong> All EV loads are calculated at
+125% demand factor per NEC 625.42.</li>
+<li><strong>C. Wiring:</strong> All conductors shall be sized per NEC
+310 and rated for 75°C minimum.</li>
+</ul>
+<h3 id="permit-drawing-set-unstamped">4.10 Permit Drawing Set –
+Unstamped</h3>
+<p>This deliverable is the compiled <strong>electrical permit drawing
+set</strong> (unstamped), finalized and ready for the engineer of
+record’s final stamp.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">One-line</td>
+<td style="text-align: left;">Phase 4</td>
+</tr>
+<tr>
+<td style="text-align: left;">Site plan</td>
+<td style="text-align: left;">Phase 4</td>
+</tr>
+<tr>
+<td style="text-align: left;">Details</td>
+<td style="text-align: left;">Phase 4</td>
+</tr>
+<tr>
+<td style="text-align: left;">Schedules</td>
+<td style="text-align: left;">Phase 4</td>
+</tr>
+<tr>
+<td style="text-align: left;">Notes</td>
+<td style="text-align: left;">Phase 4</td>
+</tr>
+</tbody>
+</table>
+<p>This complete set, reserved as a File, is the primary output of Phase
+4 and serves as the input for Phase 5.</p>
+<h3 id="compilation-qa-log">4.11 Compilation / QA Log</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">QA Item</th>
+<th style="text-align: left;">Check performed</th>
+<th style="text-align: left;">Result</th>
+<th style="text-align: left;">Checked by</th>
+<th style="text-align: left;">Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Sheet inclusion</td>
+<td style="text-align: left;">Phase 4–Phase 4 present in compiled
+PDF</td>
+<td style="text-align: left;">Pass</td>
+<td style="text-align: left;">Ethan Brooks (Document Control)</td>
+<td style="text-align: left;">2026-01-26</td>
+</tr>
+<tr>
+<td style="text-align: left;">Stable filenames</td>
+<td style="text-align: left;">Output filenames match Phase 4 evidence
+pointers</td>
+<td style="text-align: left;">Pass</td>
+<td style="text-align: left;">Ethan Brooks (Document Control)</td>
+<td style="text-align: left;">2026-01-26</td>
+</tr>
+<tr>
+<td style="text-align: left;">Title block consistency</td>
+<td style="text-align: left;">Sheet titles/IDs consistent across
+set</td>
+<td style="text-align: left;">Pass</td>
+<td style="text-align: left;">Sam Ortega (CAD Tech, )</td>
+<td style="text-align: left;">2026-01-26</td>
+</tr>
+<tr>
+<td style="text-align: left;">Cross-references</td>
+<td style="text-align: left;">Notes reference correct sheet IDs</td>
+<td style="text-align: left;">Pass</td>
+<td style="text-align: left;">Priya Shah, PE</td>
+<td style="text-align: left;">2026-01-26</td>
+</tr>
+</tbody>
+</table>
+<h3 id="phase-4-drawing-package-certification">4.12 Phase 4 Drawing
+Package Certification</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Certification Point</th>
+<th style="text-align: left;">Status</th>
+<th style="text-align: left;">Certified By</th>
+<th style="text-align: left;">Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Drawing set compiled (unstamped)</td>
+<td style="text-align: left;">Certified</td>
+<td style="text-align: left;">Ethan Brooks (Document Control)</td>
+<td style="text-align: left;">2026-01-26</td>
+</tr>
+<tr>
+<td style="text-align: left;">Electrical content aligns to Phase 3
+decision</td>
+<td style="text-align: left;">Certified</td>
+<td style="text-align: left;">Priya Shah, PE</td>
+<td style="text-align: left;">2026-01-26</td>
+</tr>
+<tr>
+<td style="text-align: left;">Inputs traceable to Phase 2 evidence
+pointers</td>
+<td style="text-align: left;">Certified</td>
+<td style="text-align: left;">Priya Shah, PE</td>
+<td style="text-align: left;">2026-01-26</td>
+</tr>
+</tbody>
+</table>
+<h3 id="next-steps-3">4.13 Next Steps</h3>
+<p>Phase 4 is complete. The <strong>Unstamped Permit Drawing Set (Phase
+4)</strong> is finalized.</p>
+<p>The project proceeds to <strong>Phase 5: Permitting
+Submission</strong> to obtain the <strong>Stamped Permit Drawings (Phase
+5)</strong> and assemble the permit application package (Phase 5).</p>
+<p><a id="phase-5"></a></p>
+<h2 id="phase-5-permitting-submission-1">Phase 5: Permitting
+Submission</h2>
+<h3 id="phase-5-purpose">5.1 Phase 5 Purpose</h3>
+<p>Phase 5 documents the formal submission of the electrical permit
+package to the AHJ, including the stamped drawing set, required forms,
+and submission receipts/tracking.</p>
+<p><strong>NOTE:</strong> The Phase 5 fields below are filled with
+<strong>example data</strong> to demonstrate a “completed” master
+deliverable package (provenance, stable filenames, and submission logs).
+Replace all names, dates, and evidence pointers with real project
+records before using this document externally.</p>
+<h3 id="phase-5-boundaries-electrical-only">5.2 Phase 5 Boundaries
+(Electrical-Only)</h3>
+<p>Phase 5 captures the electrical permitting submission artifacts. It
+intentionally excludes:</p>
+<ul>
+<li><strong>Civil / constructability</strong> topics
+(routing/trenching/means-and-methods, installation sequencing,
+etc.)</li>
+</ul>
+<h3 id="evidence-index-submission-work-products-stable-filenames">5.3
+Evidence Index + Submission Work Products (Stable Filenames)</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Item ID</th>
+<th style="text-align: left;">Work product</th>
+<th style="text-align: left;">Provenance (who / how / when)</th>
+<th style="text-align: left;">Evidence reference ID(s)</th>
+<th style="text-align: left;">Inputs + downstream use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">5-W01</td>
+<td style="text-align: left;">Stamped permit drawings (electrical
+set)</td>
+<td style="text-align: left;">Priya Shah, PE (EOR)<br>Stamp +
+PDF<br>Date: 2026-01-29 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P4/Outputs/P4.1_PermitSet_Stamped_2026-01-29.pdf"><code>phases/P4/Outputs/P4.1_PermitSet_Stamped_2026-01-29.pdf</code></a></td>
+<td style="text-align: left;">Inputs: Phase 4 unstamped set<br>Used in:
+Phase 5, Phase 5</td>
+</tr>
+<tr>
+<td style="text-align: left;">5-W02</td>
+<td style="text-align: left;">AHJ permit application form(s)</td>
+<td style="text-align: left;">Jordan Lee (PM)<br>AHJ portal form + PDF
+export<br>Date: 2026-01-29 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P4/Outputs/P4.2_AHJ_ApplicationForms_2026-01-29.pdf"><code>phases/P4/Outputs/P4.2_AHJ_ApplicationForms_2026-01-29.pdf</code></a></td>
+<td style="text-align: left;">Inputs: AHJ requirements + project
+metadata<br>Used in: Phase 5</td>
+</tr>
+<tr>
+<td style="text-align: left;">5-W03</td>
+<td style="text-align: left;">Permit application package (compiled)</td>
+<td style="text-align: left;">Ethan Brooks (Document Control)<br>PDF
+compilation<br>Date: 2026-01-29 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P4/Outputs/P4.2_PermitApplication_Package_Compiled_2026-01-29.pdf"><code>phases/P4/Outputs/P4.2_PermitApplication_Package_Compiled_2026-01-29.pdf</code></a></td>
+<td style="text-align: left;">Inputs: Phase 5 + 5-W02 + supporting
+attachments<br>Used in: Phase 5, Phase 6</td>
+</tr>
+<tr>
+<td style="text-align: left;">5-W04</td>
+<td style="text-align: left;">Supporting attachments bundle
+(electrical)</td>
+<td style="text-align: left;">Ethan Brooks (Document Control)<br>PDF
+compilation<br>Date: 2026-01-29 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P4/Outputs/P4.SupportingAttachments_Electrical_2026-01-29.pdf"><code>phases/P4/Outputs/P4.SupportingAttachments_Electrical_2026-01-29.pdf</code></a></td>
+<td style="text-align: left;">Inputs: Phase 3 + Phase 3 + EVSE/EMS +
+code basis<br>Used in: Phase 5</td>
+</tr>
+<tr>
+<td style="text-align: left;">5-W05</td>
+<td style="text-align: left;">AHJ submission receipt / confirmation</td>
+<td style="text-align: left;">Jordan Lee (PM)<br>Portal download +
+screenshot PDF<br>Date: 2026-01-29 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P4/Outputs/P4.SubmissionReceipt_AHJ_Confirmation_2026-01-29.pdf"><code>phases/P4/Outputs/P4.SubmissionReceipt_AHJ_Confirmation_2026-01-29.pdf</code></a></td>
+<td style="text-align: left;">Inputs: portal submission<br>Used in:
+Phase 5, Phase 6</td>
+</tr>
+<tr>
+<td style="text-align: left;">5-W06</td>
+<td style="text-align: left;">Permit tracking log (submission
+metadata)</td>
+<td style="text-align: left;">Jordan Lee (PM)<br>Spreadsheet<br>Date:
+2026-01-29 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P4/Outputs/P4.PermitTrackingLog_2026-01-29.xlsx.html"><code>phases/P4/Outputs/P4.PermitTrackingLog_2026-01-29.xlsx</code></a></td>
+<td style="text-align: left;">Inputs: portal submission data<br>Used in:
+Phase 6</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-excerpts-electrical-only-3">5.4 Key Excerpts
+(Electrical-Only)</h3>
+<h4 id="submission-confirmation-excerpt-5-w05">5.4.1 Submission
+Confirmation Excerpt (5-W05)</h4>
+<p><strong>Excerpted receipt fields:</strong></p>
+<ul>
+<li>AHJ: City of Palo Alto – Building Division (Electrical Permits)</li>
+<li>Submission method: Online portal upload</li>
+<li>Permit application number: <strong>EL-2026-01472</strong></li>
+<li>Submission date/time: <strong>2026-01-29 14:18 PT</strong></li>
+<li>Submitted by: <strong>Jordan Lee (PM)</strong></li>
+</ul>
+<h4 id="stamped-set-excerpt-5-w01">5.4.2 Stamped Set Excerpt
+(5-W01)</h4>
+<p><strong>Excerpted stamp fields:</strong></p>
+<ul>
+<li>Engineer-of-Record: <strong>Priya Shah, PE</strong></li>
+<li>Stamp date: <strong>2026-01-29</strong></li>
+<li>Set: <strong>P4.1_PermitSet_Stamped_2026-01-29.pdf</strong> derived
+from <strong>Phase 4</strong> with no content changes other than stamp
+block and any required administrative cover sheet</li>
+</ul>
+<h3 id="stamped-permit-drawings">5.5 Stamped Permit Drawings</h3>
+<p>This deliverable is the Phase 4 compiled set (Phase 4) reviewed and
+stamped by the Engineer-of-Record for submission to the AHJ.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Unstamped permit set</td>
+<td style="text-align: left;">4-W06</td>
+</tr>
+<tr>
+<td style="text-align: left;">EOR review notes</td>
+<td style="text-align: left;">P4-EOR (see Addendum A)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Output (reference ID):</strong> 5-W01</p>
+<h3 id="permit-application-package">5.6 Permit Application Package</h3>
+<p>This deliverable is the complete electrical permit submission package
+as provided to the AHJ, including forms, stamped drawings, and
+electrical support documents commonly required for plan check.</p>
+<h4 id="package-contents-electrical-only">5.6.1 Package contents
+(electrical-only)</h4>
+<ul>
+<li><strong>Stamped drawings</strong>: 5-W01</li>
+<li><strong>AHJ application forms</strong>: 5-W02</li>
+<li><strong>Supporting attachments (electrical)</strong>: 5-W04
+<ul>
+<li>Load calculation summary (Phase 3): 3-W01</li>
+<li>Architecture decision record (Phase 3): 3-W03</li>
+<li>EVSE cut sheet (design basis): 2-I04</li>
+<li>EMS technical brief: 3-W04</li>
+<li>AHJ/code basis evidence: 2-I05</li>
+</ul></li>
+</ul>
+<p><strong>Output (reference ID):</strong> 5-W03</p>
+<h3 id="p4-submission-qa-log">5.7 P4 Submission / QA Log</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">QA Item</th>
+<th style="text-align: left;">Check performed</th>
+<th style="text-align: left;">Result</th>
+<th style="text-align: left;">Checked by</th>
+<th style="text-align: left;">Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Stamped set included</td>
+<td style="text-align: left;">Phase 5 stamped drawings included in
+package</td>
+<td style="text-align: left;">Pass</td>
+<td style="text-align: left;">Ethan Brooks (Document Control)</td>
+<td style="text-align: left;">2026-01-29</td>
+</tr>
+<tr>
+<td style="text-align: left;">Stable filenames</td>
+<td style="text-align: left;">Package references match evidence
+pointers</td>
+<td style="text-align: left;">Pass</td>
+<td style="text-align: left;">Ethan Brooks (Document Control)</td>
+<td style="text-align: left;">2026-01-29</td>
+</tr>
+<tr>
+<td style="text-align: left;">Attachment completeness</td>
+<td style="text-align: left;">Load calc, EVSE, EMS, and code basis
+included</td>
+<td style="text-align: left;">Pass</td>
+<td style="text-align: left;">Jordan Lee (PM)</td>
+<td style="text-align: left;">2026-01-29</td>
+</tr>
+<tr>
+<td style="text-align: left;">Portal upload verification</td>
+<td style="text-align: left;">Receipt downloaded; application number
+captured</td>
+<td style="text-align: left;">Pass</td>
+<td style="text-align: left;">Jordan Lee (PM)</td>
+<td style="text-align: left;">2026-01-29</td>
+</tr>
+</tbody>
+</table>
+<h3 id="phase-5-certification">5.8 Phase 5 Certification</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Certification Point</th>
+<th style="text-align: left;">Status</th>
+<th style="text-align: left;">Certified By</th>
+<th style="text-align: left;">Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Stamped drawings issued (Phase 5)</td>
+<td style="text-align: left;">Certified</td>
+<td style="text-align: left;">Priya Shah, PE</td>
+<td style="text-align: left;">2026-01-29</td>
+</tr>
+<tr>
+<td style="text-align: left;">Permit application package submitted
+(Phase 5)</td>
+<td style="text-align: left;">Certified</td>
+<td style="text-align: left;">Jordan Lee (PM)</td>
+<td style="text-align: left;">2026-01-29</td>
+</tr>
+<tr>
+<td style="text-align: left;">Submission receipt archived and
+traceable</td>
+<td style="text-align: left;">Certified</td>
+<td style="text-align: left;">Ethan Brooks (Document Control)</td>
+<td style="text-align: left;">2026-01-29</td>
+</tr>
+</tbody>
+</table>
+<h3 id="phase-5-closeout-confirmation-completed">5.9 Phase 5 Closeout
+Confirmation (Completed)</h3>
+<p>Phase 5 is considered <strong>complete</strong> and closed out
+because all submission artifacts are archived under stable
+filenames:</p>
+<ul>
+<li><strong>Stamped drawing set issued</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P4/Outputs/P4.1_PermitSet_Stamped_2026-01-29.pdf"><code>phases/P4/Outputs/P4.1_PermitSet_Stamped_2026-01-29.pdf</code></a></li>
+<li><strong>Permit forms archived</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P4/Outputs/P4.2_AHJ_ApplicationForms_2026-01-29.pdf"><code>phases/P4/Outputs/P4.2_AHJ_ApplicationForms_2026-01-29.pdf</code></a></li>
+<li><strong>Supporting attachments bundle archived</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P4/Outputs/P4.SupportingAttachments_Electrical_2026-01-29.pdf"><code>phases/P4/Outputs/P4.SupportingAttachments_Electrical_2026-01-29.pdf</code></a></li>
+<li><strong>Compiled submission package archived
+(as-submitted)</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P4/Outputs/P4.2_PermitApplication_Package_Compiled_2026-01-29.pdf"><code>phases/P4/Outputs/P4.2_PermitApplication_Package_Compiled_2026-01-29.pdf</code></a></li>
+<li><strong>Submission receipt archived</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P4/Outputs/P4.SubmissionReceipt_AHJ_Confirmation_2026-01-29.pdf"><code>phases/P4/Outputs/P4.SubmissionReceipt_AHJ_Confirmation_2026-01-29.pdf</code></a></li>
+<li><strong>Permit tracking log started</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P4/Outputs/P4.PermitTrackingLog_2026-01-29.xlsx.html"><code>phases/P4/Outputs/P4.PermitTrackingLog_2026-01-29.xlsx</code></a></li>
+</ul>
+<p><a id="phase-6"></a></p>
+<h2 id="phase-6-authority-review-and-drawing-revision-1">Phase 6:
+Authority Review and Drawing Revision</h2>
+<h3 id="phase-6-purpose">6.1 Phase 6 Purpose</h3>
+<p>Phase 6 documents the AHJ plan check review, parses all AHJ comments
+into an auditable log, produces revised drawings addressing those
+comments, and records responses in a formal comment response letter. It
+explicitly captures the <strong>rework loop caused by AHJ
+pushback</strong> (comment intake → disposition → drawing changes →
+resubmission → approval evidence) so the revision path is traceable and
+defensible.</p>
+<p><strong>NOTE:</strong> The Phase 6 fields below are filled with
+<strong>example data</strong> to demonstrate a “completed” master
+deliverable package (provenance, stable filenames, and revision logs).
+Replace all names, dates, and evidence pointers with real project
+records before using this document externally.</p>
+<h3 id="phase-6-boundaries-electrical-only">6.2 Phase 6 Boundaries
+(Electrical-Only)</h3>
+<p>Phase 6 captures electrical plan-check comments and electrical
+drawing revisions. It intentionally excludes:</p>
+<ul>
+<li><strong>Civil / constructability</strong> topics
+(routing/trenching/means-and-methods, installation sequencing,
+etc.)</li>
+</ul>
+<h3
+id="evidence-index-reviewrevision-work-products-stable-filenames">6.3
+Evidence Index + Review/Revision Work Products (Stable Filenames)</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Item ID</th>
+<th style="text-align: left;">Work product</th>
+<th style="text-align: left;">Provenance (who / how / when)</th>
+<th style="text-align: left;">Evidence reference ID(s)</th>
+<th style="text-align: left;">Inputs + downstream use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">6-W01</td>
+<td style="text-align: left;">AHJ plan check comments (raw)</td>
+<td style="text-align: left;">AHJ<br>Portal download<br>Date: 2026-02-06
+(v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P5/Inputs/P5-AHJ_PlanCheckComments_Raw_2026-02-06.pdf"><code>phases/P5/Inputs/P5-AHJ_PlanCheckComments_Raw_2026-02-06.pdf</code></a></td>
+<td style="text-align: left;">Inputs: AHJ portal<br>Used in: Phase
+6</td>
+</tr>
+<tr>
+<td style="text-align: left;">6-W02</td>
+<td style="text-align: left;">AHJ comment log (parsed + tracked)</td>
+<td style="text-align: left;">Jordan Lee (PM)<br>Spreadsheet<br>Date:
+2026-02-06 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P5/Outputs/P5.1_AHJ_CommentLog_Parsed_2026-02-06.xlsx.html"><code>phases/P5/Outputs/P5.1_AHJ_CommentLog_Parsed_2026-02-06.xlsx</code></a></td>
+<td style="text-align: left;">Inputs: 6-W01<br>Used in: Phase 6, Phase
+6, Phase 6</td>
+</tr>
+<tr>
+<td style="text-align: left;">6-W03</td>
+<td style="text-align: left;">Revised drawings (post-comments,
+stamped)</td>
+<td style="text-align: left;">Priya Shah, PE (EOR)<br>CAD update + stamp
++ PDF<br>Date: 2026-02-12 (Rev 1)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P5/Outputs/P5.2_PermitSet_Revised_Stamped_Rev1_2026-02-12.pdf"><code>phases/P5/Outputs/P5.2_PermitSet_Revised_Stamped_Rev1_2026-02-12.pdf</code></a></td>
+<td style="text-align: left;">Inputs: Phase 5 stamped set +
+6-W02<br>Used in: Phase 6, Phase 6</td>
+</tr>
+<tr>
+<td style="text-align: left;">6-W04</td>
+<td style="text-align: left;">Redline set (internal review)</td>
+<td style="text-align: left;">Priya Shah, PE (EOR)<br>PDF
+markups<br>Date: 2026-02-10 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P5/Outputs/P5.Redlines_InternalReview_2026-02-10.pdf"><code>phases/P5/Outputs/P5.Redlines_InternalReview_2026-02-10.pdf</code></a></td>
+<td style="text-align: left;">Inputs: Phase 5 stamped set +
+6-W02<br>Used in: Phase 6</td>
+</tr>
+<tr>
+<td style="text-align: left;">6-W05</td>
+<td style="text-align: left;">Comment response letter</td>
+<td style="text-align: left;">Priya Shah, PE (EOR)<br>Letter
+PDF<br>Date: 2026-02-12 (Rev 1)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P5/Outputs/P5.3_CommentResponseLetter_Rev1_2026-02-12.pdf"><code>phases/P5/Outputs/P5.3_CommentResponseLetter_Rev1_2026-02-12.pdf</code></a></td>
+<td style="text-align: left;">Inputs: 6-W02 + 6-W03<br>Used in: Phase
+6</td>
+</tr>
+<tr>
+<td style="text-align: left;">6-W06</td>
+<td style="text-align: left;">Resubmission receipt / confirmation</td>
+<td style="text-align: left;">Jordan Lee (PM)<br>Portal download +
+screenshot PDF<br>Date: 2026-02-12 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P5/Outputs/P5.ResubmissionReceipt_AHJ_2026-02-12.pdf"><code>phases/P5/Outputs/P5.ResubmissionReceipt_AHJ_2026-02-12.pdf</code></a></td>
+<td style="text-align: left;">Inputs: AHJ portal<br>Used in: Phase 6
+closeout</td>
+</tr>
+<tr>
+<td style="text-align: left;">6-W07</td>
+<td style="text-align: left;">AHJ approval / permit issuance
+confirmation</td>
+<td style="text-align: left;">AHJ<br>Portal download<br>Date: 2026-02-19
+(v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P5/Outputs/P5.4_AHJ_Approval_Notice_2026-02-19.pdf"><code>phases/P5/Outputs/P5.4_AHJ_Approval_Notice_2026-02-19.pdf</code></a></td>
+<td style="text-align: left;">Inputs: AHJ portal<br>Used in: Phase 6,
+Phase 6 closeout</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-excerpts-electrical-only-4">6.4 Key Excerpts
+(Electrical-Only)</h3>
+<h4 id="ahj-comment-themes-excerpt-6-w01">6.4.1 AHJ Comment Themes
+Excerpt (6-W01)</h4>
+<p><strong>Excerpted themes:</strong></p>
+<ul>
+<li>Request clarification of <strong>EMS/load management method</strong>
+and fail-safe behavior.</li>
+<li>Request confirmation of <strong>available fault current /
+AIC</strong> selection basis.</li>
+<li>Request additional <strong>code notes</strong> (EVSE continuous
+load, labeling, disconnecting means references as applicable).</li>
+</ul>
+<h4 id="revision-summary-excerpt-6-w03">6.4.2 Revision Summary Excerpt
+(6-W03)</h4>
+<p><strong>Excerpted revision summary:</strong></p>
+<ul>
+<li>Updated one-line notes to clarify EMS cap logic and fail-safe
+state.</li>
+<li>Added fault current basis note and verified minimum AIC rating
+statement.</li>
+<li>Updated notes sheet with explicit NEC/CEC references and labeling
+notes.</li>
+</ul>
+<h4 id="ahj-approval-excerpt-6-w07">6.4.3 AHJ Approval Excerpt
+(6-W07)</h4>
+<p><strong>Excerpted approval fields:</strong></p>
+<ul>
+<li>Status: <strong>Approved</strong></li>
+<li>Permit application number: <strong>EL-2026-01472</strong></li>
+<li>Approval date/time: <strong>2026-02-19 10:07 PT</strong></li>
+</ul>
+<h3 id="ahj-comment-log-parsed">6.5 AHJ Comment Log – Parsed</h3>
+<p>This deliverable converts the AHJ’s raw plan-check comments into a
+structured, trackable log with owners, dispositions, and references to
+revised sheets.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AHJ comments (raw)</td>
+<td style="text-align: left;">6-W01</td>
+</tr>
+<tr>
+<td style="text-align: left;">Prior submitted set</td>
+<td style="text-align: left;">5-W01</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Output (reference ID):</strong> 6-W02</p>
+<p><strong>Parsed comment log (excerpt):</strong></p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">AHJ Comment ID</th>
+<th style="text-align: left;">Location + comment</th>
+<th style="text-align: left;">Required action + owner</th>
+<th style="text-align: left;">Resolution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">C-01</td>
+<td style="text-align: left;">E-001 (One-Line): Clarify EMS
+method/fail-safe; cite code basis</td>
+<td style="text-align: left;">Add EMS control note + fail-safe statement
++ code ref<br>Owner: Priya Shah, PE</td>
+<td style="text-align: left;">Disposition: Accepted<br>Revised in: Rev
+1<br>Response: Phase 6 §2.1</td>
+</tr>
+<tr>
+<td style="text-align: left;">C-02</td>
+<td style="text-align: left;">E-001 (One-Line): Provide fault current
+basis; confirm OCPD AIC</td>
+<td style="text-align: left;">Add short-circuit basis note + minimum AIC
+statement<br>Owner: Priya Shah, PE</td>
+<td style="text-align: left;">Disposition: Accepted<br>Revised in: Rev
+1<br>Response: Phase 6 §2.2</td>
+</tr>
+<tr>
+<td style="text-align: left;">C-03</td>
+<td style="text-align: left;">E-003 (Notes): Add EVSE continuous-load
+factor + labeling requirement</td>
+<td style="text-align: left;">Expand notes with NEC/CEC refs + labeling
+language<br>Owner: Priya Shah, PE</td>
+<td style="text-align: left;">Disposition: Accepted<br>Revised in: Rev
+1<br>Response: Phase 6 §2.3</td>
+</tr>
+<tr>
+<td style="text-align: left;">C-04</td>
+<td style="text-align: left;">General: Confirm EV subpanel designation
+and schedule consistency</td>
+<td style="text-align: left;">Standardize nomenclature “EVSP-1” across
+set<br>Owner: Sam Ortega (CAD)</td>
+<td style="text-align: left;">Disposition: Accepted<br>Revised in: Rev
+1<br>Response: Phase 6 §2.4</td>
+</tr>
+</tbody>
+</table>
+<h3 id="revised-drawings-post-comments">6.6 Revised Drawings –
+Post-Comments</h3>
+<p>This deliverable is the revised electrical permit set addressing AHJ
+comments. Revisions are tracked by revision number and traceable back to
+comment IDs.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Comment log (parsed)</td>
+<td style="text-align: left;">6-W02</td>
+</tr>
+<tr>
+<td style="text-align: left;">Prior stamped set</td>
+<td style="text-align: left;">5-W01</td>
+</tr>
+<tr>
+<td style="text-align: left;">Internal redlines (optional)</td>
+<td style="text-align: left;">6-W04</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Output (reference ID):</strong> 6-W03</p>
+<h4 id="revision-log">6.6.1 Revision log</h4>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Revision</th>
+<th style="text-align: left;">Date</th>
+<th style="text-align: left;">Summary</th>
+<th style="text-align: left;">Addressed comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Rev 1</td>
+<td style="text-align: left;">2026-02-12</td>
+<td style="text-align: left;">EMS notes clarified; fault-current/AIC
+basis added; notes expanded; nomenclature normalized</td>
+<td style="text-align: left;">C-01, C-02, C-03, C-04</td>
+</tr>
+</tbody>
+</table>
+<h4 id="how-changes-were-crafted-traceable-mapping">6.6.2 How changes
+were crafted (traceable mapping)</h4>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Change ID</th>
+<th style="text-align: left;">From (prior set)</th>
+<th style="text-align: left;">To (revised set)</th>
+<th style="text-align: left;">Change description</th>
+<th style="text-align: left;">Driven by AHJ comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">CH-01</td>
+<td style="text-align: left;">E-001</td>
+<td style="text-align: left;">E-001</td>
+<td style="text-align: left;">Added EMS cap statement + fail-safe note +
+code reference</td>
+<td style="text-align: left;">C-01</td>
+</tr>
+<tr>
+<td style="text-align: left;">CH-02</td>
+<td style="text-align: left;">E-001</td>
+<td style="text-align: left;">E-001</td>
+<td style="text-align: left;">Added available fault current basis note;
+confirmed minimum AIC</td>
+<td style="text-align: left;">C-02</td>
+</tr>
+<tr>
+<td style="text-align: left;">CH-03</td>
+<td style="text-align: left;">E-003</td>
+<td style="text-align: left;">E-003</td>
+<td style="text-align: left;">Added explicit EVSE continuous load and
+labeling notes</td>
+<td style="text-align: left;">C-03</td>
+</tr>
+<tr>
+<td style="text-align: left;">CH-04</td>
+<td style="text-align: left;">E-002/E-004</td>
+<td style="text-align: left;">E-002/E-004</td>
+<td style="text-align: left;">Standardized equipment ID “EVSP-1” across
+plan and schedules</td>
+<td style="text-align: left;">C-04</td>
+</tr>
+</tbody>
+</table>
+<h3 id="comment-response-letter">6.7 Comment Response Letter</h3>
+<p>This deliverable provides point-by-point responses to each AHJ
+comment and cross-references the revised sheets where changes were
+made.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Comment log (parsed)</td>
+<td style="text-align: left;">6-W02</td>
+</tr>
+<tr>
+<td style="text-align: left;">Revised stamped set</td>
+<td style="text-align: left;">6-W03</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Output (reference ID):</strong> 6-W05</p>
+<p><strong>Response letter (excerpt):</strong></p>
+<ul>
+<li><strong>C-01 (EMS clarification):</strong> Added EMS control
+narrative and fail-safe behavior note on Sheet E-001; see Rev 1 clouded
+note “EMS-1.”</li>
+<li><strong>C-02 (fault current / AIC):</strong> Added fault-current
+basis statement and confirmed minimum breaker AIC on Sheet E-001.</li>
+<li><strong>C-03 (notes/labeling):</strong> Updated Sheet E-003 to
+explicitly state EVSE continuous load treatment (125%) and labeling
+notes.</li>
+<li><strong>C-04 (nomenclature):</strong> Standardized EV subpanel
+designation to “EVSP-1” across all sheets and schedules.</li>
+</ul>
+<h3 id="phase-6-resubmission-log">6.8 Phase 6 Resubmission Log</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Resubmission date/time</td>
+<td style="text-align: left;">2026-02-12 16:42 PT</td>
+</tr>
+<tr>
+<td style="text-align: left;">Submitted by</td>
+<td style="text-align: left;">Jordan Lee (PM)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Permit application number</td>
+<td style="text-align: left;">EL-2026-01472</td>
+</tr>
+<tr>
+<td style="text-align: left;">Receipt evidence</td>
+<td style="text-align: left;">6-W06</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ahj-acceptance-approval-confirmation-100-closeout">6.9 AHJ
+Acceptance / Approval Confirmation (100% Closeout)</h3>
+<p>This deliverable records that the AHJ has accepted all comments and
+has approved the revised electrical permit set (or issued the permit).
+Phase 6 is not considered complete until this evidence is archived.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Resubmission receipt</td>
+<td style="text-align: left;">6-W06</td>
+</tr>
+<tr>
+<td style="text-align: left;">Revised stamped set</td>
+<td style="text-align: left;">6-W03</td>
+</tr>
+<tr>
+<td style="text-align: left;">AHJ approval notice / permit issuance</td>
+<td style="text-align: left;">6-W07</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Closeout criteria:</strong></p>
+<ul>
+<li>All AHJ comments in
+<code>P5.1_AHJ_CommentLog_Parsed_2026-02-06.xlsx</code> have disposition
+<strong>Accepted/Resolved</strong></li>
+<li>AHJ status is <strong>Approved</strong> (or <strong>Permit
+Issued</strong>) as evidenced by
+<code>P5.4_AHJ_Approval_Notice_2026-02-19.pdf</code></li>
+</ul>
+<h3 id="phase-6-certification">6.10 Phase 6 Certification</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Certification Point</th>
+<th style="text-align: left;">Status</th>
+<th style="text-align: left;">Certified By</th>
+<th style="text-align: left;">Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AHJ comments parsed and tracked (Phase
+6)</td>
+<td style="text-align: left;">Certified</td>
+<td style="text-align: left;">Jordan Lee (PM)</td>
+<td style="text-align: left;">2026-02-06</td>
+</tr>
+<tr>
+<td style="text-align: left;">Revised set addresses all comments (Phase
+6)</td>
+<td style="text-align: left;">Certified</td>
+<td style="text-align: left;">Priya Shah, PE</td>
+<td style="text-align: left;">2026-02-12</td>
+</tr>
+<tr>
+<td style="text-align: left;">Comment response letter issued (Phase
+6)</td>
+<td style="text-align: left;">Certified</td>
+<td style="text-align: left;">Priya Shah, PE</td>
+<td style="text-align: left;">2026-02-12</td>
+</tr>
+<tr>
+<td style="text-align: left;">Resubmission receipt archived</td>
+<td style="text-align: left;">Certified</td>
+<td style="text-align: left;">Ethan Brooks (Document Control)</td>
+<td style="text-align: left;">2026-02-12</td>
+</tr>
+<tr>
+<td style="text-align: left;">AHJ approval / permit issuance archived
+(Phase 6)</td>
+<td style="text-align: left;">Certified</td>
+<td style="text-align: left;">Ethan Brooks (Document Control)</td>
+<td style="text-align: left;">2026-02-19</td>
+</tr>
+</tbody>
+</table>
+<h3 id="phase-6-closeout-confirmation-completed">6.11 Phase 6 Closeout
+Confirmation (Completed)</h3>
+<p>Phase 6 is considered <strong>complete</strong> and closed out
+because AHJ comments are resolved and approval evidence is archived:</p>
+<ul>
+<li><strong>Raw plan check comments archived</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P5/Inputs/P5-AHJ_PlanCheckComments_Raw_2026-02-06.pdf"><code>phases/P5/Inputs/P5-AHJ_PlanCheckComments_Raw_2026-02-06.pdf</code></a></li>
+<li><strong>Parsed comment log archived</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P5/Outputs/P5.1_AHJ_CommentLog_Parsed_2026-02-06.xlsx.html"><code>phases/P5/Outputs/P5.1_AHJ_CommentLog_Parsed_2026-02-06.xlsx</code></a>
+(all items dispositioned <strong>Accepted/Resolved</strong>)</li>
+<li><strong>Internal redlines archived</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P5/Outputs/P5.Redlines_InternalReview_2026-02-10.pdf"><code>phases/P5/Outputs/P5.Redlines_InternalReview_2026-02-10.pdf</code></a></li>
+<li><strong>Revised stamped set issued (Rev 1)</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P5/Outputs/P5.2_PermitSet_Revised_Stamped_Rev1_2026-02-12.pdf"><code>phases/P5/Outputs/P5.2_PermitSet_Revised_Stamped_Rev1_2026-02-12.pdf</code></a></li>
+<li><strong>Point-by-point response letter issued</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P5/Outputs/P5.3_CommentResponseLetter_Rev1_2026-02-12.pdf"><code>phases/P5/Outputs/P5.3_CommentResponseLetter_Rev1_2026-02-12.pdf</code></a></li>
+<li><strong>Resubmission receipt archived</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P5/Outputs/P5.ResubmissionReceipt_AHJ_2026-02-12.pdf"><code>phases/P5/Outputs/P5.ResubmissionReceipt_AHJ_2026-02-12.pdf</code></a></li>
+<li><strong>AHJ approval/permit issuance archived</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P5/Outputs/P5.4_AHJ_Approval_Notice_2026-02-19.pdf"><code>phases/P5/Outputs/P5.4_AHJ_Approval_Notice_2026-02-19.pdf</code></a></li>
+</ul>
+<p><a id="phase-7"></a></p>
+<h2 id="phase-7-utility-coordination-1">Phase 7: Utility
+Coordination</h2>
+<h3 id="phase-7-purpose">7.1 Phase 7 Purpose</h3>
+<p>Phase 7 documents coordination with the local electrical utility to
+communicate the planned EV load addition and any load-management method,
+submit required utility application forms, and archive all utility
+correspondence/receipts. It also records the <strong>utility-driven
+rework cycle</strong> when the initial submission receives pushback
+(deficiency notice → rework package → resubmission → final
+acknowledgment) so utility concerns and responses remain auditable.</p>
+<p><strong>NOTE:</strong> The Phase 7 fields below are filled with
+<strong>example data</strong> to demonstrate a “completed” master
+deliverable package (provenance, stable filenames, and coordination
+logs). Replace all names, dates, and evidence pointers with real project
+records before using this document externally.</p>
+<h3 id="phase-7-boundaries-electrical-only">7.2 Phase 7 Boundaries
+(Electrical-Only)</h3>
+<p>Phase 7 captures technical utility coordination artifacts (load
+letters, single-line/one-line as requested by the utility, and utility
+portal forms). It intentionally excludes:</p>
+<ul>
+<li><strong>Civil / constructability</strong> topics
+(routing/trenching/means-and-methods, installation sequencing,
+etc.)</li>
+</ul>
+<h3
+id="evidence-index-utility-coordination-work-products-stable-filenames">7.3
+Evidence Index + Utility Coordination Work Products (Stable
+Filenames)</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Item ID</th>
+<th style="text-align: left;">Work product</th>
+<th style="text-align: left;">Provenance (who / how / when)</th>
+<th style="text-align: left;">Evidence reference ID(s)</th>
+<th style="text-align: left;">Inputs + downstream use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">7-W01</td>
+<td style="text-align: left;">Utility requirements capture</td>
+<td style="text-align: left;">Jordan Lee (PM)<br>Utility portal capture
++ PDF<br>Date: 2026-02-20 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Inputs/P6.UtilityRequirements_Capture_2026-02-20.pdf"><code>phases/P6/Inputs/P6.UtilityRequirements_Capture_2026-02-20.pdf</code></a></td>
+<td style="text-align: left;">Inputs: utility portal<br>Used in: Phase
+7</td>
+</tr>
+<tr>
+<td style="text-align: left;">7-W02</td>
+<td style="text-align: left;">Utility load letter + single-line</td>
+<td style="text-align: left;">Priya Shah, PE (EOR)<br>Letter +
+PDF<br>Date: 2026-02-21 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Outputs/P6.1_UtilityLoadLetter_SingleLine_2026-02-21.pdf"><code>phases/P6/Outputs/P6.1_UtilityLoadLetter_SingleLine_2026-02-21.pdf</code></a></td>
+<td style="text-align: left;">Inputs: Phase 3 + Phase 3 + service info
+(+ stamped set if required)<br>Used in: Phase 7, Phase 7</td>
+</tr>
+<tr>
+<td style="text-align: left;">7-W03</td>
+<td style="text-align: left;">Utility application forms (completed)</td>
+<td style="text-align: left;">Jordan Lee (PM)<br>Portal form + PDF
+export<br>Date: 2026-02-21 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Outputs/P6.2_UtilityApplicationForms_Completed_2026-02-21.pdf"><code>phases/P6/Outputs/P6.2_UtilityApplicationForms_Completed_2026-02-21.pdf</code></a></td>
+<td style="text-align: left;">Inputs: 7-W01 + project technical
+metadata<br>Used in: Phase 7</td>
+</tr>
+<tr>
+<td style="text-align: left;">7-W04</td>
+<td style="text-align: left;">Utility submission receipt</td>
+<td style="text-align: left;">Jordan Lee (PM)<br>Portal download +
+screenshot PDF<br>Date: 2026-02-21 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Outputs/P6.SubmissionReceipt_Utility_2026-02-21.pdf"><code>phases/P6/Outputs/P6.SubmissionReceipt_Utility_2026-02-21.pdf</code></a></td>
+<td style="text-align: left;">Inputs: portal submission<br>Used in:
+Phase 7 closeout</td>
+</tr>
+<tr>
+<td style="text-align: left;">7-W05</td>
+<td style="text-align: left;">Utility correspondence log</td>
+<td style="text-align: left;">Jordan Lee (PM)<br>Spreadsheet<br>Date:
+2026-02-24 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Outputs/P6.CorrespondenceLog_2026-02-24.xlsx.html"><code>phases/P6/Outputs/P6.CorrespondenceLog_2026-02-24.xlsx</code></a></td>
+<td style="text-align: left;">Inputs: utility comms<br>Used in: Phase 7
+closeout</td>
+</tr>
+<tr>
+<td style="text-align: left;">7-W06</td>
+<td style="text-align: left;">Utility deficiency / additional info
+required</td>
+<td style="text-align: left;">Utility<br>Portal message + PDF<br>Date:
+2026-02-25 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Inputs/P6.Utility_DeficiencyNotice_2026-02-25.pdf"><code>phases/P6/Inputs/P6.Utility_DeficiencyNotice_2026-02-25.pdf</code></a></td>
+<td style="text-align: left;">Inputs: utility review of initial
+submission<br>Used in: Phase 7</td>
+</tr>
+<tr>
+<td style="text-align: left;">7-W07</td>
+<td style="text-align: left;">Utility rework package</td>
+<td style="text-align: left;">Priya Shah, PE + Jordan Lee (PM)<br>PDF
+compilation<br>Date: 2026-02-27 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Outputs/P6.3_Utility_ReworkPackage_2026-02-27.pdf"><code>phases/P6/Outputs/P6.3_Utility_ReworkPackage_2026-02-27.pdf</code></a></td>
+<td style="text-align: left;">Inputs: 7-W06 + evidence from Phases 2, 3,
+and 4 + EMS brief<br>Used in: Phase 7</td>
+</tr>
+<tr>
+<td style="text-align: left;">7-W08</td>
+<td style="text-align: left;">Utility resubmission receipt</td>
+<td style="text-align: left;">Jordan Lee (PM)<br>Portal download +
+screenshot PDF<br>Date: 2026-02-27 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Outputs/P6.ResubmissionReceipt_Utility_2026-02-27.pdf"><code>phases/P6/Outputs/P6.ResubmissionReceipt_Utility_2026-02-27.pdf</code></a></td>
+<td style="text-align: left;">Inputs: portal resubmission<br>Used in:
+Phase 7 closeout</td>
+</tr>
+<tr>
+<td style="text-align: left;">7-W09</td>
+<td style="text-align: left;">Utility approval / acknowledgment
+(final)</td>
+<td style="text-align: left;">Utility<br>Email/portal letter<br>Date:
+2026-03-03 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Outputs/P6.Utility_Approval_Acknowledgment_2026-03-03.pdf"><code>phases/P6/Outputs/P6.Utility_Approval_Acknowledgment_2026-03-03.pdf</code></a></td>
+<td style="text-align: left;">Inputs: utility review<br>Used in: Phase 7
+closeout</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-excerpts-electrical-only-5">7.4 Key Excerpts
+(Electrical-Only)</h3>
+<h4 id="utility-load-letter-excerpt-7-w02">7.4.1 Utility Load Letter
+Excerpt (7-W02)</h4>
+<p><strong>Excerpted technical content:</strong></p>
+<ul>
+<li>Service: <strong>800A, 208Y/120V, 3Φ</strong> (verified in Phase
+2)</li>
+<li>EVSE: <strong>8 ports</strong>, <strong>32A continuous</strong> each
+(design basis)</li>
+<li>Unmanaged continuous EV load: <strong>320A</strong></li>
+<li>Load management: <strong>EMS caps aggregate EV demand to
+≤250A</strong></li>
+<li>Reference documents included: Phase 3 load calc summary +
+architecture decision record</li>
+</ul>
+<h4 id="utility-submission-receipt-excerpt-7-w04">7.4.2 Utility
+Submission Receipt Excerpt (7-W04)</h4>
+<p><strong>Excerpted receipt fields:</strong></p>
+<ul>
+<li>Submission method: Utility online portal</li>
+<li>Application/reference number:
+<strong>UTIL-EV-2026-00831</strong></li>
+<li>Submitted by: <strong>Jordan Lee (PM)</strong></li>
+<li>Submission date/time: <strong>2026-02-21 11:05 PT</strong></li>
+</ul>
+<h4 id="utility-deficiency-notice-excerpt-7-w06">7.4.3 Utility
+Deficiency Notice Excerpt (7-W06)</h4>
+<p><strong>Excerpted status:</strong></p>
+<ul>
+<li>Status: <strong>Incomplete / Additional Information
+Required</strong></li>
+<li>Reason: EMS documentation insufficient for utility review; request
+clarification of monitoring point and fail-safe cap behavior</li>
+<li>Response due: N/A (utility queue-based)</li>
+</ul>
+<h3 id="utility-load-letter-single-line">7.5 Utility Load Letter /
+Single-Line</h3>
+<p>This deliverable packages the technical load information for the
+utility, including a single-line/one-line diagram excerpt as required by
+the utility and a narrative describing any load-management method (EMS)
+used to limit service impact.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Load calculation summary</td>
+<td style="text-align: left;">3-W01</td>
+</tr>
+<tr>
+<td style="text-align: left;">Architecture decision record</td>
+<td style="text-align: left;">3-W03</td>
+</tr>
+<tr>
+<td style="text-align: left;">Service characteristics evidence</td>
+<td style="text-align: left;">2-I02 + 2-I03</td>
+</tr>
+<tr>
+<td style="text-align: left;">EVSE cut sheet (design basis)</td>
+<td style="text-align: left;">2-I04</td>
+</tr>
+<tr>
+<td style="text-align: left;">EMS technical brief</td>
+<td style="text-align: left;">3-W04</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Output (reference ID):</strong> 7-W02</p>
+<h3 id="utility-application-forms">7.6 Utility Application Forms</h3>
+<p>This deliverable captures the completed utility application forms and
+any required attachments. The submission receipt and correspondence log
+are archived to preserve full traceability.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Utility requirements</td>
+<td style="text-align: left;">7-W01</td>
+</tr>
+<tr>
+<td style="text-align: left;">Utility load letter/single-line</td>
+<td style="text-align: left;">7-W02</td>
+</tr>
+<tr>
+<td style="text-align: left;">Stamped permit drawings (if requested by
+utility)</td>
+<td style="text-align: left;">5-W01</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Output (reference ID):</strong> 7-W03</p>
+<h3 id="utility-deficiency-response-rework-resubmission">7.7 Utility
+Deficiency Response / Rework + Resubmission</h3>
+<p>This deliverable documents the utility’s “incomplete/additional info
+required” outcome and the technical rework performed to satisfy the
+utility’s request, followed by resubmission and approval.</p>
+<h4 id="deficiency-received">7.7.1 Deficiency received</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Utility deficiency notice</td>
+<td style="text-align: left;">7-W06</td>
+</tr>
+</tbody>
+</table>
+<h4 id="rework-package-electrical-only">7.7.2 Rework package
+(electrical-only)</h4>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Rework component</th>
+<th style="text-align: left;">Evidence pointer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">EMS clarification memo (monitoring point +
+cap + fail-safe)</td>
+<td style="text-align: left;">7-W07 (Section 1)</td>
+</tr>
+<tr>
+<td style="text-align: left;">EMS technical brief (revB)</td>
+<td style="text-align: left;">3-W04</td>
+</tr>
+<tr>
+<td style="text-align: left;">Load calc summary (Phase 3)</td>
+<td style="text-align: left;">3-W01</td>
+</tr>
+<tr>
+<td style="text-align: left;">Architecture decision record (Phase
+3)</td>
+<td style="text-align: left;">3-W03</td>
+</tr>
+<tr>
+<td style="text-align: left;">Stamped permit set (reference, if
+requested)</td>
+<td style="text-align: left;">5-W01</td>
+</tr>
+</tbody>
+</table>
+<h4 id="resubmission-approval">7.7.3 Resubmission + approval</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Utility application/reference number</td>
+<td style="text-align: left;">UTIL-EV-2026-00831</td>
+</tr>
+<tr>
+<td style="text-align: left;">Resubmission date/time</td>
+<td style="text-align: left;">2026-02-27 09:22 PT</td>
+</tr>
+<tr>
+<td style="text-align: left;">Resubmission receipt</td>
+<td style="text-align: left;">7-W08</td>
+</tr>
+<tr>
+<td style="text-align: left;">Utility approval/acknowledgment</td>
+<td style="text-align: left;">7-W09</td>
+</tr>
+</tbody>
+</table>
+<h3 id="phase-7-coordination-log">7.8 Phase 7 Coordination Log</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Date</th>
+<th style="text-align: left;">Activity</th>
+<th style="text-align: left;">Evidence (reference ID)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2026-02-20</td>
+<td style="text-align: left;">Confirm required attachments for EV load
+add (email w/ utility rep)</td>
+<td style="text-align: left;">7-W01</td>
+</tr>
+<tr>
+<td style="text-align: left;">2026-02-21</td>
+<td style="text-align: left;">Submit application + load letter (utility
+portal)</td>
+<td style="text-align: left;">7-W04</td>
+</tr>
+<tr>
+<td style="text-align: left;">2026-02-24</td>
+<td style="text-align: left;">EMS clarification requested (call,
+pre-review)</td>
+<td style="text-align: left;">7-W05</td>
+</tr>
+<tr>
+<td style="text-align: left;">2026-02-25</td>
+<td style="text-align: left;">Deficiency issued: “Additional Info
+Required” (utility portal)</td>
+<td style="text-align: left;">7-W06</td>
+</tr>
+<tr>
+<td style="text-align: left;">2026-02-27</td>
+<td style="text-align: left;">Resubmit rework package (utility
+portal)</td>
+<td style="text-align: left;">7-W08</td>
+</tr>
+<tr>
+<td style="text-align: left;">2026-03-03</td>
+<td style="text-align: left;">Approval/acknowledgment issued (utility
+portal letter)</td>
+<td style="text-align: left;">7-W09</td>
+</tr>
+</tbody>
+</table>
+<h3 id="phase-7-closeout-criteria">7.9 Phase 7 Closeout Criteria</h3>
+<p>Phase 7 is considered complete when:</p>
+<ul>
+<li>Utility application submission receipt is archived
+(<strong>7-W04</strong>)</li>
+<li>Correspondence log is complete (<strong>7-W05</strong>)</li>
+<li>Utility deficiency notice (if issued) is archived and dispositioned
+(<strong>7-W06</strong>)</li>
+<li>Utility approval/acknowledgment is archived (<strong>7-W09</strong>)
+or documented as “not applicable/none issued” in the correspondence
+log</li>
+</ul>
+<h3 id="phase-7-certification">7.10 Phase 7 Certification</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Certification Point</th>
+<th style="text-align: left;">Status</th>
+<th style="text-align: left;">Certified By</th>
+<th style="text-align: left;">Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Utility load letter/single-line issued
+(Phase 7)</td>
+<td style="text-align: left;">Certified</td>
+<td style="text-align: left;">Priya Shah, PE</td>
+<td style="text-align: left;">2026-02-21</td>
+</tr>
+<tr>
+<td style="text-align: left;">Utility application submitted (Phase
+7)</td>
+<td style="text-align: left;">Certified</td>
+<td style="text-align: left;">Jordan Lee (PM)</td>
+<td style="text-align: left;">2026-02-21</td>
+</tr>
+<tr>
+<td style="text-align: left;">Submission receipt archived</td>
+<td style="text-align: left;">Certified</td>
+<td style="text-align: left;">Ethan Brooks (Document Control)</td>
+<td style="text-align: left;">2026-02-21</td>
+</tr>
+<tr>
+<td style="text-align: left;">Utility deficiency addressed and
+resubmitted (Phase 7)</td>
+<td style="text-align: left;">Certified</td>
+<td style="text-align: left;">Jordan Lee (PM)</td>
+<td style="text-align: left;">2026-02-27</td>
+</tr>
+<tr>
+<td style="text-align: left;">Utility approval/acknowledgment archived
+(final)</td>
+<td style="text-align: left;">Certified</td>
+<td style="text-align: left;">Ethan Brooks (Document Control)</td>
+<td style="text-align: left;">2026-03-03</td>
+</tr>
+</tbody>
+</table>
+<h3 id="phase-7-closeout-confirmation-completed">7.11 Phase 7 Closeout
+Confirmation (Completed)</h3>
+<p>Phase 7 is considered <strong>complete</strong> and closed out
+because the utility coordination cycle is fully evidenced
+end-to-end:</p>
+<ul>
+<li><strong>Utility requirements captured</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Inputs/P6.UtilityRequirements_Capture_2026-02-20.pdf"><code>phases/P6/Inputs/P6.UtilityRequirements_Capture_2026-02-20.pdf</code></a></li>
+<li><strong>Load letter + one-line issued</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Outputs/P6.1_UtilityLoadLetter_SingleLine_2026-02-21.pdf"><code>phases/P6/Outputs/P6.1_UtilityLoadLetter_SingleLine_2026-02-21.pdf</code></a></li>
+<li><strong>Utility application forms archived</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Outputs/P6.2_UtilityApplicationForms_Completed_2026-02-21.pdf"><code>phases/P6/Outputs/P6.2_UtilityApplicationForms_Completed_2026-02-21.pdf</code></a></li>
+<li><strong>Submission receipt archived</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Outputs/P6.SubmissionReceipt_Utility_2026-02-21.pdf"><code>phases/P6/Outputs/P6.SubmissionReceipt_Utility_2026-02-21.pdf</code></a></li>
+<li><strong>Correspondence log archived</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Outputs/P6.CorrespondenceLog_2026-02-24.xlsx.html"><code>phases/P6/Outputs/P6.CorrespondenceLog_2026-02-24.xlsx</code></a></li>
+<li><strong>Deficiency notice archived</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Inputs/P6.Utility_DeficiencyNotice_2026-02-25.pdf"><code>phases/P6/Inputs/P6.Utility_DeficiencyNotice_2026-02-25.pdf</code></a></li>
+<li><strong>Rework package archived</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Outputs/P6.3_Utility_ReworkPackage_2026-02-27.pdf"><code>phases/P6/Outputs/P6.3_Utility_ReworkPackage_2026-02-27.pdf</code></a></li>
+<li><strong>Resubmission receipt archived</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Outputs/P6.ResubmissionReceipt_Utility_2026-02-27.pdf"><code>phases/P6/Outputs/P6.ResubmissionReceipt_Utility_2026-02-27.pdf</code></a></li>
+<li><strong>Final utility acknowledgment archived</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Outputs/P6.Utility_Approval_Acknowledgment_2026-03-03.pdf"><code>phases/P6/Outputs/P6.Utility_Approval_Acknowledgment_2026-03-03.pdf</code></a></li>
+</ul>
+<p><a id="phase-8"></a></p>
+<h2 id="phase-8-electrical-closeout-and-handover-1">Phase 8: Electrical
+Closeout and Handover</h2>
+<h3 id="phase-8-purpose">8.1 Phase 8 Purpose</h3>
+<p>Phase 8 captures the final electrical closeout artifacts:
+<strong>as-built electrical drawings</strong>, responses supporting
+final inspection, and evidence that the AHJ finaled the electrical
+permit/inspection (where applicable).</p>
+<p><strong>NOTE:</strong> The Phase 8 fields below are filled with
+<strong>example data</strong> to demonstrate a “completed” master
+deliverable package (provenance, stable filenames, and closeout logs).
+Replace all names, dates, and evidence pointers with real project
+records before using this document externally.</p>
+<h3 id="phase-8-boundaries-electrical-only">8.2 Phase 8 Boundaries
+(Electrical-Only)</h3>
+<p>Phase 8 captures electrical closeout documentation. It intentionally
+excludes:</p>
+<ul>
+<li><strong>Civil / constructability</strong> topics (installation
+means-and-methods, trenching execution details, routing procedures,
+etc.)</li>
+</ul>
+<h3 id="evidence-index-closeout-work-products-stable-filenames">8.3
+Evidence Index + Closeout Work Products (Stable Filenames)</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Item ID</th>
+<th style="text-align: left;">Work product</th>
+<th style="text-align: left;">Provenance (who / how / when)</th>
+<th style="text-align: left;">Evidence reference ID(s)</th>
+<th style="text-align: left;">Inputs + downstream use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">8-W01</td>
+<td style="text-align: left;">Field redlines (electrical)</td>
+<td style="text-align: left;">Luis Romero (Electrician) + Mia Chen
+(Installer PM)<br>Markups + photo references<br>Date: 2026-03-18
+(v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P7/Inputs/P7.FieldRedlines_Electrical_2026-03-18.pdf"><code>phases/P7/Inputs/P7.FieldRedlines_Electrical_2026-03-18.pdf</code></a></td>
+<td style="text-align: left;">Inputs: field observations + installed
+labels<br>Used in: Phase 8</td>
+</tr>
+<tr>
+<td style="text-align: left;">8-W02</td>
+<td style="text-align: left;">As-built electrical drawing set</td>
+<td style="text-align: left;">Sam Ortega (CAD Tech, ) + Priya Shah, PE
+<br>CAD update + PDF export<br>Date: 2026-03-22 (As-Built v1)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P7/Outputs/P7.1_AsBuilt_ElectricalPermitSet_2026-03-22.pdf"><code>phases/P7/Outputs/P7.1_AsBuilt_ElectricalPermitSet_2026-03-22.pdf</code></a></td>
+<td style="text-align: left;">Inputs: Phase 6 revised stamped set +
+8-W01 + inspection notes<br>Used in: Phase 8</td>
+</tr>
+<tr>
+<td style="text-align: left;">8-W03</td>
+<td style="text-align: left;">AHJ final inspection / permit finaled
+confirmation</td>
+<td style="text-align: left;">AHJ<br>Portal download<br>Date: 2026-03-26
+(v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P7/Outputs/P7.AHJ_FinalInspection_PermitFinaled_2026-03-26.pdf"><code>phases/P7/Outputs/P7.AHJ_FinalInspection_PermitFinaled_2026-03-26.pdf</code></a></td>
+<td style="text-align: left;">Inputs: AHJ portal<br>Used in: Phase
+8</td>
+</tr>
+<tr>
+<td style="text-align: left;">8-W04</td>
+<td style="text-align: left;">Inspector notes / correction notice (if
+any)</td>
+<td style="text-align: left;">AHJ<br>Field note + portal upload<br>Date:
+2026-03-24 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P7/Inputs/P7.AHJ_InspectorNotes_2026-03-24.pdf"><code>phases/P7/Inputs/P7.AHJ_InspectorNotes_2026-03-24.pdf</code></a></td>
+<td style="text-align: left;">Inputs: field inspection<br>Used in: Phase
+8, Phase 8</td>
+</tr>
+<tr>
+<td style="text-align: left;">8-W05</td>
+<td style="text-align: left;">Inspection support Q&amp;A log</td>
+<td style="text-align: left;">Priya Shah, PE + Jordan Lee
+(PM)<br>Spreadsheet<br>Date: 2026-03-26 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P7/Outputs/P7.2_InspectionSupport_Log_2026-03-26.xlsx.html"><code>phases/P7/Outputs/P7.2_InspectionSupport_Log_2026-03-26.xlsx</code></a></td>
+<td style="text-align: left;">Inputs: AHJ questions + responses<br>Used
+in: Phase 8</td>
+</tr>
+<tr>
+<td style="text-align: left;">8-W06</td>
+<td style="text-align: left;">EMS configuration summary
+(as-installed)</td>
+<td style="text-align: left;">Mia Chen (Installer PM)<br>Vendor export +
+PDF<br>Date: 2026-03-21 (v1.0)</td>
+<td style="text-align: left;"><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P7/Outputs/P7.EMS_ConfigSummary_AsInstalled_2026-03-21.pdf"><code>phases/P7/Outputs/P7.EMS_ConfigSummary_AsInstalled_2026-03-21.pdf</code></a></td>
+<td style="text-align: left;">Inputs: EMS system<br>Used in: Phase 8,
+Phase 8</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-excerpts-electrical-only-6">8.4 Key Excerpts
+(Electrical-Only)</h3>
+<h4 id="as-built-summary-excerpt-8-w02">8.4.1 As-Built Summary Excerpt
+(8-W02)</h4>
+<p><strong>Excerpted as-built outcomes:</strong></p>
+<ul>
+<li>EV subpanel designation standardized as <strong>EVSP-1</strong>
+(matches permit set)</li>
+<li>EMS aggregate cap configured to <strong>250A</strong>
+(as-installed), with documented fail-safe behavior</li>
+<li>One-line and schedules updated to reflect installed breaker/labeling
+differences found in field redlines (no change to the approved
+load-management intent)</li>
+</ul>
+<h4 id="final-inspection-excerpt-8-w03">8.4.2 Final Inspection Excerpt
+(8-W03)</h4>
+<p><strong>Excerpted AHJ status:</strong></p>
+<ul>
+<li>Final inspection result: <strong>Pass</strong></li>
+<li>Permit status: <strong>Finaled/Closed</strong></li>
+<li>Permit application number: <strong>EL-2026-01472</strong></li>
+<li>Final date/time: <strong>2026-03-26 09:40 PT</strong></li>
+</ul>
+<h3 id="as-built-drawings">8.5 As-Built Drawings</h3>
+<p>This deliverable is the as-built electrical drawing set prepared from
+field redlines and any AHJ inspector notes. The as-built set is intended
+to be the authoritative record of the installed electrical scope.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Prior approved/revised permit set</td>
+<td style="text-align: left;">6-W03</td>
+</tr>
+<tr>
+<td style="text-align: left;">Field redlines (electrical)</td>
+<td style="text-align: left;">8-W01</td>
+</tr>
+<tr>
+<td style="text-align: left;">AHJ inspector notes (if any)</td>
+<td style="text-align: left;">8-W04</td>
+</tr>
+<tr>
+<td style="text-align: left;">EMS as-installed config summary</td>
+<td style="text-align: left;">8-W06</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Output (reference ID):</strong> 8-W02</p>
+<h4 id="as-built-change-log">8.5.1 As-built change log</h4>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Change ID</th>
+<th style="text-align: left;">Sheet</th>
+<th style="text-align: left;">Change description</th>
+<th style="text-align: left;">Source evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AB-01</td>
+<td style="text-align: left;">One-line</td>
+<td style="text-align: left;">Updated EMS note to match as-installed cap
+value and monitoring point label</td>
+<td style="text-align: left;">8-W06 + 8-W01</td>
+</tr>
+<tr>
+<td style="text-align: left;">AB-02</td>
+<td style="text-align: left;">Panel schedules</td>
+<td style="text-align: left;">Updated EVSP-1 schedule to reflect
+installed breaker spaces/labeling</td>
+<td style="text-align: left;">8-W01</td>
+</tr>
+<tr>
+<td style="text-align: left;">AB-03</td>
+<td style="text-align: left;">Notes</td>
+<td style="text-align: left;">Added “as-built” cover note and clarified
+labeling applied in field</td>
+<td style="text-align: left;">8-W01 + 8-W04</td>
+</tr>
+</tbody>
+</table>
+<h3 id="inspection-support-responses">8.6 Inspection Support
+Responses</h3>
+<p>This deliverable documents responses provided to the AHJ/inspector
+during final inspection or closeout, including clarifications,
+supplemental documentation, and confirmation of corrected items.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Inspector notes / questions</td>
+<td style="text-align: left;">8-W04</td>
+</tr>
+<tr>
+<td style="text-align: left;">As-built set (draft/final)</td>
+<td style="text-align: left;">8-W02</td>
+</tr>
+<tr>
+<td style="text-align: left;">EMS configuration summary</td>
+<td style="text-align: left;">8-W06</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Output (reference ID):</strong> 8-W05</p>
+<p><strong>Inspection support log (excerpt):</strong></p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Item</th>
+<th style="text-align: left;">Question/Issue</th>
+<th style="text-align: left;">Response provided</th>
+<th style="text-align: left;">Evidence pointer</th>
+<th style="text-align: left;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">IS-01</td>
+<td style="text-align: left;">Provide EMS cap confirmation for
+plan-check intent</td>
+<td style="text-align: left;">Provided EMS config export showing cap set
+to 250A and fail-safe mode</td>
+<td style="text-align: left;">8-W06</td>
+<td style="text-align: left;">Closed</td>
+</tr>
+<tr>
+<td style="text-align: left;">IS-02</td>
+<td style="text-align: left;">Confirm panel labeling and circuit IDs
+match drawings</td>
+<td style="text-align: left;">Provided updated as-built schedule page
+and photo references</td>
+<td style="text-align: left;">8-W02</td>
+<td style="text-align: left;">Closed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ahj-final-acceptance-permit-closeout-confirmation">8.7 AHJ Final
+Acceptance / Permit Closeout Confirmation</h3>
+<p>This deliverable archives proof that the AHJ finaled/closed the
+electrical permit/inspection, marking the end of the AHJ process for
+this scope.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Final inspection / permit status
+evidence</td>
+<td style="text-align: left;">8-W03</td>
+</tr>
+</tbody>
+</table>
+<h3 id="phase-8-closeout-criteria">8.8 Phase 8 Closeout Criteria</h3>
+<p>Phase 8 is considered complete when:</p>
+<ul>
+<li>As-built electrical drawings are issued and archived
+(<strong>8-W02</strong>)</li>
+<li>Inspection support log is complete (<strong>8-W05</strong>)</li>
+<li>AHJ final acceptance/permit closeout evidence is archived
+(<strong>8-W03</strong>)</li>
+</ul>
+<h3 id="phase-8-certification">8.9 Phase 8 Certification</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Certification Point</th>
+<th style="text-align: left;">Status</th>
+<th style="text-align: left;">Certified By</th>
+<th style="text-align: left;">Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">As-built electrical set issued (Phase
+8)</td>
+<td style="text-align: left;">Certified</td>
+<td style="text-align: left;">Priya Shah, PE</td>
+<td style="text-align: left;">2026-03-22</td>
+</tr>
+<tr>
+<td style="text-align: left;">Inspection support documentation complete
+(Phase 8)</td>
+<td style="text-align: left;">Certified</td>
+<td style="text-align: left;">Jordan Lee (PM)</td>
+<td style="text-align: left;">2026-03-26</td>
+</tr>
+<tr>
+<td style="text-align: left;">AHJ final acceptance archived (Phase
+8)</td>
+<td style="text-align: left;">Certified</td>
+<td style="text-align: left;">Ethan Brooks (Document Control)</td>
+<td style="text-align: left;">2026-03-26</td>
+</tr>
+</tbody>
+</table>
+<h3
+id="phase-8-closeout-confirmation-completed-project-electrical-scope-closed">8.10
+Phase 8 Closeout Confirmation (Completed / Project Electrical Scope
+Closed)</h3>
+<p>Phase 8 is considered <strong>complete</strong> and the overall
+electrical project is <strong>closed out</strong> because final
+inspection/permit close evidence and as-built records are archived:</p>
+<ul>
+<li><strong>Field redlines archived</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P7/Inputs/P7.FieldRedlines_Electrical_2026-03-18.pdf"><code>phases/P7/Inputs/P7.FieldRedlines_Electrical_2026-03-18.pdf</code></a></li>
+<li><strong>EMS as-installed configuration summary archived</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P7/Outputs/P7.EMS_ConfigSummary_AsInstalled_2026-03-21.pdf"><code>phases/P7/Outputs/P7.EMS_ConfigSummary_AsInstalled_2026-03-21.pdf</code></a></li>
+<li><strong>As-built electrical record set issued</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P7/Outputs/P7.1_AsBuilt_ElectricalPermitSet_2026-03-22.pdf"><code>phases/P7/Outputs/P7.1_AsBuilt_ElectricalPermitSet_2026-03-22.pdf</code></a></li>
+<li><strong>Inspector notes archived (if any)</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P7/Inputs/P7.AHJ_InspectorNotes_2026-03-24.pdf"><code>phases/P7/Inputs/P7.AHJ_InspectorNotes_2026-03-24.pdf</code></a></li>
+<li><strong>Inspection support log archived</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P7/Outputs/P7.2_InspectionSupport_Log_2026-03-26.xlsx.html"><code>phases/P7/Outputs/P7.2_InspectionSupport_Log_2026-03-26.xlsx</code></a></li>
+<li><strong>AHJ final/permit finaled confirmation archived</strong>: <a
+href="https://rc979.github.io/EEIntake-Pages/phases/P7/Outputs/P7.AHJ_FinalInspection_PermitFinaled_2026-03-26.pdf"><code>phases/P7/Outputs/P7.AHJ_FinalInspection_PermitFinaled_2026-03-26.pdf</code></a></li>
+</ul>
+<p><a id="addendum-a"></a></p>
+<h2 id="addendum-a-stable-filename-index-by-phase">12 Addendum A: Stable
+Filename Index (by Phase)</h2>
+<p>This addendum is a consolidated index of all <strong>stable evidence
+pointers</strong> referenced in this document, grouped by phase and
+section/deliverable.</p>
+<h3 id="phase-1-project-initiation-and-feasibility-2">12.1 Phase 1 —
+Project Initiation and Feasibility</h3>
+<ul>
+<li><strong>P0 inputs</strong>
+<ul>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P0/Inputs/P0-I01_Utility_Bills_2025-01_to_2025-12.pdf"><code>phases/P0/Inputs/P0-I01_Utility_Bills_2025-01_to_2025-12.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P0/Inputs/P0-I01_GreenButton_IntervalData_2025.csv.html"><code>phases/P0/Inputs/P0-I01_GreenButton_IntervalData_2025.csv</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/galleries/p0-i02_mdp_nameplate_photos/index.html"><code>phases/P0/Inputs/P0-I02_MDP_Nameplate_Photos.zip</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P0/Inputs/P0-I02_Utility_Service_Info_Letter.pdf"><code>phases/P0/Inputs/P0-I02_Utility_Service_Info_Letter.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P0/Inputs/P0-I03_ElectriCharge_L2-7.6-G_CutSheet_revA.pdf"><code>phases/P0/Inputs/P0-I03_ElectriCharge_L2-7.6-G_CutSheet_revA.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/galleries/p0-i04_photoset_existinggear_and_garagearea/index.html"><code>phases/P0/Inputs/P0-I04_PhotoSet_ExistingGear_and_GarageArea.zip</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P0/Inputs/P0-I04_PhotoIndex_Annotated.pdf"><code>phases/P0/Inputs/P0-I04_PhotoIndex_Annotated.pdf</code></a></li>
+</ul></li>
+</ul>
+<h3 id="phase-2-data-collection-and-site-analysis-2">12.2 Phase 2 — Data
+Collection and Site Analysis</h3>
+<ul>
+<li><strong>P1 inputs</strong>
+<ul>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P1/Inputs/P1-I01_SitePlans_Arch_Set_rev2_2026-01-15.pdf"><code>phases/P1/Inputs/P1-I01_SitePlans_Arch_Set_rev2_2026-01-15.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P1/Inputs/P1-I02_PanelSchedules_MDP_and_Subpanels_2026-01-16.pdf"><code>phases/P1/Inputs/P1-I02_PanelSchedules_MDP_and_Subpanels_2026-01-16.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/galleries/p1-i03_photoset_servicegear_nameplates_2026-01-16/index.html"><code>phases/P1/Inputs/P1-I03_PhotoSet_ServiceGear_Nameplates_2026-01-16.zip</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P1/Inputs/P1-I03_PhotoIndex_Annotated_2026-01-16.pdf"><code>phases/P1/Inputs/P1-I03_PhotoIndex_Annotated_2026-01-16.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P1/Inputs/P1-I04_EVSE_CutSheet_ElectriCharge_L2-7.6-G_revA.pdf"><code>phases/P1/Inputs/P1-I04_EVSE_CutSheet_ElectriCharge_L2-7.6-G_revA.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P1/Inputs/P1-I05_AHJ_Electrical_Permitting_CodeBasis_2026-01-17.pdf"><code>phases/P1/Inputs/P1-I05_AHJ_Electrical_Permitting_CodeBasis_2026-01-17.pdf</code></a></li>
+</ul></li>
+<li><strong>P1 normalized outputs (Phase 2)</strong>
+<ul>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P1/Outputs/P1.2_SitePlans_ElectricalContext_Excerpts_2026-01-18.pdf"><code>phases/P1/Outputs/P1.2_SitePlans_ElectricalContext_Excerpts_2026-01-18.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P1/Outputs/P1.2_PanelSchedules_Normalized_MDP_Subpanels_2026-01-18.pdf"><code>phases/P1/Outputs/P1.2_PanelSchedules_Normalized_MDP_Subpanels_2026-01-18.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P1/Outputs/P1.2_Photos_Annotated_Index_2026-01-18.pdf"><code>phases/P1/Outputs/P1.2_Photos_Annotated_Index_2026-01-18.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P1/Outputs/P1.2_EVSE_CutSheet_FrozenForDesign_revA_2026-01-18.pdf"><code>phases/P1/Outputs/P1.2_EVSE_CutSheet_FrozenForDesign_revA_2026-01-18.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P1/Outputs/P1.2_AHJ_CodeBasis_Normalized_2026-01-18.pdf"><code>phases/P1/Outputs/P1.2_AHJ_CodeBasis_Normalized_2026-01-18.pdf</code></a></li>
+</ul></li>
+</ul>
+<h3 id="phase-3-system-design-and-load-calculation-2">12.3 Phase 3 —
+System Design and Load Calculation</h3>
+<ul>
+<li><strong>P2 engineering work products</strong>
+<ul>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P2/Outputs/P2.1_LoadCalc_Workbook_2026-01-22.xlsx.html"><code>phases/P2/Outputs/P2.1_LoadCalc_Workbook_2026-01-22.xlsx</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P2/Outputs/P2.1_LoadCalc_Summary_2026-01-22.pdf"><code>phases/P2/Outputs/P2.1_LoadCalc_Summary_2026-01-22.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P2/Outputs/P2.1_LoadCalc_CheckMemo_2026-01-22.pdf"><code>phases/P2/Outputs/P2.1_LoadCalc_CheckMemo_2026-01-22.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P2/Outputs/P2.2_Architecture_Decision_Record_2026-01-22.pdf"><code>phases/P2/Outputs/P2.2_Architecture_Decision_Record_2026-01-22.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P2/Inputs/P2-W04_EMS_TechnicalBrief_revB_2026-01-21.pdf"><code>phases/P2/Inputs/P2-W04_EMS_TechnicalBrief_revB_2026-01-21.pdf</code></a></li>
+</ul></li>
+</ul>
+<h3 id="phase-4-preliminary-drawing-set-production-2">12.4 Phase 4 —
+Preliminary Drawing Set Production</h3>
+<ul>
+<li><strong>P3 inputs</strong>
+<ul>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P3/Inputs/P3-PARK_ParkingLayout_OwnerProvided_2026-01-20.pdf"><code>phases/P3/Inputs/P3-PARK_ParkingLayout_OwnerProvided_2026-01-20.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P3/Inputs/P3-I03_RoutingAssumptions_InstallerMemo_2026-01-20.pdf"><code>phases/P3/Inputs/P3-I03_RoutingAssumptions_InstallerMemo_2026-01-20.pdf</code></a></li>
+</ul></li>
+<li><strong>P3 drawing work products</strong>
+<ul>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P3/Outputs/P3.1_OneLine_Prelim_Unstamped_2026-01-26.pdf"><code>phases/P3/Outputs/P3.1_OneLine_Prelim_Unstamped_2026-01-26.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P3/Outputs/P3.2_SitePlan_EVSE_Locations_Prelim_2026-01-26.pdf"><code>phases/P3/Outputs/P3.2_SitePlan_EVSE_Locations_Prelim_2026-01-26.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P3/Outputs/P3.3_Conduit_Trenching_Details_ElectricalImpacting_2026-01-26.pdf"><code>phases/P3/Outputs/P3.3_Conduit_Trenching_Details_ElectricalImpacting_2026-01-26.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P3/Outputs/P3.4_PanelSchedules_Updated_MDP_and_EVSP_2026-01-26.pdf"><code>phases/P3/Outputs/P3.4_PanelSchedules_Updated_MDP_and_EVSP_2026-01-26.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P3/Outputs/P3.5_ElectricalNotes_CodeSheets_2026-01-26.pdf"><code>phases/P3/Outputs/P3.5_ElectricalNotes_CodeSheets_2026-01-26.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P3/Outputs/P3.6_PermitSet_Unstamped_2026-01-26.pdf"><code>phases/P3/Outputs/P3.6_PermitSet_Unstamped_2026-01-26.pdf</code></a></li>
+</ul></li>
+</ul>
+<h3 id="phase-5-permitting-submission-ahj">12.5 Phase 5 — Permitting
+Submission (AHJ)</h3>
+<ul>
+<li><strong>P4 inputs</strong>
+<ul>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P4/Inputs/P4-EOR_ReviewNotes_2026-01-28.pdf"><code>phases/P4/Inputs/P4-EOR_ReviewNotes_2026-01-28.pdf</code></a></li>
+</ul></li>
+<li><strong>P4 submission outputs</strong>
+<ul>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P4/Outputs/P4.1_PermitSet_Stamped_2026-01-29.pdf"><code>phases/P4/Outputs/P4.1_PermitSet_Stamped_2026-01-29.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P4/Outputs/P4.2_AHJ_ApplicationForms_2026-01-29.pdf"><code>phases/P4/Outputs/P4.2_AHJ_ApplicationForms_2026-01-29.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P4/Outputs/P4.2_PermitApplication_Package_Compiled_2026-01-29.pdf"><code>phases/P4/Outputs/P4.2_PermitApplication_Package_Compiled_2026-01-29.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P4/Outputs/P4.SupportingAttachments_Electrical_2026-01-29.pdf"><code>phases/P4/Outputs/P4.SupportingAttachments_Electrical_2026-01-29.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P4/Outputs/P4.SubmissionReceipt_AHJ_Confirmation_2026-01-29.pdf"><code>phases/P4/Outputs/P4.SubmissionReceipt_AHJ_Confirmation_2026-01-29.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P4/Outputs/P4.PermitTrackingLog_2026-01-29.xlsx.html"><code>phases/P4/Outputs/P4.PermitTrackingLog_2026-01-29.xlsx</code></a></li>
+</ul></li>
+</ul>
+<h3 id="phase-6-authority-review-and-drawing-revision-ahj">12.6 Phase 6
+— Authority Review and Drawing Revision (AHJ)</h3>
+<ul>
+<li><strong>P5 inputs</strong>
+<ul>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P5/Inputs/P5-AHJ_PlanCheckComments_Raw_2026-02-06.pdf"><code>phases/P5/Inputs/P5-AHJ_PlanCheckComments_Raw_2026-02-06.pdf</code></a></li>
+</ul></li>
+<li><strong>P5 review/revision outputs</strong>
+<ul>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P5/Outputs/P5.1_AHJ_CommentLog_Parsed_2026-02-06.xlsx.html"><code>phases/P5/Outputs/P5.1_AHJ_CommentLog_Parsed_2026-02-06.xlsx</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P5/Outputs/P5.Redlines_InternalReview_2026-02-10.pdf"><code>phases/P5/Outputs/P5.Redlines_InternalReview_2026-02-10.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P5/Outputs/P5.2_PermitSet_Revised_Stamped_Rev1_2026-02-12.pdf"><code>phases/P5/Outputs/P5.2_PermitSet_Revised_Stamped_Rev1_2026-02-12.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P5/Outputs/P5.3_CommentResponseLetter_Rev1_2026-02-12.pdf"><code>phases/P5/Outputs/P5.3_CommentResponseLetter_Rev1_2026-02-12.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P5/Outputs/P5.ResubmissionReceipt_AHJ_2026-02-12.pdf"><code>phases/P5/Outputs/P5.ResubmissionReceipt_AHJ_2026-02-12.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P5/Outputs/P5.4_AHJ_Approval_Notice_2026-02-19.pdf"><code>phases/P5/Outputs/P5.4_AHJ_Approval_Notice_2026-02-19.pdf</code></a></li>
+</ul></li>
+</ul>
+<h3 id="phase-7-utility-coordination-2">12.7 Phase 7 — Utility
+Coordination</h3>
+<ul>
+<li><strong>P6 inputs</strong>
+<ul>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Inputs/P6.UtilityRequirements_Capture_2026-02-20.pdf"><code>phases/P6/Inputs/P6.UtilityRequirements_Capture_2026-02-20.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Inputs/P6.Utility_DeficiencyNotice_2026-02-25.pdf"><code>phases/P6/Inputs/P6.Utility_DeficiencyNotice_2026-02-25.pdf</code></a></li>
+</ul></li>
+<li><strong>P6 coordination outputs</strong>
+<ul>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Outputs/P6.1_UtilityLoadLetter_SingleLine_2026-02-21.pdf"><code>phases/P6/Outputs/P6.1_UtilityLoadLetter_SingleLine_2026-02-21.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Outputs/P6.2_UtilityApplicationForms_Completed_2026-02-21.pdf"><code>phases/P6/Outputs/P6.2_UtilityApplicationForms_Completed_2026-02-21.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Outputs/P6.SubmissionReceipt_Utility_2026-02-21.pdf"><code>phases/P6/Outputs/P6.SubmissionReceipt_Utility_2026-02-21.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Outputs/P6.CorrespondenceLog_2026-02-24.xlsx.html"><code>phases/P6/Outputs/P6.CorrespondenceLog_2026-02-24.xlsx</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Outputs/P6.3_Utility_ReworkPackage_2026-02-27.pdf"><code>phases/P6/Outputs/P6.3_Utility_ReworkPackage_2026-02-27.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Outputs/P6.ResubmissionReceipt_Utility_2026-02-27.pdf"><code>phases/P6/Outputs/P6.ResubmissionReceipt_Utility_2026-02-27.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P6/Outputs/P6.Utility_Approval_Acknowledgment_2026-03-03.pdf"><code>phases/P6/Outputs/P6.Utility_Approval_Acknowledgment_2026-03-03.pdf</code></a></li>
+</ul></li>
+</ul>
+<h3 id="phase-8-electrical-closeout-and-handover-2">12.8 Phase 8 —
+Electrical Closeout and Handover</h3>
+<ul>
+<li><strong>P7 inputs</strong>
+<ul>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P7/Inputs/P7.FieldRedlines_Electrical_2026-03-18.pdf"><code>phases/P7/Inputs/P7.FieldRedlines_Electrical_2026-03-18.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P7/Inputs/P7.AHJ_InspectorNotes_2026-03-24.pdf"><code>phases/P7/Inputs/P7.AHJ_InspectorNotes_2026-03-24.pdf</code></a></li>
+</ul></li>
+<li><strong>P7 closeout outputs</strong>
+<ul>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P7/Outputs/P7.EMS_ConfigSummary_AsInstalled_2026-03-21.pdf"><code>phases/P7/Outputs/P7.EMS_ConfigSummary_AsInstalled_2026-03-21.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P7/Outputs/P7.1_AsBuilt_ElectricalPermitSet_2026-03-22.pdf"><code>phases/P7/Outputs/P7.1_AsBuilt_ElectricalPermitSet_2026-03-22.pdf</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P7/Outputs/P7.2_InspectionSupport_Log_2026-03-26.xlsx.html"><code>phases/P7/Outputs/P7.2_InspectionSupport_Log_2026-03-26.xlsx</code></a></li>
+<li><a
+href="https://rc979.github.io/EEIntake-Pages/phases/P7/Outputs/P7.AHJ_FinalInspection_PermitFinaled_2026-03-26.pdf"><code>phases/P7/Outputs/P7.AHJ_FinalInspection_PermitFinaled_2026-03-26.pdf</code></a></li>
+</ul></li>
+</ul>
+<p><a id="addendum-b"></a></p>
+<h2 id="addendum-b-party-directory-roles-contacts">13 Addendum B: Party
+Directory (Roles + Contacts)</h2>
+<p>This addendum lists all parties referenced in this document.
+<strong>Contact details are example placeholders</strong> and must be
+replaced with real information.</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Party</th>
+<th style="text-align: left;">Works for</th>
+<th style="text-align: left;">Role</th>
+<th style="text-align: left;">Email</th>
+<th style="text-align: left;">Phone</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Owner (Entity)</td>
+<td style="text-align: left;">Place Property Ownership</td>
+<td style="text-align: left;">Project owner / applicant</td>
+<td style="text-align: left;">ev-projects@owner.example</td>
+<td style="text-align: left;">+1-650-555-0120</td>
+</tr>
+<tr>
+<td style="text-align: left;">Owner/Architect (Entity)</td>
+<td style="text-align: left;">ABC Architects</td>
+<td style="text-align: left;">Plan source / record drawings
+provider</td>
+<td style="text-align: left;">projects@architect.example</td>
+<td style="text-align: left;">+1-650-555-0121</td>
+</tr>
+<tr>
+<td style="text-align: left;">Installer (Entity)</td>
+<td style="text-align: left;">EV Install Services</td>
+<td style="text-align: left;">Installation contractor / field
+coordination</td>
+<td style="text-align: left;">pm@installer.example</td>
+<td style="text-align: left;">+1-650-555-0122</td>
+</tr>
+<tr>
+<td style="text-align: left;">Electrical Contractor (Entity)</td>
+<td style="text-align: left;">Romero Electric</td>
+<td style="text-align: left;">Electrical contractor</td>
+<td style="text-align: left;">service@electric.example</td>
+<td style="text-align: left;">+1-650-555-0123</td>
+</tr>
+<tr>
+<td style="text-align: left;">Nora Patel</td>
+<td style="text-align: left;">Owner</td>
+<td style="text-align: left;">Owner representative</td>
+<td style="text-align: left;">nora.patel@owner.example</td>
+<td style="text-align: left;">+1-650-555-0101</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mia Chen</td>
+<td style="text-align: left;">Installer</td>
+<td style="text-align: left;">Installer PM</td>
+<td style="text-align: left;">mia.chen@installer.example</td>
+<td style="text-align: left;">+1-650-555-0102</td>
+</tr>
+<tr>
+<td style="text-align: left;">Luis Romero</td>
+<td style="text-align: left;">Electrical Contractor</td>
+<td style="text-align: left;">Electrician / field lead</td>
+<td style="text-align: left;">luis.romero@electric.example</td>
+<td style="text-align: left;">+1-650-555-0103</td>
+</tr>
+<tr>
+<td style="text-align: left;">Priya Shah, PE</td>
+<td style="text-align: left;">Engineer-of-Record</td>
+<td style="text-align: left;">Electrical engineer (EOR)</td>
+<td style="text-align: left;">priya.shah@eor.example</td>
+<td style="text-align: left;">+1-650-555-0104</td>
+</tr>
+<tr>
+<td style="text-align: left;">Alex Kim, EE</td>
+<td style="text-align: left;">Independent Reviewer</td>
+<td style="text-align: left;">Electrical engineer (independent
+check)</td>
+<td style="text-align: left;">alex.kim@review.example</td>
+<td style="text-align: left;">+1-650-555-0105</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sam Ortega</td>
+<td style="text-align: left;">Design/CAD</td>
+<td style="text-align: left;">CAD technician</td>
+<td style="text-align: left;">sam.ortega@cad.example</td>
+<td style="text-align: left;">+1-650-555-0106</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ethan Brooks</td>
+<td style="text-align: left;">Document Control</td>
+<td style="text-align: left;">Document control</td>
+<td style="text-align: left;">ethan.brooks@docs.example</td>
+<td style="text-align: left;">+1-650-555-0107</td>
+</tr>
+<tr>
+<td style="text-align: left;">Jordan Lee</td>
+<td style="text-align: left;">Project Management</td>
+<td style="text-align: left;">Project manager</td>
+<td style="text-align: left;">jordan.lee@pm.example</td>
+<td style="text-align: left;">+1-650-555-0108</td>
+</tr>
+<tr>
+<td style="text-align: left;">Taylor Nguyen</td>
+<td style="text-align: left;">Utility</td>
+<td style="text-align: left;">Utility account rep (technical)</td>
+<td style="text-align: left;">taylor.nguyen@utility.example</td>
+<td style="text-align: left;">+1-650-555-0109</td>
+</tr>
+<tr>
+<td style="text-align: left;">EVSE Manufacturer (Entity)</td>
+<td style="text-align: left;">ElectriCharge</td>
+<td style="text-align: left;">EVSE cut sheet issuer</td>
+<td style="text-align: left;">support@electricharge.example</td>
+<td style="text-align: left;">+1-800-555-0124</td>
+</tr>
+<tr>
+<td style="text-align: left;">EMS Vendor (Entity)</td>
+<td style="text-align: left;">Schlage / ChargePoint</td>
+<td style="text-align: left;">Load management / EMS tech source</td>
+<td style="text-align: left;">ems-support@emsvendor.example</td>
+<td style="text-align: left;">+1-800-555-0125</td>
+</tr>
+<tr>
+<td style="text-align: left;">City of Palo Alto – Building Division
+(Electrical Permits)</td>
+<td style="text-align: left;">AHJ</td>
+<td style="text-align: left;">Electrical permitting authority / plan
+check</td>
+<td style="text-align: left;">permits@paloalto.example</td>
+<td style="text-align: left;">+1-650-555-0110</td>
+</tr>
+<tr>
+<td style="text-align: left;">Local Electrical Utility (Portal)</td>
+<td style="text-align: left;">Utility</td>
+<td style="text-align: left;">Utility interconnection/load review</td>
+<td style="text-align: left;">evprogram@utility.example</td>
+<td style="text-align: left;">+1-800-555-0111</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

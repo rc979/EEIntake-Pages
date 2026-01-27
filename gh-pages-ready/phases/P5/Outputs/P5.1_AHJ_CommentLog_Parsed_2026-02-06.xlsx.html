@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <title>View XLSX: P5.1_AHJ_CommentLog_Parsed_2026-02-06.xlsx</title>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 20px; }
+    a { color: #0b57d0; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .bar { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin: 10px 0 14px; }
+    .meta { color: #555; font-size: 13px; }
+    #sheet { padding: 6px 8px; }
+    table { border-collapse: collapse; width: 100%; font-size: 13px; }
+    th, td { border: 1px solid #eee; padding: 6px 8px; vertical-align: top; }
+    code { background: #f6f6f6; padding: 1px 4px; border-radius: 4px; }
+    .warn { color: #a14; }
+    .sheetwrap { overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <div class="bar">
+    <a href="index.html">Back to folder</a>
+    <a href="P5.1_AHJ_CommentLog_Parsed_2026-02-06.xlsx" download>Download</a>
+    <span class="meta"><code>P5.1_AHJ_CommentLog_Parsed_2026-02-06.xlsx</code></span>
+    <span id="status" class="meta">Loading…</span>
+    <label class="meta">Sheet:
+      <select id="sheet"></select>
+    </label>
+  </div>
+  <div id="note" class="meta"></div>
+  <div class="sheetwrap" id="out"></div>
+  <script>
+    const fileUrl = "P5.1_AHJ_CommentLog_Parsed_2026-02-06.xlsx";
+    async function main() {
+      const status = document.getElementById('status');
+      const note = document.getElementById('note');
+      const out = document.getElementById('out');
+      const sel = document.getElementById('sheet');
+
+      const res = await fetch(fileUrl);
+      if (!res.ok) {
+        status.textContent = 'Failed to load XLSX';
+        note.innerHTML = '<span class="warn">HTTP ' + res.status + '</span>';
+        return;
+      }
+      const buf = await res.arrayBuffer();
+      const wb = XLSX.read(buf, { type: 'array' });
+      sel.innerHTML = wb.SheetNames.map(n => '<option>' + n.replaceAll('&','&amp;').replaceAll('<','&lt;') + '</option>').join('');
+
+      function renderSheet(name) {
+        const ws = wb.Sheets[name];
+        if (!ws) return;
+        // Use SheetJS HTML generator (table only)
+        const html = XLSX.utils.sheet_to_html(ws, { id: 'sheetTable', editable: false });
+        out.innerHTML = html;
+        status.textContent = 'Loaded';
+      }
+
+      sel.addEventListener('change', () => renderSheet(sel.value));
+      renderSheet(wb.SheetNames[0]);
+    }
+    main().catch(e => {
+      document.getElementById('status').textContent = 'Error';
+      document.getElementById('note').innerHTML = '<span class="warn">' + (e?.message || String(e)) + '</span>';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+/* EEIntake outline HTML tweaks (overrides Pandoc defaults) */
+html { background-color: #fff; }
+body {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 20px;
+  line-height: 1.45;
+}
+@media (min-width: 1400px) {
+  body { max-width: 1200px; }
+}
+@media (max-width: 600px) {
+  body { padding: 14px 12px; }
+}
+table { width: 100%; }
+pre { padding: 10px 12px; border-radius: 8px; background: #f6f6f6; }
+code { background: #f6f6f6; padding: 1px 4px; border-radius: 4px; }

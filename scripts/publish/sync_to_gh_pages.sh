@@ -11,7 +11,8 @@ GH_PAGES_URL="https://${GITHUB_USER}.github.io/${REPO_NAME}"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 DOCS_DIR="$PROJECT_ROOT/docs"
-TEMP_DIR="/tmp/${REPO_NAME}-sync-$$"
+# Use Downloads folder to avoid iCloud sandbox permission issues
+TEMP_DIR="${HOME}/Downloads/gh-pages-sync-${REPO_NAME}-$$"
 
 echo "=========================================="
 echo "Syncing to GitHub Pages Repo"
