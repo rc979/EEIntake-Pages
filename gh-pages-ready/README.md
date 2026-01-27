@@ -4,6 +4,8 @@ This is the public GitHub Pages site for the EE Intake project artifacts.
 
 **Live Site:** https://rc979.github.io/EEIntake-Pages/
 
+Last updated: 2026-01-26
+
 ## Deployment Instructions
 
 ### Initial Setup (One-time)
@@ -22,9 +24,7 @@ This is the public GitHub Pages site for the EE Intake project artifacts.
 
 ### Updating the Site
 
-To update the site with new content from the main EEIntake repo:
-
-#### Option 1: Using GitHub Actions Workflow (Fastest - Recommended)
+**Fastest Method - GitHub Actions Workflow (Recommended):**
 
 From the main EEIntake repo directory:
 
@@ -37,31 +37,23 @@ git add gh-pages-ready/
 git commit -m "Update Pages site files"
 git push
 
-# 3. Trigger the sync workflow (fast - runs on GitHub servers)
-./scripts/publish/sync_pages_fast.sh EEIntake-Pages rc979
+# 3. Trigger the sync workflow (runs on GitHub servers - FAST!)
+gh workflow run sync-from-main.yml --repo rc979/EEIntake-Pages
 ```
 
-Or manually trigger the workflow:
+Or manually trigger:
 - Go to: https://github.com/rc979/EEIntake-Pages/actions
-- Click "Sync from Main Repo" workflow
-- Click "Run workflow" → "Run workflow"
+- Click "Sync from Main Repo" → "Run workflow" → "Run workflow"
 
-This is the fastest method because:
-- Files are synced on GitHub's servers (no local upload)
-- Handles all files in one operation
-- Automatically commits and deploys
+**Why this is fastest:**
+- ✅ Runs entirely on GitHub's servers (no local uploads)
+- ✅ Handles all 170+ files in one operation
+- ✅ Automatically commits and deploys
+- ✅ Takes ~30 seconds total
 
-#### Option 2: Using the Upload Script (Slower - API method)
-
-From the main EEIntake repo directory:
-
-```bash
-# 1. Prepare files
-./scripts/publish/prepare_gh_pages.sh EEIntake-Pages rc979
-
-# 2. Upload files via GitHub API (slower, uploads one by one)
-python3 scripts/publish/upload_via_api.py
-```
+**Alternative Methods (slower):**
+- Manual git push (requires cloning locally)
+- API upload script (uploads files one by one - slow)
 
 #### Option 2: Manual Git Push
 
