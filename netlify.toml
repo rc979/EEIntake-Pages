@@ -27,6 +27,17 @@
     # Test header to verify netlify.toml is being read
     X-Netlify-Config = "active"
 
+# Ensure viewer pages (.xlsx.html, .csv.html) are served as HTML
+[[headers]]
+  for = "/*.xlsx.html"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
+
+[[headers]]
+  for = "/*.csv.html"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
+
 # Free password protection alternatives (Netlify's built-in password protection is paid):
 # 
 # Option 1: Client-side JavaScript password gate (docs/_password_gate.html)
