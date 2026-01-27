@@ -54,15 +54,18 @@
     X-Netlify-Config = "active"
 
 # Ensure viewer pages (.xlsx.html, .csv.html) are served as HTML
+# Use more specific path patterns to ensure they match
 [[headers]]
-  for = "/*.xlsx.html"
+  for = "/phases/*/*.xlsx.html"
   [headers.values]
     Content-Type = "text/html; charset=utf-8"
+    X-Content-Type-Options = "nosniff"
 
 [[headers]]
-  for = "/*.csv.html"
+  for = "/phases/*/*.csv.html"
   [headers.values]
     Content-Type = "text/html; charset=utf-8"
+    X-Content-Type-Options = "nosniff"
 
 # Free password protection alternatives (Netlify's built-in password protection is paid):
 # 
