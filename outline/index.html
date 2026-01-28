@@ -82,6 +82,11 @@ Logic</a></li>
 id="toc-addendum-d-three-phase-distribution-phase-balancing-logic">15
 Addendum D: Three-Phase Distribution &amp; Phase Balancing
 Logic</a></li>
+<li><a
+href="#addendum-e-utility-integration-power-contractual-realities"
+id="toc-addendum-e-utility-integration-power-contractual-realities">16
+Addendum E: Utility Integration &amp; Power Contractual
+Realities</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -139,6 +144,8 @@ Contacts)</a></li>
 Architecture &amp; Control Logic</a></li>
 <li><a href="#addendum-d">Addendum D: Three-Phase Distribution &amp;
 Phase Balancing Logic</a></li>
+<li><a href="#addendum-e">Addendum E: Utility Integration &amp; Power
+Contractual Realities</a></li>
 </ul>
 <p><a id="overview"></a></p>
 <h2 id="overview">Overview</h2>
@@ -3646,7 +3653,11 @@ Single-Line</h3>
 <p>This deliverable packages the technical load information for the
 utility, including a single-line/one-line diagram excerpt as required by
 the utility and a narrative describing any load-management method (EMS)
-used to limit service impact.</p>
+used to limit service impact. For detailed information on why utility
+notification is required, the relationship between contracted service
+(kVA) and physical ratings (Amps), and how the Load Letter serves as a
+“legal shield,” see <a href="#addendum-e">Addendum E: Utility
+Integration &amp; Power Contractual Realities</a>.</p>
 <table>
 <thead>
 <tr>
@@ -4767,5 +4778,99 @@ values for Station 1 and Station 3, but nothing for Station 2.</p>
 individual rows and look at the KVA Totals at the bottom of the
 schedule. In a balanced design, the totals for Phase A, B, and C should
 be within 5% of each other.</p>
+<h3 id="physical-integration-note">15.4 Physical Integration Note</h3>
+<p>The 250A EVSP Feeder will utilize the contiguous spare breaker
+section (Slots 24-42) of the MDP. This avoids the need for a “service
+tap” or external “gutter” connection, which are common points of failure
+in retrofits of this age. The large-frame 250A breaker will be centered
+on the bus to ensure even heat dissipation across the 800A main
+chassis.</p>
+<p><a id="addendum-e"></a></p>
+<h2 id="addendum-e-utility-integration-power-contractual-realities">16
+Addendum E: Utility Integration &amp; Power Contractual Realities</h2>
+<h3 id="section-a-the-requirement-for-utility-notification-phase-6">16.1
+Section A: The Requirement for Utility Notification (Phase 6)</h3>
+<p>A common misconception is that if a building’s 800A Main Distribution
+Panel (MDP) has 250A of “spare” physical room, no utility coordination
+is required. However, the Utility (PG&amp;E/SCE) must be involved for
+three critical reasons that exist outside the building’s walls.</p>
+<h4 id="asset-thermal-stress-the-continuous-load-factor">16.1.1 Asset
+Thermal Stress (The Continuous Load Factor)</h4>
+<p>Standard building loads (elevators, HVAC, lighting) are intermittent.
+The utility sizes their neighborhood transformers based on a “diversity
+factor”—assuming everyone won’t use max power at the same time.</p>
+<p><strong>The Conflict</strong>: EV charging is a Continuous Load
+(defined by the NEC as 3+ hours).</p>
+<p><strong>The Risk</strong>: A transformer can handle a 550A “spike”
+from your elevators for 15 minutes easily. It may not be able to handle
+a sustained 800A draw for 8 hours without the internal cooling oil
+overheating, leading to a “burn-out” that can plunge the entire block
+into darkness.</p>
+<h4 id="grid-visibility-rule-21-compliance">16.1.2 Grid Visibility &amp;
+Rule 21 Compliance</h4>
+<p>Under California Rule 21, utilities are tasked with maintaining grid
+stability.</p>
+<p><strong>Blind Spot</strong>: If 10 buildings on the same street all
+add 250A of “hidden” EV load, the utility’s local distribution circuit
+will become unstable.</p>
+<p><strong>The Requirement</strong>: By submitting a Load Letter (Phase
+6), you ensure Taylor Nguyen (the utility rep) can update their grid
+model. If the transformer is too small, the utility is often required to
+upgrade it at their own cost under Rule 29 (EV Infrastructure
+Rules).</p>
+<h4 id="secondary-service-wires">16.1.3 Secondary Service Wires</h4>
+<p>The wires running from the street to your building (the Service Drop)
+were sized based on your building’s original projected demand, not
+necessarily its maximum 800A breaker rating. Increasing baseline
+consumption by 250A creates persistent heat that can melt underground
+insulation if the utility hasn’t confirmed the wire gauge is sufficient
+for continuous duty.</p>
+<h3 id="section-b-contracted-service-kva-vs.-physical-rating-amps">16.2
+Section B: Contracted Service (kVA) vs. Physical Rating (Amps)</h3>
+<p>While you “contract” a service in kVA (kilovolt-amperes), your
+physical equipment is rated in Amps. This leads to the “Billing
+vs. Safety” gap.</p>
+<h4 id="the-service-agreement-id-said">16.2.1 The Service Agreement ID
+(SAID)</h4>
+<p>When your building was built, the owner signed a Service Agreement
+for a specific kVA capacity.</p>
+<p><strong>Contracted Demand</strong>: You may be paying a rate for 400
+kVA of capacity.</p>
+<p><strong>Physical Peak</strong>: Your 800A MDP allows for ~288
+kVA.</p>
+<p><strong>The Gap</strong>: If you increase your usage to 250 kVA, you
+are still under your 800A breaker, but you have exceeded your Contracted
+Demand. This triggers a “Change of Service” request to avoid excessive
+demand penalties and to legally update your power contract.</p>
+<h4 id="understanding-the-kva-billing-model">16.2.2 Understanding the
+kVA Billing Model</h4>
+<p>Utility billing for commercial/multifamily sites relies on two
+distinct charges:</p>
+<p><strong>Energy Charge (kWh)</strong>: How much total fuel you
+used.</p>
+<p><strong>Demand Charge (kVA/kW)</strong>: The “width” of the pipe you
+used at your single busiest 15-minute window.</p>
+<p><strong>Impact</strong>: Adding 8 chargers significantly widens your
+“pipe” usage. By involving the utility, you can often move to an
+EV-specific rate (like PG&amp;E’s BEV rate), which reduces the kVA
+demand charges in exchange for slightly higher kWh costs during peak
+times.</p>
+<h4 id="real-time-kva-management-via-ems">16.2.3 Real-Time kVA
+Management via EMS</h4>
+<p>The EMS (Energy Management System) hardware acts as the bridge
+between your Physical Amps and your Contracted kVA.</p>
+<p><strong>The Logic</strong>: The EMS is programmed with your
+“Contracted Max kVA.”</p>
+<p><strong>The Action</strong>: Even if your 250A breaker has “room,” if
+the total building kVA starts to approach the contract limit, the EMS
+will throttle the chargers to stay within the billing “sweet spot,”
+protecting the owner from massive overage fees.</p>
+<h3 id="summary-why-the-load-letter-is-your-legal-shield">16.3 Summary:
+Why the Load Letter is your “Legal Shield”</h3>
+<p>By providing a Load Letter that mentions your EMS, you are telling
+the utility: “We are increasing our kVA demand, but our software will
+prevent us from ever exceeding the 800A safety limit of our MDP and your
+transformer.” This usually grants you an immediate “Approval to Proceed”
+without expensive infrastructure upgrades.</p>
 </body>
 </html>
