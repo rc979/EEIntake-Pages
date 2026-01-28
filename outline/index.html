@@ -73,6 +73,15 @@ Filename Index (by Phase)</a></li>
 <li><a href="#addendum-b-party-directory-roles-contacts"
 id="toc-addendum-b-party-directory-roles-contacts">13 Addendum B: Party
 Directory (Roles + Contacts)</a></li>
+<li><a
+href="#addendum-c-energy-management-system-ems-architecture-control-logic"
+id="toc-addendum-c-energy-management-system-ems-architecture-control-logic">14
+Addendum C: Energy Management System (EMS) Architecture &amp; Control
+Logic</a></li>
+<li><a href="#addendum-d-three-phase-distribution-phase-balancing-logic"
+id="toc-addendum-d-three-phase-distribution-phase-balancing-logic">15
+Addendum D: Three-Phase Distribution &amp; Phase Balancing
+Logic</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -126,6 +135,10 @@ Handover</a></li>
 Phase)</a></li>
 <li><a href="#addendum-b">Addendum B: Party Directory (Roles +
 Contacts)</a></li>
+<li><a href="#addendum-c">Addendum C: Energy Management System (EMS)
+Architecture &amp; Control Logic</a></li>
+<li><a href="#addendum-d">Addendum D: Three-Phase Distribution &amp;
+Phase Balancing Logic</a></li>
 </ul>
 <p><a id="overview"></a></p>
 <h2 id="overview">Overview</h2>
@@ -1257,6 +1270,10 @@ fields):</strong></p>
 <li>System: <strong>208Y/120V, 3-phase</strong></li>
 <li>Available spaces: <strong>4 (3-pole)</strong></li>
 </ul>
+<p>For details on the three-phase distribution strategy and phase
+balancing logic used in the updated panel schedules, see <a
+href="#addendum-d">Addendum D: Three-Phase Distribution &amp; Phase
+Balancing Logic</a>.</p>
 <h4 id="photo-set-nameplatelabel-verification-excerpts-2-i03">2.4.3
 Photo Set – Nameplate/Label Verification Excerpts (2-I03)</h4>
 <p><strong>Excerpted verifications (from annotated photo
@@ -1903,7 +1920,10 @@ per NEC.</td>
 <td style="text-align: left;"><strong>EMS System</strong></td>
 <td style="text-align: left;">Integrated Panel-level EMS</td>
 <td style="text-align: left;">Limits total current draw to <strong>250
-Amps</strong> to fit within service headroom.</td>
+Amps</strong> to fit within service headroom. See <a
+href="#addendum-c">Addendum C: Energy Management System (EMS)
+Architecture &amp; Control Logic</a> for detailed architecture and
+control logic.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Charger Count</strong></td>
@@ -2326,7 +2346,10 @@ electrical routing decisions</li>
 <h3 id="updated-panel-schedules">4.8 Updated Panel Schedules</h3>
 <p>The existing panel schedule for the MDP is updated to reflect the new
 downstream load (the 350A breaker for the EV subpanel), and a new
-schedule for the EV subpanel is created.</p>
+schedule for the EV subpanel is created. For details on the three-phase
+distribution strategy and phase balancing logic used in these schedules,
+see <a href="#addendum-d">Addendum D: Three-Phase Distribution &amp;
+Phase Balancing Logic</a>.</p>
 <table>
 <thead>
 <tr>
@@ -4638,5 +4661,111 @@ check</td>
 </tr>
 </tbody>
 </table>
+<p><a id="addendum-c"></a></p>
+<h2
+id="addendum-c-energy-management-system-ems-architecture-control-logic">14
+Addendum C: Energy Management System (EMS) Architecture &amp; Control
+Logic</h2>
+<h3 id="core-hardware-components">14.1 Core Hardware Components</h3>
+<p>While the One-Line Diagram (P3.1) focuses on power flow, the EMS
+“nervous system” consists of the following components that facilitate
+the Sense-Think-Act loop:</p>
+<p><strong>Current Transformer (CT) Array</strong>: High-precision
+“clamshell” sensors installed on the main service busbars. These measure
+the magnetic field of the total building draw in real-time.</p>
+<p><strong>EMS Controller / Local Gateway</strong>: An industrial-grade
+microcomputer (typically DIN-rail mounted in the EV subpanel). It serves
+as the local intelligence hub, capable of operating even during internet
+outages.</p>
+<p><strong>Grid Communication Interface</strong>: A dedicated bridge
+(often Modbus or RS485) that translates the analog signals from the CTs
+into digital data for the controller.</p>
+<h3 id="hardware-software-interfaces">14.2 Hardware &amp; Software
+Interfaces</h3>
+<p>The system operates across three primary interface layers:</p>
+<p><strong>Physical Interface (CT-to-Gateway)</strong>: Shielded
+twisted-pair wiring that transmits the live amperage readings from the
+main switchgear to the EMS controller.</p>
+<p><strong>Local Network Interface (Gateway-to-Charger)</strong>:
+Usually an Ethernet or robust Mesh Wi-Fi network using the OCPP (Open
+Charge Point Protocol) to send throttling commands to each of the 8
+stations.</p>
+<p><strong>Cloud API Interface</strong>: An encrypted outbound
+connection (Cellular or WAN) used for remote monitoring, firmware
+updates, and reporting.</p>
+<h3 id="the-role-of-the-cloud">14.3 The Role of the Cloud</h3>
+<p>The Cloud does not perform the real-time load shedding—that is
+handled locally for safety and speed. Instead, the Cloud provides:</p>
+<p><strong>Priority Profiles</strong>: Allows the owner to designate
+specific chargers for “VIP” or “Fleet” priority via a web dashboard.</p>
+<p><strong>Data Logging</strong>: Records proof for the utility (Taylor
+Nguyen) that the 250A cap was never exceeded.</p>
+<p><strong>Latency Compensation</strong>: Monitors network health to
+ensure commands are reaching chargers within the required 2-second
+window.</p>
+<h3 id="control-logic-maintaining-the-250a-max">14.4 Control Logic:
+Maintaining the 250A Max</h3>
+<p>The EMS maintains the limit through a continuous mathematical
+loop:</p>
+<ol type="1">
+<li><p><strong>Measurement</strong>: Total Site Load (P<sub>total</sub>)
+is measured by CTs.</p></li>
+<li><p><strong>Calculation</strong>: Available EV Power
+(P<sub>avail</sub>) = 250A − P<sub>building</sub>.</p></li>
+<li><p><strong>Command</strong>: If P<sub>total</sub> &gt; 245A, the EMS
+sends a “SetChargingProfile” command via OCPP to all 8
+chargers.</p></li>
+<li><p><strong>Throttling</strong>: Chargers reduce their pilot signal
+(PWM), forcing the cars to drop current instantly.</p></li>
+<li><p><strong>Fail-Safe</strong>: If the Gateway loses contact with the
+CTs or the Cloud, all chargers default to 6A (minimum) to ensure the
+main breaker never trips.</p></li>
+</ol>
+<p><a id="addendum-d"></a></p>
+<h2 id="addendum-d-three-phase-distribution-phase-balancing-logic">15
+Addendum D: Three-Phase Distribution &amp; Phase Balancing Logic</h2>
+<h3 id="the-wye-distribution-strategy">15.1 The “Wye” Distribution
+Strategy</h3>
+<p>The project utilizes a 208Y/120V Three-Phase Wye configuration. This
+is the standard “Workhorse” of commercial buildings in California.</p>
+<p><strong>The 3P Feeder</strong>: The wires coming from the main
+service to the EV Subpanel (Panel B) carry all three phases (A, B, and
+C). This allows us to pull power from three different “lanes” of the
+grid simultaneously.</p>
+<p><strong>The 1P Load</strong>: Because the vehicles are North American
+spec (Single-Phase), they can only bridge two of these phases at a time
+to get 208V (e.g., A-B, B-C, or C-A).</p>
+<h3 id="the-hidden-balancing-logic">15.2 The “Hidden” Balancing
+Logic</h3>
+<p>To prevent a “Phase Imbalance”—which causes heat in the neutral wire
+and stresses the utility transformer—the 8 chargers are distributed
+across the phases in a 3-3-2 staggered pattern:</p>
+<ul>
+<li><p><strong>Group 1 (Stations 1, 4, 7)</strong>: Connected to Phase A
+and B.</p></li>
+<li><p><strong>Group 2 (Stations 2, 5, 8)</strong>: Connected to Phase B
+and C.</p></li>
+<li><p><strong>Group 3 (Stations 3, 6)</strong>: Connected to Phase C
+and A.</p></li>
+</ul>
+<p>By spreading the chargers this way, we ensure that if all 8 cars are
+charging at full tilt, the load on any single phase (A, B, or C) stays
+relatively equal, maximizing the 250A headroom provided by the
+utility.</p>
+<h3 id="why-the-schedule-looks-messy">15.3 Why the Schedule Looks
+“Messy”</h3>
+<p>A standard Panel Schedule is organized by Circuit Numbers, not by
+Phase Group. This can make the balancing logic difficult to see at a
+glance:</p>
+<p><strong>Standard Numbering</strong>: Circuits 1 &amp; 3 are Phase
+A-B; Circuits 5 &amp; 7 are Phase B-C; Circuits 9 &amp; 11 are Phase
+C-A.</p>
+<p><strong>The Visual Jumble</strong>: Because breakers are installed
+vertically (1, 3, 5, 7…), the “Phase A” column on the schedule will have
+values for Station 1 and Station 3, but nothing for Station 2.</p>
+<p><strong>Verification</strong>: To confirm the balance, ignore the
+individual rows and look at the KVA Totals at the bottom of the
+schedule. In a balanced design, the totals for Phase A, B, and C should
+be within 5% of each other.</p>
 </body>
 </html>
