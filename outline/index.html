@@ -87,6 +87,9 @@ href="#addendum-e-utility-integration-power-contractual-realities"
 id="toc-addendum-e-utility-integration-power-contractual-realities">16
 Addendum E: Utility Integration &amp; Power Contractual
 Realities</a></li>
+<li><a href="#addendum-f-fault-current-arc-flash"
+id="toc-addendum-f-fault-current-arc-flash">17 Addendum F: Fault Current
+&amp; Arc Flash</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -147,6 +150,8 @@ Architecture &amp; Control Logic</a></li>
 Phase Balancing Logic</a></li>
 <li><a href="#addendum-e">Addendum E: Utility Integration &amp; Power
 Contractual Realities</a></li>
+<li><a href="#addendum-f">Addendum F: Fault Current &amp; Arc
+Flash</a></li>
 </ul>
 <p><a id="overview"></a></p>
 <h2 id="overview">Overview</h2>
@@ -2202,8 +2207,9 @@ Ratings</h4>
 <li><p>MDP bus rating: 800 A</p></li>
 <li><p>EV subpanel bus rating: 400 A</p></li>
 <li><p>EV feeder OCPD: 350 A, 3-pole</p></li>
-<li><p>Breaker interrupting rating: 65 kAIC minimum at 120/208
-V</p></li>
+<li><p>Breaker interrupting rating: 65 kAIC minimum at 120/208 V (see <a
+href="#addendum-f">Addendum F: Fault Current &amp; Arc Flash</a> for why
+a full fault study is not required and how AIC handles safety)</p></li>
 </ul>
 <h4 id="feeder-conductors-design-basis">4.5.6 Feeder Conductors (design
 basis)</h4>
@@ -4873,5 +4879,53 @@ the utility: “We are increasing our kVA demand, but our software will
 prevent us from ever exceeding the 800A safety limit of our MDP and your
 transformer.” This usually grants you an immediate “Approval to Proceed”
 without expensive infrastructure upgrades.</p>
+<p><a id="addendum-f"></a></p>
+<h2 id="addendum-f-fault-current-arc-flash">17 Addendum F: Fault Current
+&amp; Arc Flash</h2>
+<p>This addendum explains why this project does not require a full
+engineered fault current study or an arc flash study at the design
+stage, and how AIC (Ampere Interrupting Capacity) ratings satisfy code
+and inspection requirements.</p>
+<h3 id="the-dwelling-unit-exception-nec-110.24">17.1 The “Dwelling Unit”
+Exception (NEC 110.24)</h3>
+<p>Under the National Electrical Code (NEC 110.24), which California
+adopts, there is a specific exception for residential dwellings.</p>
+<p><strong>The Rule:</strong> Service equipment in buildings other than
+dwelling units must be field-marked with the maximum available fault
+current.</p>
+<p><strong>The Exception:</strong> Because this project is a multifamily
+dwelling with a service likely under 1000A (the site has an 800A MDP),
+the strict requirement for engineered fault current labeling is often
+waived or simplified. The AHJ may accept the approach described in §17.3
+(AIC ratings) in lieu of a separate fault study document.</p>
+<h3 id="arc-flash-is-an-operational-study-not-a-design-study">17.2 Arc
+Flash is an “Operational” Study, Not a “Design” Study</h3>
+<p>Arc flash calculations (NFPA 70E) are designed to protect workers who
+maintain equipment while it is energized.</p>
+<p><strong>The Timing:</strong> In most California jurisdictions, an arc
+flash study is considered a post-construction maintenance requirement,
+not a permit-submission requirement.</p>
+<p><strong>The Data Gap:</strong> To perform an accurate arc flash
+study, the EE needs the exact manufacturer, model, and trip-settings of
+every breaker installed. Since equipment has not been purchased yet
+(Phase 7), any calculation done in Phase 3 would be a “best guess” and
+legally invalid for OSHA-style labeling. A proper arc flash study is
+therefore deferred until as-built conditions and installed equipment are
+known.</p>
+<h3 id="aic-ratings-handle-the-safety-implicitly">17.3 AIC Ratings
+Handle the Safety “Implicitly”</h3>
+<p>Instead of a full “Fault Study,” the EE uses AIC (Ampere Interrupting
+Capacity) ratings.</p>
+<p><strong>The Logic:</strong> Rather than calculating the exact fault
+current, the engineer specifies that all new breakers (the 250A main and
+the 40A branches) must have an AIC rating higher than the utility’s
+available fault current (e.g., 65 kA AIC at 120/208 V).</p>
+<p><strong>The Proof:</strong> This is checked by the City Inspector in
+Phase 5 when they review the Short Circuit Current Rating (SCCR) on the
+equipment spec sheets, effectively replacing the need for a separate
+engineered fault current calculation document. The design basis (e.g.,
+42 kA available at MDP, 65 kAIC minimum) is stated on the one-line and
+in notes; the inspector verifies that installed equipment meets or
+exceeds that rating.</p>
 </body>
 </html>
