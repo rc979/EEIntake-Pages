@@ -90,6 +90,10 @@ Realities</a></li>
 <li><a href="#addendum-f-fault-current-arc-flash"
 id="toc-addendum-f-fault-current-arc-flash">17 Addendum F: Fault Current
 &amp; Arc Flash</a></li>
+<li><a href="#addendum-g-after-the-fact-gaps-ee-compliance-strategic"
+id="toc-addendum-g-after-the-fact-gaps-ee-compliance-strategic">18
+Addendum G: After-the-Fact Gaps (EE, Compliance &amp;
+Strategic)</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -152,6 +156,8 @@ Phase Balancing Logic</a></li>
 Contractual Realities</a></li>
 <li><a href="#addendum-f">Addendum F: Fault Current &amp; Arc
 Flash</a></li>
+<li><a href="#addendum-g">Addendum G: After-the-Fact Gaps (EE,
+Compliance &amp; Strategic)</a></li>
 </ul>
 <p><a id="overview"></a></p>
 <h2 id="overview">Overview</h2>
@@ -4951,5 +4957,72 @@ maintenance personnel. That labeling relies on an arc flash study
 performed with as-built data (see §17.2); if the owner opts for it, the
 study and sticker application are typically completed during or shortly
 after commissioning.</p>
+<p><a id="addendum-g"></a></p>
+<h2 id="addendum-g-after-the-fact-gaps-ee-compliance-strategic">18
+Addendum G: After-the-Fact Gaps (EE, Compliance &amp; Strategic)</h2>
+<p>This addendum summarizes critical gaps identified after the original
+8-phase plan was established—items that may require additional
+deliverables, studies, or design decisions depending on jurisdiction,
+utility, and project scope. They are grouped into <strong>Electrical
+Engineering (EE)</strong> requirements, <strong>Legal &amp; Physical
+Compliance</strong> requirements, and <strong>Strategic “1,500
+State”</strong> considerations (California’s patchwork of local reach
+codes and utility clusters).</p>
+<h3 id="electrical-engineering-ee-gaps">18.1 Electrical Engineering (EE)
+Gaps</h3>
+<ul>
+<li><strong>ALMS Logic Simulation:</strong> Proving to the AHJ that the
+system can maintain the 3.3 kW floor per port simultaneously without
+tripping the main breaker.</li>
+<li><strong>SCCR Validation:</strong> Calculating the Short-Circuit
+Current Rating to ensure chargers and associated equipment do not exceed
+ratings during a fault if the utility transformer is particularly
+“hot.”</li>
+<li><strong>Harmonic Distortion:</strong> Accounting for the “noise” EV
+chargers inject into the electrical system, which can overheat neutral
+conductors and may require K-Rated transformers.</li>
+<li><strong>DC Leakage “Blinding”:</strong> Implementing protection
+(e.g., Type B RCDs) to prevent DC current from “blinding” the building’s
+main AC safety breakers.</li>
+<li><strong>Thermal Derating:</strong> Calculating how continuous
+10-hour charging cycles and garage ambient heat affect wire and breaker
+capacity.</li>
+<li><strong>Emergency Disconnects:</strong> Meeting NEC 2026 Article
+120.13 (or equivalent) requirements for a manual shutoff within sight of
+the chargers.</li>
+</ul>
+<h3 id="legal-physical-compliance-gaps">18.2 Legal &amp; Physical
+Compliance Gaps</h3>
+<ul>
+<li><strong>CEC Software Integration:</strong> Generating official NRCC
+forms via CBECC 2025 or EnergyPro 10—a legal requirement for many
+California permits.</li>
+<li><strong>ADA Path of Travel:</strong> Designing a clear, accessible
+route from the charging stall to the building entrance (often one of the
+costliest compliance items).</li>
+<li><strong>Direct-to-Unit Mandate:</strong> Providing a “Technical
+Infeasibility” letter if chargers are not wired directly to residents’
+individual meters, where required by jurisdiction.</li>
+<li><strong>CTEP/Weights &amp; Measures:</strong> Ensuring hardware is
+certified by the CDFA (California Department of Food and Agriculture) if
+the client intends to bill for electricity.</li>
+<li><strong>Fire Suppression Classification:</strong> Verifying whether
+existing sprinklers meet Ordinary Hazard Group II standards for EV
+garage areas.</li>
+<li><strong>Conduit Sizing (The 1-inch Rule):</strong> Meeting the 2025
+CALGreen requirement for a minimum 1-inch trade size for all EV
+raceways.</li>
+</ul>
+<h3 id="strategic-1500-state-gaps">18.3 Strategic “1,500 State”
+Gaps</h3>
+<ul>
+<li><strong>The Inheritance Matrix:</strong> Moving beyond “checking
+rules” to a hierarchical logic that automatically overrides State rules
+with Local Reach Codes where applicable.</li>
+<li><strong>GPS-Linked Logic:</strong> Automating the identification of
+which Utility Cluster (e.g., PCE, SVCE) the project falls into, which
+dictates the specific ALMS (Advanced Load Management System) logic
+required.</li>
+</ul>
 </body>
 </html>
